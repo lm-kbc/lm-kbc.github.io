@@ -1,3 +1,6 @@
+title: LM-KBC
+description: Knowledge Base Construction from Pre-trained Language Models
+
 ### Task Description
 
 Pre-trained language models (LMs) have advanced a range of semantic tasks and have also shown promise for knowledge extraction from the models itself. Although several works have explored this ability in a setting called probing or prompting, the viability of _knowledge base construction_ from LMs has not yet been explored.
