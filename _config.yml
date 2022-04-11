@@ -1,3 +1,5 @@
-theme: jekyll-theme-cayman
 title: LM-KBC
 description: Knowledge Base Construction from Pre-trained Language Models
+show_downloads: false
+google_analytics:
+theme: jekyll-theme-cayman
