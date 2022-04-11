@@ -1,4 +1,4 @@
-## Welcome to GitHub Pages
+## LM-KBC
 
 You can use the [editor on GitHub](https://github.com/lm-kbc/lm-kbc.github.io/edit/main/index.md) to maintain and preview the content for your website in Markdown files.
 
