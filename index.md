@@ -1,37 +1,18 @@
-## LM-KBC
+### Task Description
 
-You can use the [editor on GitHub](https://github.com/lm-kbc/lm-kbc.github.io/edit/main/index.md) to maintain and preview the content for your website in Markdown files.
+Pre-trained language models (LMs) have advanced a range of semantic tasks and have also shown promise for knowledge extraction from the models itself. Although several works have explored this ability in a setting called probing or prompting, the viability of _knowledge base construction_ from LMs has not yet been explored.
+In this challenge, participants are asked to build actual knowledge bases from LMs, for given subjects and relations. In crucial difference to existing probing benchmarks like LAMA ([Petroni et al., 2019](https://arxiv.org/pdf/1909.01066.pdf)), we make no simplifying assumptions on relation cardinalities, i.e., a subject-entity can stand in relation with zero, one, or many object-entities. Furthermore, submissions need to go beyond just ranking the predictions, and materialize outputs, which are evaluated by established KB metrics of precision and recall. The challenge comes with two tracks: (i) a BERT-type LM track with low computational requirements, and (ii) an open track, where participants can use any LM of their choice.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+### Dataset
 
-### Markdown
+### Evaluation Metrics
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+### Submission Details
 
-```markdown
-Syntax highlighted code block
+### Important Dates
 
-# Header 1
-## Header 2
-### Header 3
+### People
 
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/lm-kbc/lm-kbc.github.io/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+- [Sneha Singhania](https://people.mpi-inf.mpg.de/~ssinghan/), Max Planck Institute for Informatics, Germany
+- [Tuan-Phong Nguyen](https://www.tuan-phong.com/), Max Planck Institute for Informatics, Germany
+- [Simon Razniewski](http://simonrazniewski.com/), Max Planck Institute for Informatics, Germany
