@@ -14,6 +14,10 @@ In this challenge, participants are asked to build actual knowledge bases from L
 
 ### Submission Details
 
+### Communication
+
+For general questions please use the following Google group: https://groups.google.com/g/lm-kbc
+
 ### Important Dates
 
 ### People
