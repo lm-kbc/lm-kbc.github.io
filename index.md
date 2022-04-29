@@ -20,7 +20,7 @@ For general questions please use the Google group: <a href="https://groups.googl
 
 ### Important Dates
 | Activity | Dates |
-|:---:|:---:|
+|:---|:---:|
 | Call for participants        |  02 May 2022        |
 | Dataset release              | 13 May 2022         |
 | System submission deadline   | 14 July 2022        |
