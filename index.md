@@ -19,14 +19,13 @@ In this challenge, participants are asked to build actual knowledge bases from L
 For general questions please use the Google group: <a href="https://groups.google.com/g/lm-kbc" target="_blank">https://groups.google.com/g/lm-kbc</a>
 
 ### Important Dates
-|----------|:-------------:|
-| Call for participants | 02 May 2022  |
-| Dataset release |    13 May 2022   |
-| System submission deadline |    14 July 2022   |
-| Winner Announcement |    15 August 2022   |
-| ISWC Invitations  |    15 August 2022   |
-| ISWC Presentations  |    23-27 October 2022   |
-|----------|:-------------:|
+|:----------------------------:|:-------------------:|
+| Call for participants        |  02 May 2022        |
+| Dataset release              | 13 May 2022         |
+| System submission deadline   | 14 July 2022        |
+| Winner Announcement          | 15 August 2022      |
+| ISWC Invitations             | 15 August 2022      |
+| ISWC Presentations           | 23-27 October 2022  |
 
 ### People
 - <a href="https://people.mpi-inf.mpg.de/~ssinghan/" target="_blank">Sneha Singhania</a>, Max Planck Institute for Informatics, Germany
