@@ -38,7 +38,7 @@ The dataset file contains three columns, (1) subject-entity, (2) object-entity, 
 
 ### Evaluation Metrics
 
-We use precision, recall and f1-score as evaluation metrics to compare the predicted object-entities with true object-entities on the hidden test dataset. We release a <a href="/models/bert.py">baseline</a> implementation and <a href="/evaluation.py">evaluation</a> script. The baseline model probes the BERT langauge model using a sample prompt like _Germany shares border with \[MASK\]_ and selects object-entities predicted in the \[MASK\] position with $>= 0.5$ likelihood as outputs on validation subject-entities. Participants can use evaluation script to compute the precision, recall and f1-score to assess the performance of their systems.
+We use precision, recall and f1-score as evaluation metrics to compare the predicted object-entities with true object-entities on the hidden test dataset. We release a <a href="/models/bert.py">baseline</a> implementation and <a href="/evaluation.py">evaluation</a> script. The baseline model probes the BERT langauge model using a sample prompt like _"Germany shares border with \[MASK\]"_ and selects object-entities predicted in the \[MASK\] position with $>= 0.5$ likelihood as outputs on validation subject-entities. Participants can use evaluation script to compute the precision, recall and f1-score to assess the performance of their systems.
 
 ### Submission Details
 
