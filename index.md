@@ -13,7 +13,6 @@ Formally, given the input subject-entity ($\mathtt{s}$) and relation ($\mathtt{r
 
 We release a dataset (train and validation) for a diverse set of 12 relations, each covering a different set of subject-entities and along with complete list ground truth object-entities per subject-relation-pair. The total number of object-entities varies for a given subject-relation pair. The train dataset subject-relation-object triples can be used for training the language models in any form, while validation can be used for hyperparameter tuning. Futher details on the relations are given below:
 
-<pre style="background-color: seashell"><code>
 
  **Relation**     | **Description**
 ---------------------------|------------------------------------------------------------------------
@@ -31,7 +30,6 @@ We release a dataset (train and validation) for a diverse set of 12 relations, e
  CompanyParentOrganization | company ($s$) has another company ($o$) as its parent organization
 ---------------------------|------------------------------------------------------------------------
 
-</code></pre>
 
 The dataset files contain three columns, (1) subject-entity, (2) object-entity, and (3) relation. To faciliate usage of LMs like BERT which are constrained by single-token predictions, we provide a valid single-token form for multi-token object-entities, and either of them can be given as an output. 
 
