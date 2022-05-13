@@ -28,7 +28,6 @@ We release a dataset (train and validation) for a diverse set of 12 relations, e
  PersonPlaceOfDeath        | person ($s$) died at a location ($o$)
  PersonCauseOfDeath        | person ($s$) died due to a cause ($o$)
  CompanyParentOrganization | company ($s$) has another company ($o$) as its parent organization
----------------------------|------------------------------------------------------------------------
 
 
 The dataset files contain three columns, (1) subject-entity, (2) object-entity, and (3) relation. To faciliate usage of LMs like BERT which are constrained by single-token predictions, we provide a valid single-token form for multi-token object-entities, and either of them can be given as an output. 
