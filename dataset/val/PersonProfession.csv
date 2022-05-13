@@ -1,0 +1,332 @@
+Entity,ObjectEntity
+Bill Maher,['screenwriter']
+Bill Maher,['actor']
+Bill Maher,['writer']
+Bill Maher,['comedian']
+Bill Maher,"['television producer', 'producer']"
+Bill Maher,"['presenter', 'television presenter']"
+Bill Maher,['journalist']
+Bill Maher,"['producer', 'film producer']"
+Tom Hanks,['screenwriter']
+Tom Hanks,['actor']
+Tom Hanks,['writer']
+Tom Hanks,['composer']
+Tom Hanks,['comedian']
+Tom Hanks,"['television producer', 'producer']"
+Tom Hanks,"['presenter', 'television presenter']"
+Tom Hanks,"['actor', 'character actor']"
+Tom Hanks,"['executive producer', 'producer']"
+Tom Hanks,"['television director', 'director']"
+Tom Hanks,"['actor', 'stage actor']"
+Tom Hanks,"['voice actor', 'actor']"
+Tom Hanks,"['director', 'film director']"
+Tom Hanks,"['producer', 'film producer']"
+Tom Hanks,"['actor', 'television actor']"
+Tom Hanks,"['actor', 'film actor']"
+Tom Hanks,"['short story writer', 'writer']"
+Tom Hanks,['narrator']
+Hillary Clinton,['writer']
+Hillary Clinton,['lawyer']
+Hillary Clinton,['politician']
+Hillary Clinton,['diplomat']
+Hillary Clinton,"['university teacher', 'teacher']"
+Hillary Clinton,['podcaster']
+Hillary Clinton,['autobiographer']
+Bill Gates,['entrepreneur']
+Bill Gates,['programmer']
+Bill Gates,['philanthropist']
+Michael Bloomberg,['actor']
+Michael Bloomberg,['writer']
+Michael Bloomberg,['businessperson']
+Michael Bloomberg,['politician']
+Michael Bloomberg,['trader']
+Michael Bloomberg,"['aircraft pilot', 'pilot']"
+Michael Bloomberg,"['bank manager', 'manager']"
+Nicolas Sarkozy,['lawyer']
+Nicolas Sarkozy,['politician']
+Nicolas Sarkozy,['statesperson']
+Bob Marley,['composer']
+Bob Marley,['singer']
+Bob Marley,"['singer-songwriter', 'singer']"
+Bob Marley,['guitarist']
+Bob Marley,['operator']
+Bob Marley,['assembly line worker']
+Jimmy Kimmel,['screenwriter']
+Jimmy Kimmel,['comedian']
+Jimmy Kimmel,"['television producer', 'producer']"
+Jimmy Kimmel,"['presenter', 'television presenter']"
+Jimmy Kimmel,"['voice actor', 'actor']"
+Jimmy Kimmel,"['producer', 'film producer']"
+Jimmy Kimmel,"['actor', 'television actor']"
+Jimmy Kimmel,"['actor', 'film actor']"
+Jennette McCurdy,['screenwriter']
+Jennette McCurdy,['actor']
+Jennette McCurdy,['singer']
+Jennette McCurdy,"['singer-songwriter', 'singer']"
+Jennette McCurdy,['musician']
+Jennette McCurdy,['songwriter']
+Jennette McCurdy,['journalist']
+Jennette McCurdy,"['voice actor', 'actor']"
+Jennette McCurdy,['dancer']
+Jennette McCurdy,"['actor', 'television actor']"
+Jennette McCurdy,"['actor', 'film actor']"
+Jennette McCurdy,['manufacturer']
+Aamir Khan,['screenwriter']
+Aamir Khan,"['presenter', 'television presenter']"
+Aamir Khan,"['director', 'film director']"
+Aamir Khan,"['producer', 'film producer']"
+Aamir Khan,"['actor', 'film actor']"
+Lil Wayne,['entrepreneur']
+Lil Wayne,['singer']
+Lil Wayne,['songwriter']
+Lil Wayne,['rapper']
+Lil Wayne,"['executive', 'music executive']"
+Oprah Winfrey,['actor']
+Oprah Winfrey,['writer']
+Oprah Winfrey,['reporter']
+Oprah Winfrey,['businessperson']
+Oprah Winfrey,"['television producer', 'producer']"
+Oprah Winfrey,"['presenter', 'television presenter']"
+Oprah Winfrey,['journalist']
+Oprah Winfrey,"['voice actor', 'actor']"
+Oprah Winfrey,"['producer', 'film producer']"
+Oprah Winfrey,['podcaster']
+Oprah Winfrey,['motivational speaker']
+Oprah Winfrey,"['talk show host', 'host']"
+Oprah Winfrey,['autobiographer']
+Miranda Cosgrove,['actor']
+Miranda Cosgrove,['singer']
+Miranda Cosgrove,['musician']
+Miranda Cosgrove,"['actor', 'child actor']"
+Miranda Cosgrove,"['actor', 'television actor']"
+Miranda Cosgrove,"['actor', 'dub actor']"
+Miranda Cosgrove,"['singer', 'pop singer']"
+David Cameron,['politician']
+Bruce Springsteen,['singer']
+Bruce Springsteen,"['producer', 'record producer']"
+Bruce Springsteen,['pianist']
+Bruce Springsteen,['musician']
+Bruce Springsteen,['songwriter']
+Bruce Springsteen,['guitarist']
+Bruce Springsteen,"['artist', 'recording artist']"
+Coco Austin,['actor']
+Coco Austin,"['glamour model', 'model']"
+Coco Austin,['dancer']
+Coco Austin,"['actor', 'film actor']"
+Robin van Persie,"['association football player', 'footballer']"
+Cher,['actor']
+Cher,['composer']
+Cher,['singer']
+Cher,"['producer', 'record producer']"
+Cher,"['singer-songwriter', 'singer']"
+Cher,"['actor', 'character actor']"
+Cher,"['director', 'film director']"
+Cher,['model']
+Cher,"['actor', 'television actor']"
+Cher,"['actor', 'film actor']"
+Cher,['manufacturer']
+Cher,"['artist', 'recording artist']"
+Paris Hilton,['actor']
+Paris Hilton,['writer']
+Paris Hilton,"['dj', 'disc jockey']"
+Paris Hilton,['entrepreneur']
+Paris Hilton,['singer']
+Paris Hilton,['socialite']
+Paris Hilton,"['designer', 'fashion designer']"
+Paris Hilton,['model']
+Paris Hilton,"['actor', 'television actor']"
+Paris Hilton,"['actor', 'film actor']"
+Paris Hilton,['autobiographer']
+Ariana Grande,['actor']
+Ariana Grande,"['producer', 'record producer']"
+Ariana Grande,"['singer-songwriter', 'singer']"
+Ariana Grande,"['voice actor', 'actor']"
+Ariana Grande,['model']
+Ariana Grande,['dancer']
+Ariana Grande,['philanthropist']
+Joe Biden,['lawyer']
+Joe Biden,['politician']
+Joe Biden,"['university teacher', 'teacher']"
+Justin Timberlake,['actor']
+Justin Timberlake,['singer']
+J. K. Rowling,['screenwriter']
+J. K. Rowling,['writer']
+J. K. Rowling,['author']
+J. K. Rowling,"['executive producer', 'producer']"
+J. K. Rowling,"['producer', 'film producer']"
+J. K. Rowling,"['writer', ""children's writer""]"
+J. K. Rowling,['novelist']
+Donald Tusk,['politician']
+Donald Tusk,['historian']
+John Cleese,['screenwriter']
+John Cleese,['actor']
+John Cleese,['writer']
+John Cleese,['comedian']
+John Cleese,"['actor', 'stage actor']"
+John Cleese,"['voice actor', 'actor']"
+John Cleese,"['director', 'film director']"
+John Cleese,"['producer', 'film producer']"
+John Cleese,"['actor', 'television actor']"
+John Cleese,"['actor', 'film actor']"
+John Cleese,['autobiographer']
+Seth Meyers,['screenwriter']
+Seth Meyers,['writer']
+Seth Meyers,['comedian']
+Seth Meyers,['journalist']
+Seth Meyers,"['voice actor', 'actor']"
+Seth Meyers,"['actor', 'television actor']"
+Seth Meyers,"['actor', 'film actor']"
+Jessie J,['singer']
+Jessie J,"['singer-songwriter', 'singer']"
+Jessie J,['songwriter']
+Jessie J,"['executive', 'music executive']"
+Jessie J,['autobiographer']
+Maria Sharapova,['diplomat']
+Maria Sharapova,['model']
+Maria Sharapova,"['player', 'tennis player']"
+Kevin Spacey,['screenwriter']
+Kevin Spacey,['actor']
+Kevin Spacey,"['television producer', 'producer']"
+Kevin Spacey,"['actor', 'character actor']"
+Kevin Spacey,"['actor', 'stage actor']"
+Kevin Spacey,"['voice actor', 'actor']"
+Kevin Spacey,"['director', 'film director']"
+Kevin Spacey,"['producer', 'film producer']"
+Kevin Spacey,"['director', 'theatrical director']"
+Kevin Spacey,"['actor', 'television actor']"
+Kevin Spacey,"['actor', 'film actor']"
+Stephen King,['screenwriter']
+Stephen King,['actor']
+Stephen King,['writer']
+Stephen King,['teacher']
+Stephen King,"['television producer', 'producer']"
+Stephen King,['columnist']
+Stephen King,['journalist']
+Stephen King,"['director', 'film director']"
+Stephen King,['director']
+Stephen King,['novelist']
+Stephen King,"['science fiction writer', 'writer']"
+Tiger Woods,['writer']
+Tiger Woods,['animal trainer']
+Tiger Woods,['golfer']
+Ben Stiller,['screenwriter']
+Ben Stiller,['actor']
+Ben Stiller,['writer']
+Ben Stiller,['comedian']
+Ben Stiller,"['actor', 'character actor']"
+Ben Stiller,['trekkie']
+Ben Stiller,"['voice actor', 'actor']"
+Ben Stiller,"['director', 'film director']"
+Ben Stiller,"['producer', 'film producer']"
+Ben Stiller,['director']
+Ben Stiller,"['actor', 'television actor']"
+Ben Stiller,"['actor', 'film actor']"
+Ben Stiller,['manufacturer']
+Novak Djokovic,"['player', 'tennis player']"
+Lewis Hamilton,"['racing automobile driver', 'driver']"
+Lewis Hamilton,"['formula one driver', 'driver']"
+Mark Ruffalo,['screenwriter']
+Mark Ruffalo,['writer']
+Mark Ruffalo,"['actor', 'stage actor']"
+Mark Ruffalo,"['director', 'film director']"
+Mark Ruffalo,"['producer', 'film producer']"
+Mark Ruffalo,"['actor', 'television actor']"
+Mark Ruffalo,"['actor', 'film actor']"
+Kobe Bryant,['screenwriter']
+Kobe Bryant,"['player', 'basketball player']"
+Shaquille O'Neal,['screenwriter']
+Shaquille O'Neal,['actor']
+Shaquille O'Neal,['businessperson']
+Shaquille O'Neal,['singer']
+Shaquille O'Neal,['thai boxer']
+Shaquille O'Neal,"['television producer', 'producer']"
+Shaquille O'Neal,['rapper']
+Shaquille O'Neal,"['sports commentator', 'commentator']"
+Shaquille O'Neal,"['producer', 'film producer']"
+Shaquille O'Neal,"['player', 'basketball player']"
+Shaquille O'Neal,['real estate entrepreneur']
+Shaquille O'Neal,"['actor', 'film actor']"
+Shaquille O'Neal,['podcaster']
+Pitbull,['entrepreneur']
+Pitbull,['singer']
+Pitbull,"['producer', 'record producer']"
+Pitbull,['musician']
+Pitbull,['songwriter']
+Pitbull,['rapper']
+Pitbull,"['brand ambassador', 'ambassador']"
+Pitbull,['philanthropist']
+Calvin Harris,"['dj', 'disc jockey']"
+Calvin Harris,['singer']
+Calvin Harris,"['producer', 'record producer']"
+Calvin Harris,"['singer-songwriter', 'singer']"
+Calvin Harris,['public figure']
+Calvin Harris,['songwriter']
+Calvin Harris,['manufacturer']
+Triple H,['screenwriter']
+Triple H,['actor']
+Triple H,['vice president']
+Triple H,"['actor', 'television actor']"
+Triple H,"['actor', 'film actor']"
+Triple H,"['wrestler', 'professional wrestler']"
+Tyra Banks,['actor']
+Tyra Banks,['businessperson']
+Tyra Banks,['entrepreneur']
+Tyra Banks,['singer']
+Tyra Banks,"['television producer', 'producer']"
+Tyra Banks,['musician']
+Tyra Banks,"['presenter', 'television presenter']"
+Tyra Banks,['model']
+Tyra Banks,"['actor', 'television actor']"
+Tyra Banks,"['actor', 'film actor']"
+Tyra Banks,"['talk show host', 'host']"
+Tyra Banks,"['host', 'game show host']"
+Logan Henderson,['actor']
+Logan Henderson,['singer']
+Logan Henderson,['pianist']
+Logan Henderson,"['singer-songwriter', 'singer']"
+Logan Henderson,['guitarist']
+Logan Henderson,['rapper']
+Logan Henderson,['dancer']
+Logan Henderson,"['actor', 'television actor']"
+Logan Henderson,"['actor', 'film actor']"
+Hugo Chávez,['politician']
+Hugo Chávez,"['military officer', 'officer']"
+Demi Moore,['actor']
+Demi Moore,"['actor', 'stage actor']"
+Demi Moore,"['voice actor', 'actor']"
+Demi Moore,"['director', 'film director']"
+Demi Moore,"['producer', 'film producer']"
+Demi Moore,['model']
+Demi Moore,"['actor', 'television actor']"
+Demi Moore,"['actor', 'film actor']"
+Arvind Kejriwal,['politician']
+Arvind Kejriwal,['bureaucrat']
+Iker Casillas,"['association football player', 'footballer']"
+Brie Larson,['screenwriter']
+Brie Larson,['actor']
+Brie Larson,['singer']
+Brie Larson,"['television producer', 'producer']"
+Brie Larson,"['director', 'film director']"
+Brie Larson,"['producer', 'film producer']"
+Brie Larson,"['actor', 'television actor']"
+Brie Larson,"['actor', 'film actor']"
+Carly Rae Jepsen,['actor']
+Carly Rae Jepsen,['singer']
+Carly Rae Jepsen,"['singer-songwriter', 'singer']"
+Carly Rae Jepsen,['musician']
+Daniel Tosh,['screenwriter']
+Daniel Tosh,['actor']
+Daniel Tosh,['singer']
+Daniel Tosh,['comedian']
+Daniel Tosh,"['television producer', 'producer']"
+Daniel Tosh,"['presenter', 'television presenter']"
+Daniel Tosh,"['executive producer', 'producer']"
+Daniel Tosh,"['television director', 'director']"
+Daniel Tosh,"['voice actor', 'actor']"
+Daniel Tosh,"['director', 'film director']"
+Daniel Tosh,"['producer', 'film producer']"
+Daniel Tosh,['dancer']
+Daniel Tosh,"['actor', 'television actor']"
+Daniel Tosh,"['actor', 'film actor']"
+Daniel Tosh,"['comedian', 'stand-up comedian']"
+V. V. S. Laxman,['cricketer']
