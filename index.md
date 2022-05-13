@@ -10,7 +10,7 @@ In this challenge, participants are asked to build actual knowledge bases from L
 
 ### Dataset
 
-Download the <a class="btn actionBtn inverseBtn" href="/lm-kbc.github.io/dataset" download>dataset</a>.
+Download the <a class="btn actionBtn inverseBtn" href="/dataset" download>dataset</a>.
 
 ### Evaluation Metrics
 
