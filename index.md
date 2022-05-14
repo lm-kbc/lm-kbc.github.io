@@ -31,7 +31,7 @@ We release a dataset (train and validation) for a diverse set of 12 relations, e
 Each row in the dataset files constitutes one triple, of (1) subject-entity, (2) relation, and (3) object-entity. For (3), we sometimes provide multiple aliases, where outputing any one of them is sufficient. In particular, to faciliate usage of LMs like BERT (which are constrained by single-token predictions), we always provide one valid single-token form for every object.
 To represent subjects with zero valid objects, we introduce a special value 'NONE'. Those subjects will then have one row with that value, e.g., 'Apple Inc., CompanyParentOrganization, NONE'.
 
-<a class="btn actionBtn inverseBtn" href="/dataset" download>Download the Dataset</a>.
+<a class="btn actionBtn inverseBtn" href="/dataset" target="_blank">Download the Dataset</a>.
 
 ### Task Evaluation
 
