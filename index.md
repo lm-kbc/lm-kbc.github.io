@@ -47,7 +47,7 @@ Participants are required to submit (1) their system implementing the LM probing
 
 | Activity | Dates |
 |:---|:---:|
-| Dataset (train and val) release    | 13 May 2022         |
+| Dataset (train and val) release    | 17 May 2022         |
 | Dataset (test) release             | 11 July 2022        |
 | System + test dataset predictions submission         | 14 July 2022        |
 | Winner Announcement                | 15 August 2022      |
