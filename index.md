@@ -7,64 +7,64 @@ Pre-trained language models (LMs) have advanced a range of semantic tasks and ha
 
 ### Task Definition
 
-Formally, given the input subject-entity (`s`) and relation (`r`), the task is to predict all the correct object-entities ({<code>o<sub>1</sub></code>, <code>o<sub>2</sub></code>, ..., <code>o<sub>k</sub></code>}) using LM probing. The challenge comes with two tracks: (i) a <a href="https://aclanthology.org/N19-1423/" target="_blank">BERT</a> (BERT-base or BERT-large) track with low computational requirements, and (ii) an open track, where participants can use any LM (e.g., <a href="https://arxiv.org/pdf/1907.11692.pdf" target="blank">RoBERTa</a>, <a href="https://arxiv.org/pdf/1901.02860.pdf" target="blank">Transformer-XL</a>, <a href="https://d4mucfpksywv.cloudfront.net/better-language-models/language-models.pdf" target="_blank">GPT-2</a>, <a href="https://arxiv.org/pdf/1910.13461.pdf" target="blank">BART</a> etc.) of their choice.
+Formally, given the input subject-entity (<code>s</code>) and relation (<code>r</code>), the task is to predict all the correct object-entities ({<code>o<sub>1</sub></code>, <code>o<sub>2</sub></code>, ..., <code>o<sub>k</sub></code>}) using LM probing. The challenge comes with two tracks: (i) a <a href="https://aclanthology.org/N19-1423/" target="_blank">BERT</a> (BERT-base or BERT-large) track with low computational requirements, and (ii) an open track, where participants can use any LM (e.g., <a href="https://arxiv.org/pdf/1907.11692.pdf" target="blank">RoBERTa</a>, <a href="https://arxiv.org/pdf/1901.02860.pdf" target="blank">Transformer-XL</a>, <a href="https://d4mucfpksywv.cloudfront.net/better-language-models/language-models.pdf" target="_blank">GPT-2</a>, <a href="https://arxiv.org/pdf/1910.13461.pdf" target="blank">BART</a> etc.) of their choice.
 
 ### Dataset
 
 We release a dataset (train and validation) for a diverse set of 12 relations, each covering a different set of subject-entities and along with complete list ground truth object-entities per subject-relation-pair. The total number of object-entities varies for a given subject-relation pair. The train dataset subject-relation-object triples can be used for training the language models in any form, while validation can be used for hyperparameter tuning. Futher details on the relations are given below:
 
- <table class="center" style="width:100%;background-color:#e2d4da;font-family:Lucida Console,Courier New,monospace;">
+ <table class="center" style="width:100%;background-color:#ebe2ea;font-family:Lucida Console,Courier New,monospace;font-size:12px;">
     <tr>
         <th><strong>Relation</strong></th>
         <th><strong>Description</strong></th>
     </tr>
     <tr>
         <td>CountryBordersWithCountry</td>
-        <td>country (<code>s</code>) shares a land border with another country (<code>o</code>)</td> 
+        <td>country (<code>s</code>) shares a land border with another country (<code>o</code>)</td>
     </tr>
     <tr>
         <td>CountryOfficialLanguage</td>
-        <td>country (`s`) has an official language (`o`)</td> 
+        <td>country (<code>s</code>) has an official language (<code>o</code>)</td>
     </tr>
     <tr>
         <td>RiverBasinsCountry</td>
-        <td>country (`s`) basins in a country (`o`)</td> 
+        <td>country (<code>s</code>) basins in a country (<code>o</code>)</td>
     </tr>
     <tr>
         <td>StateSharesBorderState</td>
-        <td>state (`s`) of a country shares a land border with another state (`o`)</td> 
+        <td>state (<code>s</code>) of a country shares a land border with another state (<code>o</code>)</td>
     </tr>
     <tr>
         <td>ChemicalCompoundElement</td>
-        <td>chemical compound (`s`) consists of an element (`o`)</td> 
+        <td>chemical compound (<code>s</code>) consists of an element (<code>o</code>)</td>
     </tr>
     <tr>
         <td>PersonInstrument</td>
-        <td>person (`s`) plays an instrument (`o`)</td> 
+        <td>person (<code>s</code>) plays an instrument (<code>o</code>)</td>
     </tr>
     <tr>
         <td>PersonLanguage</td>
-        <td>person (`s`) speaks in a language (`o`)</td> 
+        <td>person (<code>s</code>) speaks in a language (<code>o</code>)</td>
     </tr>
     <tr>
         <td>PersonEmployer</td>
-        <td>person (`s`) is or was employed by a company (`o`)</td> 
+        <td>person (<code>s</code>) is or was employed by a company (<code>o</code>)</td>
     </tr>
     <tr>
         <td>PersonProfession</td>
-        <td>person (`s`) held a profession (`o`)</td> 
+        <td>person (<code>s</code>) held a profession (<code>o</code>)</td>
     </tr>
     <tr>
         <td>PersonPlaceOfDeath</td>
-        <td>person (`s`) died at a location (`o`)</td> 
+        <td>person (<code>s</code>) died at a location (<code>o</code>)</td>
     </tr>
     <tr>
         <td>PersonCauseOfDeath</td>
-        <td>person (`s`) died due to a cause (`o`)</td> 
+        <td>person (<code>s</code>) died due to a cause (<code>o</code>)</td>
     </tr>
     <tr>
         <td>CompanyParentOrganization</td>
-        <td>company (`s`) has another company (`o`) as its parent organization</td> 
+        <td>company (<code>s</code>) has another company (<code>o</code>) as its parent organization</td>
     </tr>
 </table>
 
