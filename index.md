@@ -109,7 +109,7 @@ To represent subjects with zero valid objects, we introduce a special value <em>
 
 We use a standard KBC evaluation metric, the F1-score (based on the combination of precision and recall), to compare the predicted object-entities with true object-entities on the hidden test dataset. We release a <a href="/models/bert.py">baseline</a> implementation and <a href="/evaluation.py">evaluation</a> script. The baseline model probes the BERT language model using a sample prompt like _"China shares border with \[MASK\]"_ and selects object-entities predicted in the \[MASK\] position with greater than or equal to 0.5 likelihood as outputs. Participants can use the evaluation script to compute the F1-score for assessing the performance of their systems.
 
-For general questions or discussion please use the Google group: <a href="https://groups.google.com/g/lm-kbc" target="_blank">https://groups.google.com/g/lm-kbc</a>
+For general questions or discussion please use the Google group: <a href="{{ google_group_url }}" target="_blank">{{ google_group_url }}</a>.
 
 </div>
 
