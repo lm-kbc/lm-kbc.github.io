@@ -26,6 +26,10 @@
         /* a:not(.btn) {
             color: #198754;
         } */
+
+        /* tbody tr:hover {
+            background-color: #D6EEEE;
+        } */
     </style>
 </head>
 
@@ -38,7 +42,7 @@
         <p>
             <a id="header-description" href="https://iswc2022.semanticweb.org/" target="_blank"
                 class="text-decoration-none text-black">
-                21st International Semantic Web Conference (ISWC 2022)
+                21<sup>st</sup> International Semantic Web Conference (ISWC 2022)
             </a>
         </p>
         <p>
@@ -106,9 +110,6 @@
                         models in any form, while development can be used for hyperparameter tuning. Futher details on
                         the relations are given below:</p>
                     <table class="table table-striped table-hover">
-                        <style>
-                              tr:hover {background-color: #D6EEEE;}
-                        </style>
                         <thead>
                             <tr>
                                 <th scope="col">Relation</th>
@@ -189,7 +190,7 @@
                     <h3 id="task-evaluation">Task Evaluation</h3>
                     <p>We use a standard KBC evaluation metric, the F1-score (based on the combination of precision and
                         recall), to compare the predicted object-entities with true object-entities on the hidden test
-                        dataset. We release a <a href="https://github.com/lm-kbc/dataset/blob/main/bert.py"
+                        dataset. We release a <a href="https://github.com/lm-kbc/dataset/blob/main/baseline.py"
                             target="_blank">baseline</a>
                         implementation and <a href="https://github.com/lm-kbc/dataset/blob/main/evaluation.py"
                             target="_blank">evaluation</a> script. The baseline model probes the BERT language model
@@ -206,19 +207,25 @@
                     <h3 id="submission-details">Submission Details</h3>
                     <p>Participants are required to submit:</p>
                     <ol>
-                        <li>a system implementing the LM probing approach</li>
-                        <li>the output for the test dataset subject-entites</li>
+                        <li>a system implementing the LM probing approach,</li>
+                        <li>the output for the test dataset subject-entites,</li>
                         <li>a system description in PDF format (no
-                            longer than 12 pages, <a href="https://www.overleaf.com/latex/templates/springer-lecture-notes-in-computer-science/kzwwpvhwnvfj#.WtR5Hy5ua71" target="_blank">LNCS style</a>)</li>
+                            longer than 12 pages, <a
+                                href="https://www.overleaf.com/latex/templates/springer-lecture-notes-in-computer-science/kzwwpvhwnvfj#.WtR5Hy5ua71"
+                                target="_blank">LNCS style</a>) uploaded to
+                            <a href="https://easychair.org/conferences/?conf=lmkbc2022" target="_blank">Easychair</a>.
+                        </li>
                     </ol>
                     <p>
                         The test dataset is initially hidden to preserve the
-                        integrity of results, and is released <span class="text-decoration-underline">3 days</span>
+                        integrity of results, and will be released <span class="text-decoration-underline">3 days</span>
                         before system submission deadline. The output files for the test subject-entities must be
-                        formatted like the given dataset files (one for each relation in .csv form), and submitted along with the
-                        system. The top performing systems will get an opportunity to present their ideas and results during
+                        formatted like the given dataset files (one for each relation in .csv form), and submitted along
+                        with the
+                        system. The top performing systems will get an opportunity to present their ideas and results
+                        during
                         the ISWC 2022 conference, and will be published in the CEUR challenge proceedings. System
-                        descriptions should be uploaded to 
+                        descriptions should be uploaded to
                         <a href="https://easychair.org/conferences/?conf=lmkbc2022" target="_blank">Easychair</a>.
                     </p>
                 </div>
