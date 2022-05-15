@@ -1,5 +1,6 @@
 show_downloads: true
 google_analytics:
+theme: jekyll-theme-cayman
 markdown: GFM
 head_title: LM-KBC Challenge @ ISWC 2022
 dataset:
