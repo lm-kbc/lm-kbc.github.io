@@ -88,7 +88,7 @@ We release a dataset (train and development) for a diverse set of 12 relations, 
 Each row in the dataset files constitutes one triple, of (1) subject-entity, (2) relation, and (3) object-entity. For (3), we sometimes provide multiple aliases, where outputing any one of them is sufficient. In particular, to faciliate usage of LMs like BERT (which are constrained by single-token predictions), we provide atleast one valid single-token form for every object.
 To represent subjects with zero valid objects, we introduce a special value <em>NONE</em>. Those subjects will then have one row with that value, e.g., ( Apple Inc., CompanyParentOrganization, <em>NONE</em> ).
 
-<div style="text-align:center;">
+<div style="text-align:center;margin-top:48px;">
  <a href="https://github.com/lm-kbc/lm-kbc.github.io/blob/main/dataset" 
     target="_blank"
     class="btn"
