@@ -1,8 +1,0 @@
-show_downloads: true
-google_analytics:
-theme: jekyll-theme-cayman
-markdown: GFM
-head_title: LM-KBC Challenge @ ISWC 2022
-dataset:
-  dataset_url: https://github.com/lm-kbc/lm-kbc.github.io/blob/main/dataset
-google_group_url: https://groups.google.com/g/lm-kbc
