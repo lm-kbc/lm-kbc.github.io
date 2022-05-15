@@ -3,16 +3,17 @@ title: LM-KBC
 description: Knowledge Base Construction from Pre-trained Language Models
 ---
 
-Pre-trained language models (LMs) have advanced a range of semantic tasks and have also shown promise for knowledge extraction from the models itself. Although several works have explored this ability in a setting called LM probing using prompting or prompt-based learning (<a href="https://arxiv.org/pdf/2107.13586.pdf">Liu et al., 2021</a>), the viability of _knowledge base construction_ from LMs has not yet been explored. In this challenge, we invite participants to build actual knowledge bases from LMs, for given subjects and relations. In crucial difference to existing probing benchmarks like LAMA (<a href="https://arxiv.org/pdf/1909.01066.pdf" target="_blank">Petroni et al., 2019</a>), we make no simplifying assumptions on relation cardinalities, i.e., a subject-entity can stand in relation with zero, one, or many object-entities. Furthermore, submissions need to go beyond just ranking the predictions, and materialize outputs, which are evaluated by established KB metrics of precision and recall.
+Pre-trained language models (LMs) have advanced a range of semantic tasks and have also shown promise for knowledge extraction from the models itself. Although several works have explored this ability in a setting called LM probing using prompting or prompt-based learning (<a href="https://arxiv.org/pdf/2107.13586.pdf" target="_blank">Liu et al., 2021</a>), the viability of _knowledge base construction_ from LMs has not yet been explored. In this challenge, we invite participants to build actual knowledge bases from LMs, for given subjects and relations. In crucial difference to existing probing benchmarks like LAMA (<a href="https://arxiv.org/pdf/1909.01066.pdf" target="_blank">Petroni et al., 2019</a>), we make no simplifying assumptions on relation cardinalities, i.e., a subject-entity can stand in relation with zero, one, or many object-entities. Furthermore, submissions need to go beyond just ranking the predictions, and materialize outputs, which are evaluated by established KB metrics of precision and recall.
 
 ## Table of Contents
 
-- [Task Definition](#sec-task-definition)
-- [Dataset](#sec-dataset)
-- [Task Evaluation](#sec-task-evaluation)
-- [Submission Details](#sec-submission-details)
-- [Important Dates](#sec-important-dates)
-- [Organizers](#sec-organizers)
+- [Table of Contents](#table-of-contents)
+  - [Task Definition](#task-definition)
+  - [Dataset](#dataset)
+  - [Task Evaluation](#task-evaluation)
+  - [Submission Details](#submission-details)
+  - [Important Dates](#important-dates)
+  - [Organizers](#organizers)
 
 <div id='sec-task-definition'/>
 
