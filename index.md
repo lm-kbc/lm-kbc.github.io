@@ -7,7 +7,7 @@ Pre-trained language models (LMs) have advanced a range of semantic tasks and ha
 
 ### Task Definition
 
-Formally, given the input subject-entity (`s`) and relation (`r`), the task is to predict all the correct object-entities ({<code>o<sub>1</sub></code>, <code>o<sub>2</sub></code>, ..., <code>o<sub>k</sub></code>}) using LM probing. The challenge comes with two tracks: (i) a BERT-type (BERT-base, BERT-large etc.) track with low computational requirements, and (ii) an open track, where participants can use any LM (e.g., <a href="https://d4mucfpksywv.cloudfront.net/better-language-models/language-models.pdf" target="_blank">GPT-2</a>, <a href="https://arxiv.org/pdf/1910.13461.pdf" target="blank">BART</a> etc.) of their choice.
+Formally, given the input subject-entity (`s`) and relation (`r`), the task is to predict all the correct object-entities ({<code>o<sub>1</sub></code>, <code>o<sub>2</sub></code>, ..., <code>o<sub>k</sub></code>}) using LM probing. The challenge comes with two tracks: (i) a <a href="https://aclanthology.org/N19-1423/" target="_blank">BERT</a> (BERT-base or BERT-large) track with low computational requirements, and (ii) an open track, where participants can use any LM (e.g., <a href="https://arxiv.org/pdf/1907.11692.pdf" target="blank">RoBERTA</a>, <a href="https://arxiv.org/pdf/1901.02860.pdf" target="blank">Transformer-XL</a>, <a href="https://d4mucfpksywv.cloudfront.net/better-language-models/language-models.pdf" target="_blank">GPT-2</a>, <a href="https://arxiv.org/pdf/1910.13461.pdf" target="blank">BART</a> etc.) of their choice.
 
 ### Dataset
 
