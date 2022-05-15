@@ -3,7 +3,7 @@ title: LM-KBC
 description: Knowledge Base Construction from Pre-trained Language Models
 ---
 
-Pre-trained language models (LMs) have advanced a range of semantic tasks and have also shown promise for knowledge extraction from the models itself. Although several works have explored this ability in a setting called LM probing using prompting, the viability of _knowledge base construction_ from LMs has not yet been explored. In this challenge, we invite participants to build actual knowledge bases from LMs, for given subjects and relations. In crucial difference to existing probing benchmarks like LAMA (<a href="https://arxiv.org/pdf/1909.01066.pdf" target="_blank">Petroni et al., 2019</a>), we make no simplifying assumptions on relation cardinalities, i.e., a subject-entity can stand in relation with zero, one, or many object-entities. Furthermore, submissions need to go beyond just ranking the predictions, and materialize outputs, which are evaluated by established KB metrics of precision and recall.
+Pre-trained language models (LMs) have advanced a range of semantic tasks and have also shown promise for knowledge extraction from the models itself. Although several works have explored this ability in a setting called LM probing using prompting or prompt-based learning (<a href="https://arxiv.org/pdf/2107.13586.pdf">Liu et al., 2021</a>), the viability of _knowledge base construction_ from LMs has not yet been explored. In this challenge, we invite participants to build actual knowledge bases from LMs, for given subjects and relations. In crucial difference to existing probing benchmarks like LAMA (<a href="https://arxiv.org/pdf/1909.01066.pdf" target="_blank">Petroni et al., 2019</a>), we make no simplifying assumptions on relation cardinalities, i.e., a subject-entity can stand in relation with zero, one, or many object-entities. Furthermore, submissions need to go beyond just ranking the predictions, and materialize outputs, which are evaluated by established KB metrics of precision and recall.
 
 ### Task Definition
 
@@ -73,7 +73,7 @@ We release a dataset (train and development) for a diverse set of 12 relations, 
 </table>
 
 Each row in the dataset files constitutes one triple, of (1) subject-entity, (2) relation, and (3) object-entity. For (3), we sometimes provide multiple aliases, where outputing any one of them is sufficient. In particular, to faciliate usage of LMs like BERT (which are constrained by single-token predictions), we provide atleast one valid single-token form for every object.
-To represent subjects with zero valid objects, we introduce a special value <em>NONE</em>. Those subjects will then have one row with that value, e.g., (Apple Inc., CompanyParentOrganization, <em>NONE</em>).
+To represent subjects with zero valid objects, we introduce a special value <em>NONE</em>. Those subjects will then have one row with that value, e.g., ( Apple Inc., CompanyParentOrganization, <em>NONE</em> ).
 
 <div style="text-align:center;">
  <a href="https://github.com/lm-kbc/lm-kbc.github.io/blob/main/dataset" 
