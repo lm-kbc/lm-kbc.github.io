@@ -13,58 +13,58 @@ Formally, given the input subject-entity (<code>s</code>) and relation (<code>r<
 
 We release a dataset (train and validation) for a diverse set of 12 relations, each covering a different set of subject-entities and along with complete list ground truth object-entities per subject-relation-pair. The total number of object-entities varies for a given subject-relation pair. The train dataset subject-relation-object triples can be used for training the language models in any form, while validation can be used for hyperparameter tuning. Futher details on the relations are given below:
 
- <table class="center" style="width:100%;background-color:#ebe2ea;font-family:Lucida Console,Courier New,monospace;font-size:12px;">
+ <table class="center" style="width:100%;background-color:#ebe2ea;font-family:Lucida Console,Courier New,monospace;font-size:13px;">
     <tr>
         <th><strong>Relation</strong></th>
         <th><strong>Description</strong></th>
     </tr>
     <tr>
         <td>CountryBordersWithCountry</td>
-        <td>country (<code>s</code>) shares a land border with another country (<code>o</code>)</td>
+        <td>country (s) shares a land border with another country (o)</td>
     </tr>
     <tr>
         <td>CountryOfficialLanguage</td>
-        <td>country (<code>s</code>) has an official language (<code>o</code>)</td>
+        <td>country (s) has an official language (o)</td>
     </tr>
     <tr>
         <td>RiverBasinsCountry</td>
-        <td>country (<code>s</code>) basins in a country (<code>o</code>)</td>
+        <td>country (s) basins in a country (o)</td>
     </tr>
     <tr>
         <td>StateSharesBorderState</td>
-        <td>state (<code>s</code>) of a country shares a land border with another state (<code>o</code>)</td>
+        <td>state (s) of a country shares a land border with another state (o)</td>
     </tr>
     <tr>
         <td>ChemicalCompoundElement</td>
-        <td>chemical compound (<code>s</code>) consists of an element (<code>o</code>)</td>
+        <td>chemical compound (s) consists of an element (o)</td>
     </tr>
     <tr>
         <td>PersonInstrument</td>
-        <td>person (<code>s</code>) plays an instrument (<code>o</code>)</td>
+        <td>person (s) plays an instrument (o)</td>
     </tr>
     <tr>
         <td>PersonLanguage</td>
-        <td>person (<code>s</code>) speaks in a language (<code>o</code>)</td>
+        <td>person (s) speaks in a language (o)</td>
     </tr>
     <tr>
         <td>PersonEmployer</td>
-        <td>person (<code>s</code>) is or was employed by a company (<code>o</code>)</td>
+        <td>person (s) is or was employed by a company (o)</td>
     </tr>
     <tr>
         <td>PersonProfession</td>
-        <td>person (<code>s</code>) held a profession (<code>o</code>)</td>
+        <td>person (s) held a profession (o)</td>
     </tr>
     <tr>
         <td>PersonPlaceOfDeath</td>
-        <td>person (<code>s</code>) died at a location (<code>o</code>)</td>
+        <td>person (s) died at a location (o)</td>
     </tr>
     <tr>
         <td>PersonCauseOfDeath</td>
-        <td>person (<code>s</code>) died due to a cause (<code>o</code>)</td>
+        <td>person (s) died due to a cause (o)</td>
     </tr>
     <tr>
         <td>CompanyParentOrganization</td>
-        <td>company (<code>s</code>) has another company (<code>o</code>) as its parent organization</td>
+        <td>company (s) has another company (o) as its parent organization</td>
     </tr>
 </table>
 
