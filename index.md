@@ -20,6 +20,8 @@ Pre-trained language models (LMs) have advanced a range of semantic tasks and ha
 
 Formally, given the input subject-entity (<code>s</code>) and relation (<code>r</code>), the task is to predict all the correct object-entities ({<code>o<sub>1</sub></code>, <code>o<sub>2</sub></code>, ..., <code>o<sub>k</sub></code>}) using LM probing. The challenge comes with two tracks: (i) a <a href="https://aclanthology.org/N19-1423/" target="_blank">BERT</a> (BERT-base or BERT-large) track with low computational requirements, and (ii) an open track, where participants can use any LM (e.g., <a href="https://arxiv.org/pdf/1907.11692.pdf" target="blank">RoBERTa</a>, <a href="https://arxiv.org/pdf/1901.02860.pdf" target="blank">Transformer-XL</a>, <a href="https://d4mucfpksywv.cloudfront.net/better-language-models/language-models.pdf" target="_blank">GPT-2</a>, <a href="https://arxiv.org/pdf/1910.13461.pdf" target="blank">BART</a> etc.) of their choice.
 
+</div>
+
 <div id='sec-dataset'/>
 
 ### Dataset
@@ -99,6 +101,8 @@ To represent subjects with zero valid objects, we introduce a special value <em>
  </a>
 </div>
 
+</div>
+
 <div id='sec-task-evaluation'/>
 
 ### Task Evaluation
@@ -107,11 +111,15 @@ We use a standard KBC evaluation metric, the F1-score (based on the combination 
 
 For general questions or discussion please use the Google group: <a href="https://groups.google.com/g/lm-kbc" target="_blank">https://groups.google.com/g/lm-kbc</a>
 
+</div>
+
 <div id='sec-submission-details'/>
 
 ### Submission Details
 
 Participants are required to submit (1) their system implementing the LM probing approach, (2) the output for the test dataset subject-entites, (3) a system description in PDF format (no longer than 12 pages, LNCS style). The test dataset is initially hidden to preserve the integrity of results, and is released 3 days before system submission deadline. The output files for the test subject-entities must be formatted like the train dataset files (one for each relation), and submitted along with the system. Top performing systems will get an opportunity to present their ideas and results during the ISWC 2022 conference. System descriptions should be submitted on Easychair (link soon here).
+
+</div>
 
 <div id='sec-important-dates'/>
 
@@ -126,10 +134,14 @@ Participants are required to submit (1) their system implementing the LM probing
 | ISWC Invitations                   | 15 August 2022      |
 | ISWC Presentations                 | 23-27 October 2022  |
 
-<div id='sec-organizers'/>
+</div>
+
+<div id='sec-organizers'>
 
 ### Organizers
 
 - <a href="https://people.mpi-inf.mpg.de/~ssinghan/" target="_blank">Sneha Singhania</a>, Max Planck Institute for Informatics, Germany
 - <a href="https://www.tuan-phong.com/" target="_blank">Tuan-Phong Nguyen</a>, Max Planck Institute for Informatics, Germany
 - <a href="http://simonrazniewski.com/" target="_blank">Simon Razniewski</a>, Max Planck Institute for Informatics, Germany
+
+</div>
