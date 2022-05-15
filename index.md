@@ -35,7 +35,7 @@ To represent subjects with zero valid objects, we introduce a special value 'NON
  <a href="https://github.com/lm-kbc/lm-kbc.github.io/blob/main/dataset" 
     target="_blank"
     class="btn"
-    style="background-color:#1e6bb8;">
+    style="background-color:#1e6bb8;color:#ffffff;">
   <strong>
    Download the Dataset
    </strong>
