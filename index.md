@@ -118,7 +118,7 @@ For general questions or discussion please use the Google group: <a href="https:
 
 ### Submission Details
 
-Participants are required to submit (1) their system implementing the LM probing approach, (2) the output for the test dataset subject-entites, (3) a system description in PDF format (no longer than 12 pages, LNCS style). The test dataset is initially hidden to preserve the integrity of results, and is released 3 days before system submission deadline. The output files for the test subject-entities must be formatted like the train dataset files (one for each relation), and submitted along with the system. Top performing systems will get an opportunity to present their ideas and results during the ISWC 2022 conference. System descriptions should be submitted on Easychair (link soon here).
+Participants are required to submit (1) their system implementing the LM probing approach, (2) the output for the test dataset subject-entites, (3) a system description in PDF format (no longer than 12 pages, LNCS style). The test dataset is initially hidden to preserve the integrity of results, and is released 3 days before system submission deadline. The output files for the test subject-entities must be formatted like the train dataset files (one for each relation), and submitted along with the system. Top performing systems will get an opportunity to present their ideas and results during the ISWC 2022 conference, and will be published in the CEUR challenge proceedings. System descriptions should be submitted on <a href="https://easychair.org/conferences/?conf=lmkbc2022">Easychair</a>.
 
 </div>
 
