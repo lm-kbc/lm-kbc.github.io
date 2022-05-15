@@ -13,14 +13,14 @@ Formally, given the input subject-entity (`s`) and relation (`r`), the task is t
 
 We release a dataset (train and validation) for a diverse set of 12 relations, each covering a different set of subject-entities and along with complete list ground truth object-entities per subject-relation-pair. The total number of object-entities varies for a given subject-relation pair. The train dataset subject-relation-object triples can be used for training the language models in any form, while validation can be used for hyperparameter tuning. Futher details on the relations are given below:
 
- <table class="center" style="width:80%;background-color:#e2d4da;font-family:Lucida Console,Courier New,monospace;">
+ <table class="center" style="width:100%;background-color:#e2d4da;font-family:Lucida Console,Courier New,monospace;">
     <tr>
         <th><strong>Relation</strong></th>
         <th><strong>Description</strong></th>
     </tr>
     <tr>
         <td>CountryBordersWithCountry</td>
-        <td>country (`s`) shares a land border with another country (`o`)</td> 
+        <td>country (<code>s</code>) shares a land border with another country (<code>o</code>)</td> 
     </tr>
     <tr>
         <td>CountryOfficialLanguage</td>
