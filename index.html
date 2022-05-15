@@ -109,7 +109,8 @@
                         pair. The train dataset subject-relation-object triples can be used for training the language
                         models in any form, while development can be used for hyperparameter tuning. Futher details on
                         the relations are given below:</p>
-                    <table class="table table-striped table-hover">
+
+                    <!-- <table class="table table-striped table-hover">
                         <thead>
                             <tr>
                                 <th scope="col">Relation</th>
@@ -169,7 +170,443 @@
                                     organization</td>
                             </tr>
                         </tbody>
+                    </table> -->
+
+                    <!-- reference link: https://codepen.io/aardrian/pen/VoQbLm -->
+                    <table class="cell">
+                        <link rel="stylesheet" type="text/css" href="style.css">
+                        <script src="script.js"></script>
+                        <thead>
+                        <tr>
+                            <th><span class="visually-hidden">Toggle</span></th>
+                            <th>Relation</th>
+                            <th>Description</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>
+                            <button type="button" id="btCBb" aria-expanded="false" onclick="toggle(this.id,'#CB01b,#CB02b,#CB03b,#CB04b,#CB05b');" aria-controls="CB01b CB02b CB03b CB04b CB05b" aria-label="3 more from" aria-labelledby="btnCBb lblCBb">
+                                <svg xmlns="\http://www.w3.org/2000/svg&quot;" viewBox="0 0 80 80" focusable="false"><path d="M70.3 13.8L40 66.3 9.7 13.8z"></path></svg>
+                            </button>
+                            </td>
+                            <td id="lblCBb"><samp>CountryBordersWithCountry</samp></td>
+                            <td>country (<code>s</code>) shares a land border with another country (<code>o</code>)</td>
+                        </tr>
+                        <tr id="CB01b" class="hidden">
+                            <td></td>
+                            <td>(Canada, <samp>CountryBordersWithCountry</samp>, Greenland)</td>
+                            <td></td>
+                        </tr>
+                        <tr id="CB02b" class="hidden">
+                            <td></td>
+                            <td>(Canada, <samp>CountryBordersWithCountry</samp>, [USA, United States of America])</td>
+                            <td></td>
+                        </tr>
+                        <tr id="CB03b" class="hidden">
+                            <td></td>
+                            <td>(Norway, <samp>CountryBordersWithCountry</samp>, Finland)</td>
+                            <td></td>
+                        </tr>
+                        <tr id="CB04b" class="hidden">
+                            <td></td>
+                            <td>(Norway, <samp>CountryBordersWithCountry</samp>, Sweden)</td>
+                            <td></td>
+                        </tr>
+                        <tr id="CB05b" class="hidden">
+                            <td></td>
+                            <td>(Norway, <samp>CountryBordersWithCountry</samp>, Russia)</td>
+                            <td></td>
+                        </tr>
+                        
+                        <tr>
+                            <td>
+                            <button type="button" id="btnOFb" aria-expanded="false" onclick="toggle(this.id,'#OF01b,#OF02b,#OF03b,#OF04b,#OF05b');" aria-controls="OF01b OF02b OF03b OF04b OF05b" aria-label="3 more from" aria-labelledby="btnOFb lblOFb">
+                                <svg xmlns="\http://www.w3.org/2000/svg&quot;" viewBox="0 0 80 80" focusable="false"><path d="M70.3 13.8L40 66.3 9.7 13.8z"></path></svg>
+                            </button>
+                            </td>
+                            <td id="lblOFb"><samp>CountryOfficialLanguage</samp></td>
+                            <td>country (<code>s</code>) has an official language (<code>o</code>)</td>
+                        </tr>
+                        <tr id="OF01b" class="hidden">
+                            <td></td>
+                            <td>(Belarus, <samp>CountryOfficialLanguage</samp>, Belarusian)</td>
+                            <td></td>
+                        </tr>
+                        <tr id="OF02b" class="hidden">
+                            <td></td>
+                            <td>(Belarus, <samp>CountryOfficialLanguage</samp>, Russian)</td>
+                            <td></td>
+                        </tr>
+                        <tr id="OF03b" class="hidden">
+                            <td></td>
+                            <td>(Seychelles, <samp>CountryOfficialLanguage</samp>, French)</td>
+                            <td></td>
+                        </tr>
+                        <tr id="OF04b" class="hidden">
+                            <td></td>
+                            <td>(Seychelles, <samp>CountryOfficialLanguage</samp>, English)</td>
+                            <td></td>
+                        </tr>
+                        <tr id="OF05b" class="hidden">
+                            <td></td>
+                            <td>(Seychelles, <samp>CountryOfficialLanguage</samp>, [Seychellois Creole, Creole])</td>
+                            <td></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>
+                            <button type="button" id="btnRBb" aria-expanded="false" onclick="toggle(this.id,'#RB01b,#RB02b,#RB03b,#RB04b,#RB05b');" aria-controls="RB01b RB02b RB03b RB04b RB05b" aria-label="3 more from" aria-labelledby="btnRBb lblRBb">
+                                <svg xmlns="\http://www.w3.org/2000/svg&quot;" viewBox="0 0 80 80" focusable="false"><path d="M70.3 13.8L40 66.3 9.7 13.8z"></path></svg>
+                            </button>
+                            </td>
+                            <td id="lblRBb"><samp>RiverBasinsCountry</samp></td>
+                            <td>country (<code>s</code>) basins in a country (<code>o</code>)</td>
+                        </tr>
+                        <tr id="RB01b" class="hidden">
+                            <td></td>
+                            <td>(Elbe, <samp>RiverBasinsCountry</samp>, Germany)</td>
+                            <td></td>
+                        </tr>
+                        <tr id="RB02b" class="hidden">
+                            <td></td>
+                            <td>(Elbe, <samp>RiverBasinsCountry</samp>, Poland)</td>
+                            <td></td>
+                        </tr>
+                        <tr id="RB03b" class="hidden">
+                            <td></td>
+                            <td>(Elbe, <samp>RiverBasinsCountry</samp>, Austria)</td>
+                            <td></td>
+                        </tr>
+                        <tr id="RB04b" class="hidden">
+                            <td></td>
+                            <td>(Elbe, <samp>RiverBasinsCountry</samp>, [Czech Republic, Czechia])</td>
+                            <td></td>
+                        </tr>
+                        <tr id="RB05b" class="hidden">
+                            <td></td>
+                            <td>(Drin, <samp>RiverBasinsCountry</samp>, Albania)</td>
+                            <td></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>
+                            <button type="button" id="btnSBb" aria-expanded="false" onclick="toggle(this.id,'#SB01b,#SB02b,#SB03b,#SB04b,#SB05b');" aria-controls="SB01b SB02b SB03b SB04b SB05b" aria-label="3 more from" aria-labelledby="btnSBb lblSBb">
+                                <svg xmlns="\http://www.w3.org/2000/svg&quot;" viewBox="0 0 80 80" focusable="false"><path d="M70.3 13.8L40 66.3 9.7 13.8z"></path></svg>
+                            </button>
+                            </td>
+                            <td id="lblSBb"><samp>StateSharesBorderState</samp></td>
+                            <td>state (<code>s</code>) of a country shares a land border with another state (<code>o</code>)</td>
+                        </tr>
+                        <tr id="SB01b" class="hidden">
+                            <td></td>
+                            <td>(Oregon, <samp>StateSharesBorderState</samp>, California)</td>
+                            <td></td>
+                        </tr>
+                        <tr id="SB02b" class="hidden">
+                            <td></td>
+                            <td>(Oregon, <samp>StateSharesBorderState</samp>, Idaho)</td>
+                            <td></td>
+                        </tr>
+                        <tr id="SB03b" class="hidden">
+                            <td></td>
+                            <td>(Oregon, <samp>StateSharesBorderState</samp>, Washington)</td>
+                            <td></td>
+                        </tr>
+                        <tr id="SB04b" class="hidden">
+                            <td></td>
+                            <td>(Oregon, <samp>StateSharesBorderState</samp>, Nevada)</td>
+                            <td></td>
+                        </tr>
+                        <tr id="SB05b" class="hidden">
+                            <td></td>
+                            <td>(Florida, <samp>StateSharesBorderState</samp>, Georgia)</td>
+                            <td></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>
+                            <button type="button" id="btnCCb" aria-expanded="false" onclick="toggle(this.id,'#CC01b,#CC02b,#CC03b,#CC04b,#CC05b');" aria-controls="CC01b CC02b CC03b CC04b CC05b" aria-label="3 more from" aria-labelledby="btnCCb lblCCb">
+                                <svg xmlns="\http://www.w3.org/2000/svg&quot;" viewBox="0 0 80 80" focusable="false"><path d="M70.3 13.8L40 66.3 9.7 13.8z"></path></svg>
+                            </button>
+                            </td>
+                            <td id="lblCCb"><samp>ChemicalCompoundElement</samp></td>
+                            <td>chemical compound (<code>s</code>) consists of an element (<code>o</code>)</td>
+                        </tr>
+                        <tr id="CC01b" class="hidden">
+                            <td></td>
+                            <td>(Water, <samp>ChemicalCompoundElement</samp>, Hydrogen)</td>
+                            <td></td>
+                        </tr>
+                        <tr id="CC02b" class="hidden">
+                            <td></td>
+                            <td>(Water, <samp>ChemicalCompoundElement</samp>, Oxygen)</td>
+                            <td></td>
+                        </tr>
+                        <tr id="CC03b" class="hidden">
+                            <td></td>
+                            <td>(Borax, <samp>ChemicalCompoundElement</samp>, Boron)</td>
+                            <td></td>
+                        </tr>
+                        <tr id="CC04b" class="hidden">
+                            <td></td>
+                            <td>(Borax, <samp>ChemicalCompoundElement</samp>, Oxygen)</td>
+                            <td></td>
+                        </tr>
+                        <tr id="CC05b" class="hidden">
+                            <td></td>
+                            <td>(Borax, <samp>ChemicalCompoundElement</samp>, Sodium)</td>
+                            <td></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>
+                            <button type="button" id="btnPIb" aria-expanded="false" onclick="toggle(this.id,'#PI01b,#PI02b,#PI03b,#PI04b,#PI05b');" aria-controls="PI01b PI02b PI03b PI04b PI05b" aria-label="3 more from" aria-labelledby="btnPIb lblPIb">
+                                <svg xmlns="\http://www.w3.org/2000/svg&quot;" viewBox="0 0 80 80" focusable="false"><path d="M70.3 13.8L40 66.3 9.7 13.8z"></path></svg>
+                            </button>
+                            </td>
+                            <td id="lblPIb"><samp>PersonInstrument</samp></td>
+                            <td>person (<code>s</code>) plays an instrument (<code>o</code>)</td>
+                        </tr>
+                        <tr id="PI01b" class="hidden">
+                            <td></td>
+                            <td>(Chester Bennington, <samp>PersonInstrument</samp>, NONE)</td>
+                            <td></td>
+                        </tr>
+                        <tr id="PI02b" class="hidden">
+                            <td></td>
+                            <td>(Ringo Starr, <samp>PersonInstrument</samp>, Guitar)</td>
+                            <td></td>
+                        </tr>
+                        <tr id="PI03b" class="hidden">
+                            <td></td>
+                            <td>(Ringo Starr, <samp>PersonInstrument</samp>, Drum)</td>
+                            <td></td>
+                        </tr>
+                        <tr id="PI04b" class="hidden">
+                            <td></td>
+                            <td>(Ringo Starr, <samp>PersonInstrument</samp>, [Percussion Instrument, Percussion])</td>
+                            <td></td>
+                        </tr>
+                        <tr id="PI05b" class="hidden">
+                            <td></td>
+                            <td>(Leeteuk, <samp>PersonInstrument</samp>, Piano)</td>
+                            <td></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>
+                            <button type="button" id="btnPLb" aria-expanded="false" onclick="toggle(this.id,'#PL01b,#PL02b,#PL03b,#PL04b,#PL05b');" aria-controls="PL01b PL02b PL03b PL04b PL05b" aria-label="3 more from" aria-labelledby="btnPLb lblPLb">
+                                <svg xmlns="\http://www.w3.org/2000/svg&quot;" viewBox="0 0 80 80" focusable="false"><path d="M70.3 13.8L40 66.3 9.7 13.8z"></path></svg>
+                            </button>
+                            </td>
+                            <td id="lblPLb"><samp>PersonLanguage</samp></td>
+                            <td>person (<code>s</code>) speaks in a language (<code>o</code>)</td>
+                        </tr>
+                        <tr id="PL01b" class="hidden">
+                            <td></td>
+                            <td>(Bruno Mars, <samp>PersonLanguage</samp>, Spanish)</td>
+                            <td></td>
+                        </tr>
+                        <tr id="PL02b" class="hidden">
+                            <td></td>
+                            <td>(Bruno Mars, <samp>PersonLanguage</samp>, English)</td>
+                            <td></td>
+                        </tr>
+                        <tr id="PL03b" class="hidden">
+                            <td></td>
+                            <td>(Aamir Khan, <samp>PersonLanguage</samp>, Hindi)</td>
+                            <td></td>
+                        </tr>
+                        <tr id="PL04b" class="hidden">
+                            <td></td>
+                            <td>(Aamir Khan, <samp>PersonLanguage</samp>, Urdu)</td>
+                            <td></td>
+                        </tr>
+                        <tr id="PL05b" class="hidden">
+                            <td></td>
+                            <td>(Aamir Khan, <samp>PersonLanguage</samp>, English)</td>
+                            <td></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>
+                            <button type="button" id="btnPEb" aria-expanded="false" onclick="toggle(this.id,'#PE01b,#PE02b,#PE03b,#PE04b,#PE05b');" aria-controls="PE01b PE02b PE03b PE04b PE05b" aria-label="3 more from" aria-labelledby="btnPEb lblPEb">
+                                <svg xmlns="\http://www.w3.org/2000/svg&quot;" viewBox="0 0 80 80" focusable="false"><path d="M70.3 13.8L40 66.3 9.7 13.8z"></path></svg>
+                            </button>
+                            </td>
+                            <td id="lblPEb"><samp>PersonEmployer</samp></td>
+                            <td>person (<code>s</code>) is or was employed by a company (<code>o</code>)</td>
+                        </tr>
+                        <tr id="PE01b" class="hidden">
+                            <td></td>
+                            <td>(Susan Wojcicki, <samp>PersonEmployer</samp>, Google)</td>
+                            <td></td>
+                        </tr>
+                        <tr id="PE02b" class="hidden">
+                            <td></td>
+                            <td>(Steve Wozniak, <samp>PersonEmployer</samp>, [Apple Inc, Apple])</td>
+                            <td></td>
+                        </tr>
+                        <tr id="PE03b" class="hidden">
+                            <td></td>
+                            <td>(Steve Wozniak, <samp>PersonEmployer</samp>, [Hewlett-Packard, HP])</td>
+                            <td></td>
+                        </tr>
+                        <tr id="PE04b" class="hidden">
+                            <td></td>
+                            <td>(Steve Wozniak, <samp>PersonEmployer</samp>, University of Technology Sydney)</td>
+                            <td></td>
+                        </tr>
+                        <tr id="PE05b" class="hidden">
+                            <td></td>
+                            <td>(Steve Wozniak, <samp>PersonEmployer</samp>, [Atari, Atari Inc])</td>
+                            <td></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>
+                            <button type="button" id="btnPPb" aria-expanded="false" onclick="toggle(this.id,'#PP01b,#PP02b,#PP03b,#PP04b,#PP05b');" aria-controls="PP01b PP02b PP03b PP04b PP05b" aria-label="3 more from" aria-labelledby="btnPPb lblPPb">
+                                <svg xmlns="\http://www.w3.org/2000/svg&quot;" viewBox="0 0 80 80" focusable="false"><path d="M70.3 13.8L40 66.3 9.7 13.8z"></path></svg>
+                            </button>
+                            </td>
+                            <td id="lblPPb"><samp>PersonProfession</samp></td>
+                            <td>person (<code>s</code>) held a profession (<code>o</code>)</td>
+                        </tr>
+                        <tr id="PP01b" class="hidden">
+                            <td></td>
+                            <td>(Nicolas Sarkozy, <samp>PersonProfession</samp>, Lawyer)</td>
+                            <td></td>
+                        </tr>
+                        <tr id="PP02b" class="hidden">
+                            <td></td>
+                            <td>(Nicolas Sarkozy, <samp>PersonProfession</samp>, Politician)</td>
+                            <td></td>
+                        </tr>
+                        <tr id="PP03b" class="hidden">
+                            <td></td>
+                            <td>(Nicolas Sarkozy, <samp>PersonProfession</samp>, Statesperson)</td>
+                            <td></td>
+                        </tr>
+                        <tr id="PP04b" class="hidden">
+                            <td></td>
+                            <td>(Shakira, <samp>PersonProfession</samp>, [Singer-Songwriter, Singer, Songwriter])</td>
+                            <td></td>
+                        </tr>
+                        <tr id="PP05b" class="hidden">
+                            <td></td>
+                            <td>(Shakira, <samp>PersonProfession</samp>, Guitarist)</td>
+                            <td></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>
+                            <button type="button" id="btnPDb" aria-expanded="false" onclick="toggle(this.id,'#PD01b,#PD02b,#PD03b,#PD04b,#PD05b');" aria-controls="PD01b PD02b PD03b PD04b PD05b" aria-label="3 more from" aria-labelledby="btnPDb lblPDb">
+                                <svg xmlns="\http://www.w3.org/2000/svg&quot;" viewBox="0 0 80 80" focusable="false"><path d="M70.3 13.8L40 66.3 9.7 13.8z"></path></svg>
+                            </button>
+                            </td>
+                            <td id="lblPDb"><samp>PersonPlaceOfDeath</samp></td>
+                            <td>person (<code>s</code>) died at a location (<code>o</code>)</td>
+                        </tr>
+                        <tr id="PD01b" class="hidden">
+                            <td></td>
+                            <td>(Elvis Presley, <samp>PersonPlaceOfDeath</samp>, Graceland)</td>
+                            <td></td>
+                        </tr>
+                        <tr id="PD02b" class="hidden">
+                            <td></td>
+                            <td>(Kofi Annan, <samp>PersonPlaceOfDeath</samp>, Bern)</td>
+                            <td></td>
+                        </tr>
+                        <tr id="PD03b" class="hidden">
+                            <td></td>
+                            <td>(Prince, <samp>PersonPlaceOfDeath</samp>, Chanhassen)</td>
+                            <td></td>
+                        </tr>
+                        <tr id="PD04b" class="hidden">
+                            <td></td>
+                            <td>(John lewis, <samp>PersonPlaceOfDeath</samp>, Atlanta)</td>
+                            <td></td>
+                        </tr>
+                        <tr id="PD05b" class="hidden">
+                            <td></td>
+                            <td>(Lata Mangeshkar, <samp>PersonPlaceOfDeath</samp>, Mumbai)</td>
+                            <td></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>
+                            <button type="button" id="btnPCb" aria-expanded="false" onclick="toggle(this.id,'#PC01b,#PC02b,#PC03b,#PC04b,#PC05b');" aria-controls="PC01b PC02b PC03b PC04b PC05b" aria-label="3 more from" aria-labelledby="btnPCb lblPCb">
+                                <svg xmlns="\http://www.w3.org/2000/svg&quot;" viewBox="0 0 80 80" focusable="false"><path d="M70.3 13.8L40 66.3 9.7 13.8z"></path></svg>
+                            </button>
+                            </td>
+                            <td id="lblPCb"><samp>PersonCauseOfDeath</samp></td>
+                            <td>person (<code>s</code>) died due to a cause (<code>o</code>)</td>
+                        </tr>
+                        <tr id="PC01b" class="hidden">
+                            <td></td>
+                            <td>(John lewis, <samp>PersonCauseOfDeath</samp>, [Pancreatic Cancer, Cancer])</td>
+                            <td></td>
+                        </tr>
+                        <tr id="PC02b" class="hidden">
+                            <td></td>
+                            <td>(Bob Saget, <samp>PersonCauseOfDeath</samp>, [Head Injury, Injury])</td>
+                            <td></td>
+                        </tr>
+                        <tr id="PC03b" class="hidden">
+                            <td></td>
+                            <td>(Irrfan khan, <samp>PersonCauseOfDeath</samp>, [Neuroendocrine Tumor, Tumor])</td>
+                            <td></td>
+                        </tr>
+                        <tr id="PC04b" class="hidden">
+                            <td></td>
+                            <td>(Pierre Nkurunziza, <samp>PersonCauseOfDeath</samp>, [Covid-19, Covid])</td>
+                            <td></td>
+                        </tr>
+                        <tr id="PC05b" class="hidden">
+                            <td></td>
+                            <td>(Adam west, <samp>PersonCauseOfDeath</samp>, Leukemia)</td>
+                            <td></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>
+                            <button type="button" id="btnCPOb" aria-expanded="false" onclick="toggle(this.id,'#CPO01b,#CPO02b,#CPO03b,#CPO04b,#CPO05b');" aria-controls="CPO01b CPO02b CPO03b CPO04b CPO05b" aria-label="3 more from" aria-labelledby="btnCPOb lblCPOb">
+                                <svg xmlns="\http://www.w3.org/2000/svg&quot;" viewBox="0 0 80 80" focusable="false"><path d="M70.3 13.8L40 66.3 9.7 13.8z"></path></svg>
+                            </button>
+                            </td>
+                            <td id="lblCPOb"><samp>CompanyParentOrganization</samp></td>
+                            <td>company (<code>s</code>) has another company (<code>o</code>) as its parent organization</td>
+                        </tr>
+                        <tr id="CPO01b" class="hidden">
+                            <td></td>
+                            <td>(Apple Inc, <samp>CompanyParentOrganization</samp>, NONE)</td>
+                            <td></td>
+                        </tr>
+                        <tr id="CPO02b" class="hidden">
+                            <td></td>
+                            <td>(Abarth, <samp>CompanyParentOrganization</samp>, [Stellantis Italy, Stellantis])</td>
+                            <td></td>
+                        </tr>
+                        <tr id="CPO03b" class="hidden">
+                            <td></td>
+                            <td>(Bentley, <samp>CompanyParentOrganization</samp>, [Volkswagen Group, Volkswagen])</td>
+                            <td></td>
+                        </tr>
+                        <tr id="CPO04b" class="hidden">
+                            <td></td>
+                            <td>(Saab, <samp>CompanyParentOrganization</samp>, General Motors)</td>
+                            <td></td>
+                        </tr>
+                        <tr id="CPO05b" class="hidden">
+                            <td></td>
+                            <td>(Hitachi, <samp>CompanyParentOrganization</samp>, NONE)</td>
+                            <td></td>
+                        </tr>
+                    
+                        </tbody>
                     </table>
+
                     <p>Each row in the dataset files constitutes one triple, of (1) subject-entity, (2) relation, and
                         (3) object-entity. For (3), we sometimes provide multiple aliases, where outputing any one of
                         them is sufficient. In particular, to faciliate usage of LMs like BERT (which are constrained by
