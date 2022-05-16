@@ -91,7 +91,7 @@
                     <p>We release a dataset (train and development) for a diverse set of 12 relations, each covering a
                         different set of subject-entities and along with complete list ground truth object-entities per
                         subject-relation-pair. The total number of object-entities varies for a given subject-relation
-                        pair. The train dataset subject-relation-object triples can be used for training the language
+                        pair. The train dataset subject-relation-object triples can be used for training or probing the language
                         models in any form, while development can be used for hyperparameter tuning. Futher details on
                         the relations are given below:</p>
 
@@ -325,9 +325,7 @@
                     <p>Each row in the dataset files constitutes one triple, of (1) subject-entity, (2) relation, and
                         (3) object-entity. For (3), we sometimes provide multiple aliases, where outputing any one of
                         them is sufficient. In particular, to faciliate usage of LMs like BERT (which are constrained by
-                        single-token predictions), we provide atleast one valid single-token form for every object.
-                        To represent subjects with zero valid objects, we introduce a special value <em>NONE</em>. Those
-                        subjects will then have one row with that value, e.g., (Apple Inc., CompanyParentOrganization,
+                        single-token predictions), we provide a valid single-token form for multi-token object-entities, wherever such a form is meaningful. To represent subjects with zero valid objects, we introduce a special value <em>NONE</em>. Those subjects will then have one row with that value, e.g., (Apple Inc., CompanyParentOrganization,
                         <em>NONE</em>).
                     </p>
 
