@@ -11,7 +11,7 @@
     <script src="https://kit.fontawesome.com/360bbb0a38.js" crossorigin="anonymous"></script>
 
     <link rel="stylesheet" type="text/css" href="style.css">
-    <script src="script.js"></script>
+    <!-- <script src="script.js"></script> -->
 </head>
 
 <body class="px-xxl-5">
@@ -96,11 +96,20 @@
                         models in any form, while development can be used for hyperparameter tuning. Futher details on
                         the relations are given below:</p>
 
-                    <!-- <table class="table table-striped table-hover">
+                    <table class="table table-striped table-hover">
                         <thead>
                             <tr>
                                 <th scope="col">Relation</th>
                                 <th scope="col">Description</th>
+                                <th scope="col" style="width:40%;">
+                                    <span>
+                                        Examples
+                                    </span>
+                                    <!-- <button class="btn btn-link text-success text-decoration-none" type="button"
+                                        data-bs-toggle="collapse" data-bs-target=".multi-collapse" aria-expanded="false"
+                                        aria-controls="collapseExample_1 collapseExample_2 collapseExample_3 collapseExample_4 collapseExample_5 collapseExample_6 collapseExample_7 collapseExample_8 collapseExample_9 collapseExample_10 collapseExample_11 collapseExample_12">
+                                        Toggle All</button> -->
+                                </th>
                             </tr>
                         </thead>
                         <tbody class="table-group-divider">
@@ -108,59 +117,245 @@
                                 <td><samp>CountryBordersWithCountry</samp></td>
                                 <td>country (<code>s</code>) shares a land border with another country (<code>o</code>)
                                 </td>
+                                <td>
+                                    <a data-bs-toggle="collapse" href="#collapseExample_1" role="button"
+                                        aria-expanded="false" aria-controls="collapseExample_1">
+                                        Show/Hide
+                                    </a>
+                                    <div class="collapse multi-collapse" id="collapseExample_1">
+                                        <ul>
+                                            <li>(Canada, CountryBordersWithCountry, Greenland)</li>
+                                            <li>(Canada, CountryBordersWithCountry, [USA, United States of America])
+                                            </li>
+                                            <li>(Norway, CountryBordersWithCountry, Finland)</li>
+                                            <li>(Norway, CountryBordersWithCountry, Sweden)</li>
+                                            <li>(Norway, CountryBordersWithCountry, Russia)</li>
+                                        </ul>
+                                    </div>
+                                </td>
                             </tr>
                             <tr>
                                 <td><samp>CountryOfficialLanguage</samp></td>
                                 <td>country (<code>s</code>) has an official language (<code>o</code>)</td>
+                                <td>
+                                    <a data-bs-toggle="collapse" href="#collapseExample_2" role="button"
+                                        aria-expanded="false" aria-controls="collapseExample_2">
+                                        Show/Hide
+                                    </a>
+                                    <div class="collapse multi-collapse" id="collapseExample_2">
+                                        <ul>
+                                            <li>(Belarus, CountryOfficialLanguage, Belarusian) </li>
+                                            <li>(Belarus, CountryOfficialLanguage, Russian) </li>
+                                            <li>(Seychelles, CountryOfficialLanguage, French) </li>
+                                            <li>(Seychelles, CountryOfficialLanguage, English) </li>
+                                            <li>(Seychelles, CountryOfficialLanguage, [Seychellois Creole, Creole])
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </td>
                             </tr>
                             <tr>
                                 <td><samp>RiverBasinsCountry</samp></td>
                                 <td>country (<code>s</code>) basins in a country (<code>o</code>)</td>
+                                <td>
+                                    <a data-bs-toggle="collapse" href="#collapseExample_3" role="button"
+                                        aria-expanded="false" aria-controls="collapseExample_3">
+                                        Show/Hide
+                                    </a>
+                                    <div class="collapse multi-collapse" id="collapseExample_3">
+                                        <ul>
+                                            <li> (Elbe, RiverBasinsCountry, Germany) </li>
+                                            <li>(Elbe, RiverBasinsCountry, Poland) </li>
+                                            <li>(Elbe, RiverBasinsCountry, Austria) </li>
+                                            <li>(Elbe, RiverBasinsCountry, [Czech Republic, Czechia]) </li>
+                                            <li>(Drin, RiverBasinsCountry, Albania)</li>
+                                        </ul>
+                                    </div>
+                                </td>
                             </tr>
                             <tr>
                                 <td><samp>StateSharesBorderState</samp></td>
                                 <td>state (<code>s</code>) of a country shares a land border with another state
                                     (<code>o</code>)</td>
+                                <td>
+                                    <a data-bs-toggle="collapse" href="#collapseExample_4" role="button"
+                                        aria-expanded="false" aria-controls="collapseExample_4">
+                                        Show/Hide
+                                    </a>
+                                    <div class="collapse multi-collapse" id="collapseExample_4">
+                                        <ul>
+                                            <li> (Oregon, StateSharesBorderState, California) </li>
+                                            <li>(Oregon, StateSharesBorderState, Idaho) </li>
+                                            <li>(Oregon, StateSharesBorderState, Washington) </li>
+                                            <li>(Oregon, StateSharesBorderState, Nevada) </li>
+                                            <li>(Florida, StateSharesBorderState, Georgia)</li>
+                                        </ul>
+                                    </div>
+                                </td>
                             </tr>
                             <tr>
                                 <td><samp>ChemicalCompoundElement</samp></td>
                                 <td>chemical compound (<code>s</code>) consists of an element (<code>o</code>)</td>
+                                <td>
+                                    <a data-bs-toggle="collapse" href="#collapseExample_5" role="button"
+                                        aria-expanded="false" aria-controls="collapseExample_5">
+                                        Show/Hide
+                                    </a>
+                                    <div class="collapse multi-collapse" id="collapseExample_5">
+                                        <ul>
+                                            <li>(Water, ChemicalCompoundElement, Hydrogen) </li>
+                                            <li>(Water, ChemicalCompoundElement, Oxygen) </li>
+                                            <li>(Borax, ChemicalCompoundElement, Boron) </li>
+                                            <li>(Borax, ChemicalCompoundElement, Oxygen) </li>
+                                            <li>(Borax, ChemicalCompoundElement, Sodium) </li>
+                                        </ul>
+                                    </div>
+                                </td>
                             </tr>
                             <tr>
                                 <td><samp>PersonInstrument</samp></td>
                                 <td>person (<code>s</code>) plays an instrument (<code>o</code>)</td>
+                                <td>
+                                    <a data-bs-toggle="collapse" href="#collapseExample_6" role="button"
+                                        aria-expanded="false" aria-controls="collapseExample_6">
+                                        Show/Hide
+                                    </a>
+                                    <div class="collapse multi-collapse" id="collapseExample_6">
+                                        <ul>
+                                            <li>(Chester Bennington, PersonInstrument, NONE) </li>
+                                            <li>(Ringo Starr, PersonInstrument, Guitar) </li>
+                                            <li>(Ringo Starr, PersonInstrument, Drum) </li>
+                                            <li>(Ringo Starr, PersonInstrument, [Percussion Instrument, Percussion])
+                                            </li>
+                                            <li>(Leeteuk, PersonInstrument, Piano) </li>
+                                        </ul>
+                                    </div>
+                                </td>
                             </tr>
                             <tr>
                                 <td><samp>PersonLanguage</samp></td>
                                 <td>person (<code>s</code>) speaks in a language (<code>o</code>)</td>
+                                <td>
+                                    <a data-bs-toggle="collapse" href="#collapseExample_7" role="button"
+                                        aria-expanded="false" aria-controls="collapseExample_7">
+                                        Show/Hide
+                                    </a>
+                                    <div class="collapse multi-collapse" id="collapseExample_7">
+                                        <ul>
+                                            <li> (Bruno Mars, PersonLanguage, Spanish) </li>
+                                            <li>(Bruno Mars, PersonLanguage, English) </li>
+                                            <li>(Aamir Khan, PersonLanguage, Hindi) </li>
+                                            <li>(Aamir Khan, PersonLanguage, Urdu) </li>
+                                            <li>(Aamir Khan, PersonLanguage, English)</li>
+                                        </ul>
+                                    </div>
+                                </td>
                             </tr>
                             <tr>
                                 <td><samp>PersonEmployer</samp></td>
                                 <td>person (<code>s</code>) is or was employed by a company (<code>o</code>)</td>
+                                <td>
+                                    <a data-bs-toggle="collapse" href="#collapseExample_8" role="button"
+                                        aria-expanded="false" aria-controls="collapseExample_8">
+                                        Show/Hide
+                                    </a>
+                                    <div class="collapse multi-collapse" id="collapseExample_8">
+                                        <ul>
+                                            <li> (Susan Wojcicki, PersonEmployer, Google) </li>
+                                            <li>(Steve Wozniak, PersonEmployer, [Apple Inc, Apple]) </li>
+                                            <li>(Steve Wozniak, PersonEmployer, [Hewlett-Packard, HP]) </li>
+                                            <li>(Steve Wozniak, PersonEmployer, University of Technology Sydney) </li>
+                                            <li>(Steve Wozniak, PersonEmployer, [Atari, Atari Inc])</li>
+                                        </ul>
+                                    </div>
+                                </td>
                             </tr>
                             <tr>
                                 <td><samp>PersonProfession</samp></td>
                                 <td>person (<code>s</code>) held a profession (<code>o</code>)</td>
+                                <td>
+                                    <a data-bs-toggle="collapse" href="#collapseExample_9" role="button"
+                                        aria-expanded="false" aria-controls="collapseExample_9">
+                                        Show/Hide
+                                    </a>
+                                    <div class="collapse multi-collapse" id="collapseExample_9">
+                                        <ul>
+                                            <li> (Nicolas Sarkozy, PersonProfession, Lawyer) </li>
+                                            <li>(Nicolas Sarkozy, PersonProfession, Politician) </li>
+                                            <li>(Nicolas Sarkozy, PersonProfession, Statesperson) </li>
+                                            <li>(Shakira, PersonProfession, [Singer-Songwriter, Singer, Songwriter])
+                                            </li>
+                                            <li>(Shakira, PersonProfession, Guitarist)</li>
+                                        </ul>
+                                    </div>
+                                </td>
                             </tr>
                             <tr>
                                 <td><samp>PersonPlaceOfDeath</samp></td>
                                 <td>person (<code>s</code>) died at a location (<code>o</code>)</td>
+                                <td>
+                                    <a data-bs-toggle="collapse" href="#collapseExample_10" role="button"
+                                        aria-expanded="false" aria-controls="collapseExample_10">
+                                        Show/Hide
+                                    </a>
+                                    <div class="collapse multi-collapse" id="collapseExample_10">
+                                        <ul>
+                                            <li> (Elvis Presley, PersonPlaceOfDeath, Graceland) </li>
+                                            <li>(Kofi Annan, PersonPlaceOfDeath, Bern) </li>
+                                            <li>(Prince, PersonPlaceOfDeath, Chanhassen) </li>
+                                            <li>(John lewis, PersonPlaceOfDeath, Atlanta) </li>
+                                            <li>(Lata Mangeshkar, PersonPlaceOfDeath, Mumbai)</li>
+                                        </ul>
+                                    </div>
+                                </td>
                             </tr>
                             <tr>
                                 <td><samp>PersonCauseOfDeath</samp></td>
                                 <td>person (<code>s</code>) died due to a cause (<code>o</code>)</td>
+                                <td>
+                                    <a data-bs-toggle="collapse" href="#collapseExample_11" role="button"
+                                        aria-expanded="false" aria-controls="collapseExample_11">
+                                        Show/Hide
+                                    </a>
+                                    <div class="collapse multi-collapse" id="collapseExample_11">
+                                        <ul>
+                                            <li> (John lewis, PersonCauseOfDeath, [Pancreatic Cancer, Cancer]) </li>
+                                            <li>(Bob Saget, PersonCauseOfDeath, [Head Injury, Injury]) </li>
+                                            <li>(Irrfan khan, PersonCauseOfDeath, [Neuroendocrine Tumor, Tumor]) </li>
+                                            <li>(Pierre Nkurunziza, PersonCauseOfDeath, [Covid-19, Covid]) </li>
+                                            <li>(Adam west, PersonCauseOfDeath, Leukemia)</li>
+                                        </ul>
+                                    </div>
+                                </td>
                             </tr>
                             <tr>
                                 <td><samp>CompanyParentOrganization</samp></td>
                                 <td>company (<code>s</code>) has another company (<code>o</code>) as its parent
                                     organization</td>
+                                <td>
+                                    <a data-bs-toggle="collapse" href="#collapseExample_12" role="button"
+                                        aria-expanded="false" aria-controls="collapseExample_12">
+                                        Show/Hide
+                                    </a>
+                                    <div class="collapse multi-collapse" id="collapseExample_12">
+                                        <ul>
+                                            <li> (Apple Inc, CompanyParentOrganization, NONE) </li>
+                                            <li>(Abarth, CompanyParentOrganization, [Stellantis Italy, Stellantis])
+                                            </li>
+                                            <li>(Bentley, CompanyParentOrganization, [Volkswagen Group, Volkswagen])
+                                            </li>
+                                            <li>(Saab, CompanyParentOrganization, General Motors) </li>
+                                            <li>(Hitachi, CompanyParentOrganization, NONE)</li>
+                                        </ul>
+                                    </div>
+                                </td>
                             </tr>
                         </tbody>
-                    </table> -->
+                    </table>
 
                     <!-- reference link: https://codepen.io/aardrian/pen/VoQbLm -->
                     <!-- TODO: need to fix the style using table id and then defining the macros in the style block above -->
-                    <table class="cell">
+                    <!-- <table class="cell">
                         <thead>
                             <tr>
                                 <th><span class="visually-hidden">Toggle</span></th>
@@ -671,7 +866,7 @@
                             </tr>
 
                         </tbody>
-                    </table>
+                    </table> -->
 
                     <p>Each row in the dataset files constitutes one triple, of (1) subject-entity, (2) relation, and
                         (3) object-entity. For (3), we sometimes provide multiple aliases, where outputing any one of
