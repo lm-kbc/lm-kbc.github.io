@@ -1,140 +1,160 @@
-body {
-    /* font-family: "Segoe UI", -apple-system, BlinkMacSystemFont, Roboto,
-      Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif; */
+/* body {
+    font-family: "Segoe UI", -apple-system, BlinkMacSystemFont, Roboto,
+      Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif; 
     line-height: 1.4;
     background: #fefefe;
     color: #333;
     margin: 0 1em;
-  }
-  
-  table {
-    margin: 1em 0;
-    border-collapse: collapse;
-  }
-  
-  th,
-  td {
-    padding: 0.25em 0.5em 0.25em 1em;
-    vertical-align: text-top;
-    text-align: left;
-    text-indent: -0.5em;
-  }
-  
-  th {
-    vertical-align: bottom;
-    background-color: rgba(254, 254, 254, 0.75);
-    color: rgb(11, 10, 10);
-    font-weight: bold;
-  }
-  
-  .row td:nth-of-type(2), .cell td:nth-of-type(3) {
-    font-style: italic;
-  }
-  
-  .row th:nth-of-type(3),
-  .row td:nth-of-type(3),
-  .cell th:nth-of-type(4),
-  .cell td:nth-of-type(4) {
-    text-align: right;
-  }
-  
-  td[colspan] {
-    background-color: #eee;
-    color: #000;
-    font-weight: normal;
-    font-style: italic;
-    padding: 0;
-    text-indent: 0;
-  }
-  
-  tr.shown, tr.hidden {
-    background-color: rgb(250, 229, 229);
-    display: table-row;
-  }
-  
-  tr.hidden {
-    display: none;
-  }
-  
-  .row button {
-    background-color: transparent;
-    border: .1em solid transparent;
-    font: inherit;
-    padding: 0.25em 0.5em 0.25em .25em;
-    width: 100%;
-    text-align: left;
-  }
-  
-  .row button:focus, .row button:hover {
-    background-color: #ddd;
-    outline: .2em solid rgb(102, 102, 255);
-  }
-  
-  .row button svg {
-    width: .8em;
-    height: .8em;
-    margin: 0 0 -.05em 0;
-    fill: #66f;
-    transition: transform 0.25s ease-in;
-    transform-origin: center 45%;
-  }
-  
-  .row button:hover svg,
-  .row button:focus svg {
-    fill: rgb(67, 67, 167);
-  }
-  
-  /* Lean on programmatic state for styling */
-  .row button[aria-expanded="true"] svg {
-    transform: rotate(180deg);
-  }
-  
-  .cell button {
-    font-size: 60%;
-    color: #000;
-    background-color: #66f;
-    padding: 0.3em 0.2em 0 0.2em;
-    border: 0.2em solid #66f;
-    border-radius: 50%;
-    line-height: 1;
-    text-align: center;
-    text-indent: 0;
-    transform: rotate(270deg);
-  }
-  
-  .cell button svg {
-    width: 1.25em;
-    height: 1.25em;
-    fill: #fff;
-    transition: transform 0.25s ease-in;
-    transform-origin: center 45%;
-  }
-  
-  .cell button:hover,
-  .cell button:focus {
-    background-color: #fff;
-    outline: none;
-  }
-  
-  .cell button:hover svg,
-  .cell button:focus svg {
-    fill: #66f;
-  }
-  
-  /* Lean on programmatic state for styling */
-  .cell button[aria-expanded="true"] svg {
-    transform: rotate(90deg);
-  }
-  
-  /* Proven method to visually hide something but */
-  /* still make it available to assistive technology */
-  .visually-hidden {
-    position: absolute;
-    top: auto;
-    overflow: hidden;
-    clip: rect(1px 1px 1px 1px); /* IE 6/7 */
-    clip: rect(1px, 1px, 1px, 1px);
-    width: 1px;
-    height: 1px;
-    white-space: nowrap;
-  }
+  } */
+
+#content p {
+  text-align: justify;
+}
+
+#header-description {
+  font-size: 1.5em;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:not(.btn) {
+  color: #198754;
+}
+
+table:not(.table) {
+  margin: 1em 0;
+  border-collapse: collapse;
+}
+
+table:not(.table) th,
+table:not(.table) td {
+  padding: 0.25em 0.5em 0.25em 1em;
+  vertical-align: text-top;
+  text-align: left;
+  text-indent: -0.5em;
+}
+
+table:not(.table) th {
+  vertical-align: bottom;
+  background-color: rgba(254, 254, 254, 0.75);
+  color: rgb(11, 10, 10);
+  font-weight: bold;
+}
+
+table:not(.table) td:nth-of-type(2),
+.cell td:nth-of-type(3) {
+  font-style: italic;
+}
+
+table:not(.table) th:nth-of-type(3),
+table:not(.table) td:nth-of-type(3),
+.cell th:nth-of-type(4),
+.cell td:nth-of-type(4) {
+  text-align: right;
+}
+
+table:not(.table) td[colspan] {
+  background-color: #eee;
+  color: #000;
+  font-weight: normal;
+  font-style: italic;
+  padding: 0;
+  text-indent: 0;
+}
+
+table:not(.table) tr.shown,
+table:not(.table) tr.hidden {
+  background-color: rgb(250, 229, 229);
+  display: table-row;
+}
+
+table:not(.table) tr.hidden {
+  display: none;
+}
+
+table:not(.table) button {
+  background-color: transparent;
+  border: .1em solid transparent;
+  font: inherit;
+  padding: 0.25em 0.5em 0.25em .25em;
+  width: 100%;
+  text-align: left;
+}
+
+table:not(.table) button:focus,
+table:not(.table) button:hover {
+  background-color: #ddd;
+  outline: .2em solid rgb(102, 102, 255);
+}
+
+table:not(.table) button svg {
+  width: .8em;
+  height: .8em;
+  margin: 0 0 -.05em 0;
+  fill: #66f;
+  transition: transform 0.25s ease-in;
+  transform-origin: center 45%;
+}
+
+table:not(.table) button:hover svg,
+table:not(.table) button:focus svg {
+  fill: rgb(67, 67, 167);
+}
+
+/* Lean on programmatic state for styling */
+table:not(.table) button[aria-expanded="true"] svg {
+  transform: rotate(180deg);
+}
+
+.cell button {
+  font-size: 60%;
+  color: #000;
+  background-color: #66f;
+  padding: 0.3em 0.2em 0 0.2em;
+  border: 0.2em solid #66f;
+  border-radius: 50%;
+  line-height: 1;
+  text-align: center;
+  text-indent: 0;
+  transform: rotate(270deg);
+}
+
+.cell button svg {
+  width: 1.25em;
+  height: 1.25em;
+  fill: #fff;
+  transition: transform 0.25s ease-in;
+  transform-origin: center 45%;
+}
+
+.cell button:hover,
+.cell button:focus {
+  background-color: #fff;
+  outline: none;
+}
+
+.cell button:hover svg,
+.cell button:focus svg {
+  fill: #66f;
+}
+
+/* Lean on programmatic state for styling */
+.cell button[aria-expanded="true"] svg {
+  transform: rotate(90deg);
+}
+
+/* Proven method to visually hide something but */
+/* still make it available to assistive technology */
+.visually-hidden {
+  position: absolute;
+  top: auto;
+  overflow: hidden;
+  clip: rect(1px 1px 1px 1px);
+  /* IE 6/7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  width: 1px;
+  height: 1px;
+  white-space: nowrap;
+}
