@@ -22,3 +22,12 @@ img.headshot {
   width: 200px;
   height: 200px;
 }
+
+.btn-twitter {
+  background-color: #00acee;
+  color: white !important;
+}
+
+.btn-twitter:hover {
+  background-color: #008abe;
+}
