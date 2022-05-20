@@ -1,0 +1,19 @@
+#content p {
+  text-align: justify;
+}
+
+#header-description {
+  font-size: 1.5em;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:not(.btn) {
+  color: #198754;
+}
+
+#license-img {
+  width: 120px;
+}

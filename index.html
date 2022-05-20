@@ -10,7 +10,7 @@
 
     <script src="https://kit.fontawesome.com/360bbb0a38.js" crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="./static/style.css">
 </head>
 
 <body class="px-xxl-5">
@@ -27,19 +27,22 @@
         </p>
         <p>
             <a class="btn btn-success" href="https://github.com/lm-kbc/dataset" target="_blank">
-                Download dataset
                 <i class="fa-solid fa-download"></i>
+                Download dataset
             </a>
             <a class="btn btn-secondary" href="https://groups.google.com/g/lm-kbc" target="_blank">
-                Discussions
                 <i class="fa-solid fa-user-group"></i>
+                Discussions
+            </a>
+            <a class="btn btn-primary" href="https://twitter.com/lm_kbc" target="_blank">
+                <i class="fa-brands fa-twitter"></i>
+                Follow us
             </a>
         </p>
-        <p>
+        <!-- <p>
             <a href="https://twitter.com/lm_kbc?ref_src=twsrc%5Etfw" class="twitter-follow-button"
                 data-show-count="false" data-show-screen-name="false" data-size="large">Follow @lm_kbc</a>
-            <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-        </p>
+        </p> -->
     </div>
 
     <hr>
@@ -59,7 +62,7 @@
                             href="https://arxiv.org/pdf/1909.01066.pdf" target="_blank">Petroni et al., 2019</a>), we
                         make no simplifying assumptions on relation cardinalities, i.e., a subject-entity can stand in
                         relation with zero, one, or many object-entities. Furthermore, submissions need to go beyond
-                        just ranking the predictions, and make concrete decisions on materializing outputs. The outputs 
+                        just ranking the predictions, and make concrete decisions on materializing outputs. The outputs
                         are evaluated using the established F1-score KB metric.</p>
 
                     <p class="bg-warning">Formally, given the input subject-entity (<code>s</code>) and relation
@@ -91,7 +94,8 @@
                     <p>We release a dataset (train and development) for a diverse set of 12 relations, each covering a
                         different set of subject-entities and along with complete list ground truth object-entities per
                         subject-relation-pair. The total number of object-entities varies for a given subject-relation
-                        pair. The train dataset subject-relation-object triples can be used for training or probing the language
+                        pair. The train dataset subject-relation-object triples can be used for training or probing the
+                        language
                         models in any form, while development can be used for hyperparameter tuning. Futher details on
                         the relations are given below:</p>
 
@@ -325,13 +329,19 @@
                     <p>Each row in the dataset files constitutes one triple, of (1) subject-entity, (2) relation, and
                         (3) object-entity. For (3), we sometimes provide multiple aliases, where outputing any one of
                         them is sufficient. In particular, to faciliate usage of LMs like BERT (which are constrained by
-                        single-token predictions), we provide a valid single-token form for multi-token object-entities, wherever such a form is meaningful. To represent subjects with zero valid objects, we introduce a special value <em>NONE</em>. Those subjects will then have one row with that value, e.g., (Apple Inc., CompanyParentOrganization,
+                        single-token predictions), we provide a valid single-token form for multi-token object-entities,
+                        wherever such a form is meaningful. To represent subjects with zero valid objects, we introduce
+                        a special value <em>NONE</em>. Those subjects will then have one row with that value, e.g.,
+                        (Apple Inc., CompanyParentOrganization,
                         <em>NONE</em>).
                     </p>
 
                     <h5>Dataset Characteristics</h5>
-                    <p> 
-                        For each of the 12 relations, the number of unique subject-entities in the train, dev, and test are 100, 50, and 50. The minimum and maximum number of object-entities for each relation is given below. If the minimum value is 0, then the subject-entity can have zero valid object-entities for that relation.
+                    <p>
+                        For each of the 12 relations, the number of unique subject-entities in the train, dev, and test
+                        are 100, 50, and 50. The minimum and maximum number of object-entities for each relation is
+                        given below. If the minimum value is 0, then the subject-entity can have zero valid
+                        object-entities for that relation.
                     </p>
 
                     <table class="table table-striped table-hover">
@@ -345,49 +355,85 @@
                         </thead>
                         <tbody class="table-group-divider">
                             <tr>
-                                <td><samp>CountryBordersWithCountry</samp></td><td>[0, 19]</td><td>[0, 14]</td><td>[0, 11]</td>
+                                <td><samp>CountryBordersWithCountry</samp></td>
+                                <td>[0, 19]</td>
+                                <td>[0, 14]</td>
+                                <td>[0, 11]</td>
                             </tr>
                             <tr>
-                                <td><samp>CountryOfficialLanguage</samp></td><td>[1, 4]</td><td>[1, 15]</td><td>[1, 11]</td>
+                                <td><samp>CountryOfficialLanguage</samp></td>
+                                <td>[1, 4]</td>
+                                <td>[1, 15]</td>
+                                <td>[1, 11]</td>
                             </tr>
                             <tr>
-                                <td><samp>StateSharesBorderState</samp></td><td>[1, 14]</td><td>[1, 15]</td><td>[1, 14]</td>
-                            </tr>
-                           
-                            <tr>
-                                <td><samp>RiverBasinsCountry</samp></td><td>[1, 6]</td><td>[1, 10]</td><td>[1, 9]</td>
-                            </tr>
-
-                            <tr>
-                                <td><samp>ChemicalCompoundElement</samp></td><td>[1, 5]</td><td>[1, 5]</td><td>[1, 6]</td>
-                            </tr>
-                            
-                            <tr>
-                                <td><samp>PersonLanguage</samp></td><td>[1, 6]</td><td>[1, 5]</td><td>[1, 7]</td>
-                            </tr>
-                            
-                            <tr>
-                                <td><samp>PersonProfession</samp></td><td>[1, 23]</td><td>[1, 19]</td><td>[1, 20]</td>
-                            </tr>
-                            
-                            <tr>
-                                <td><samp>PersonInstrument</samp></td><td>[0, 7]</td><td>[0, 14]</td><td>[0, 7]</td>
-                            </tr>
-                            
-                            <tr>
-                                <td><samp>PersonEmployer</samp></td><td>[1, 8]</td><td>[1, 8]</td><td>[1, 8]</td>
+                                <td><samp>StateSharesBorderState</samp></td>
+                                <td>[1, 14]</td>
+                                <td>[1, 15]</td>
+                                <td>[1, 14]</td>
                             </tr>
 
                             <tr>
-                                <td><samp>PersonPlaceOfDeath</samp></td><td>[0, 1]</td><td>[0, 1]</td><td>[0, 1]</td>
+                                <td><samp>RiverBasinsCountry</samp></td>
+                                <td>[1, 6]</td>
+                                <td>[1, 10]</td>
+                                <td>[1, 9]</td>
                             </tr>
 
                             <tr>
-                                <td><samp>PersonCauseOfDeath</samp></td><td>[0, 3]</td><td>[0, 2]</td><td>[0, 2]</td>
+                                <td><samp>ChemicalCompoundElement</samp></td>
+                                <td>[1, 5]</td>
+                                <td>[1, 5]</td>
+                                <td>[1, 6]</td>
                             </tr>
-                            
+
                             <tr>
-                                <td><samp>CompanyParentOrganization</samp></td><td>[0, 5]</td><td>[0, 1]</td><td>[0, 3]</td>
+                                <td><samp>PersonLanguage</samp></td>
+                                <td>[1, 6]</td>
+                                <td>[1, 5]</td>
+                                <td>[1, 7]</td>
+                            </tr>
+
+                            <tr>
+                                <td><samp>PersonProfession</samp></td>
+                                <td>[1, 23]</td>
+                                <td>[1, 19]</td>
+                                <td>[1, 20]</td>
+                            </tr>
+
+                            <tr>
+                                <td><samp>PersonInstrument</samp></td>
+                                <td>[0, 7]</td>
+                                <td>[0, 14]</td>
+                                <td>[0, 7]</td>
+                            </tr>
+
+                            <tr>
+                                <td><samp>PersonEmployer</samp></td>
+                                <td>[1, 8]</td>
+                                <td>[1, 8]</td>
+                                <td>[1, 8]</td>
+                            </tr>
+
+                            <tr>
+                                <td><samp>PersonPlaceOfDeath</samp></td>
+                                <td>[0, 1]</td>
+                                <td>[0, 1]</td>
+                                <td>[0, 1]</td>
+                            </tr>
+
+                            <tr>
+                                <td><samp>PersonCauseOfDeath</samp></td>
+                                <td>[0, 3]</td>
+                                <td>[0, 2]</td>
+                                <td>[0, 2]</td>
+                            </tr>
+
+                            <tr>
+                                <td><samp>CompanyParentOrganization</samp></td>
+                                <td>[0, 5]</td>
+                                <td>[0, 1]</td>
+                                <td>[0, 3]</td>
                             </tr>
 
                         </tbody>
@@ -410,9 +456,11 @@
                             target="_blank">evaluation</a> script. The baseline model probes the BERT language model
                         using a sample prompt like <em>"China shares border with [MASK]"</em>, and selects
                         object-entities predicted in the [MASK] position with greater than or equal to 0.5 likelihood as
-                        outputs. This baseline achieves 14.21% F1-score on the hidden test dataset. Participants can use the evaluation script to compute the F1-score for assessing the
-                        performance of their systems. For more details on LM-probing and the baseline method, check the released <a href="https://github.com/lm-kbc/dataset/blob/main/getting_started.ipynb"
-                        target="_blank">notebook</a>.</p>
+                        outputs. This baseline achieves 14.21% F1-score on the hidden test dataset. Participants can use
+                        the evaluation script to compute the F1-score for assessing the
+                        performance of their systems. For more details on LM-probing and the baseline method, check the
+                        released <a href="https://github.com/lm-kbc/dataset/blob/main/getting_started.ipynb"
+                            target="_blank">notebook</a>.</p>
                     <!-- <p>For general questions or discussion please use the Google group:
                         <a href="https://groups.google.com/g/lm-kbc"
                             target="_blank">https://groups.google.com/g/lm-kbc</a>.
@@ -517,6 +565,37 @@
                     </div>
                 </div>
             </div>
+        </div>
+
+        <div class="container-fluid">
+            <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+                <div class="d-flex align-items-center">
+                    <!-- <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
+                        <svg class="bi" width="30" height="24">
+                            <use xlink:href="#bootstrap"></use>
+                        </svg>
+                    </a> -->
+                    <!-- <span class="text-muted">© 2021 Company, Inc</span> -->
+                    <div class="me-4">
+                        <a href="http://creativecommons.org/licenses/by/3.0" target="_blank">
+                            <img src="static/by.png" alt="cc-by-3.0" id="license-img">
+                        </a>
+                    </div>
+                    <span>
+                        The SMART dataset is licensed under a
+                        <a href="http://creativecommons.org/licenses/by/3.0" target="_blank">
+                            Creative Commons Attribution 3.0 Unported License</a>.
+                    </span>
+                </div>
+
+                <!-- <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+                    <li class="ms-3">
+                        <a>
+                            <i class="fa-brands fa-twitter"></i>
+                        </a>
+                    </li>
+                </ul> -->
+            </footer>
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
