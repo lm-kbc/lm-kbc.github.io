@@ -14,9 +14,6 @@ a:not(.btn) {
   color: #198754;
 }
 
-#license-img {
-  width: 120px;
-}
 
 img.headshot {
   width: 200px;
@@ -32,7 +29,11 @@ img.headshot {
   background-color: #008abe;
 }
 
-img.mpilogo {
-  width: 500px;
-  height: auto;
+#mpi-logo,
+#license-img {
+  height: 3em;
+}
+
+.footer {
+  font-size: 0.75rem;
 }
