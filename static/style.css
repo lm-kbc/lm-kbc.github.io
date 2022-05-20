@@ -31,3 +31,8 @@ img.headshot {
 .btn-twitter:hover {
   background-color: #008abe;
 }
+
+img.mpilogo {
+  width: 500px;
+  height: auto;
+}
