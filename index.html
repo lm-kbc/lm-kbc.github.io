@@ -304,7 +304,7 @@
                     <p>Each row in the dataset files constitutes one triple, of (1) subject-entity, (2) relation, and
                         (3) list of all possible object-entity. For (3), we sometimes provide multiple aliases, where outputing any one of them is sufficient. In particular, to faciliate usage of LMs like BERT (which are constrained by
                         single-token predictions), we provide a valid single-token form for multi-token object-entities,
-                        wherever such a form is meaningful. When the subjects have zero valid objects, the ground truth is an empty list, e.g., (Apple Inc., CompanyParentOrganization, []).
+                        wherever such a form is meaningful. When the subjects have zero valid objects, the ground truth is an empty list, e.g., (Apple Inc., CompanyParentOrganization, [ ]).
                     </p>
 
                     <h5>Dataset Characteristics</h5>
