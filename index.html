@@ -95,7 +95,8 @@
                         different set of subject-entities and along with complete list ground truth object-entities per
                         subject-relation-pair. The total number of object-entities varies for a given subject-relation
                         pair. The train dataset subject-relation-object triples can be used for training or probing the
-                        language models in any form, while development can be used for hyperparameter tuning. Futher details on
+                        language models in any form, while development can be used for hyperparameter tuning. Futher
+                        details on
                         the relations are given below:</p>
 
                     <table class="table table-striped table-hover">
@@ -302,9 +303,21 @@
                     </table>
 
                     <p>Each row in the dataset files constitutes one triple, of (1) subject-entity, (2) relation, and
-                        (3) list of all possible object-entity. For (3), we sometimes provide multiple aliases, where outputing any one of them is sufficient. In particular, to faciliate usage of LMs like BERT (which are constrained by
+                        (3) list of all possible object-entities. For (3), we sometimes provide multiple aliases for an
+                        object-entity, where
+                        outputing any one of them is sufficient for that entity. In particular, to faciliate usage of
+                        LMs like BERT
+                        (which are constrained by
                         single-token predictions), we provide a valid single-token form for multi-token object-entities,
-                        wherever such a form is meaningful. When the subjects have zero valid objects, the ground truth is an empty list, e.g., (Apple Inc., CompanyParentOrganization, [ ]).
+                        wherever such a form is meaningful.
+                        Please read the
+                        <a href="https://github.com/lm-kbc/dataset#data-format" target="_blank">
+                            <b>File format</b>
+                        </a>
+                        section
+                        for more details.
+                        When the subjects have zero valid objects, the ground truth is an empty list, e.g.,
+                        (Apple Inc., <samp>CompanyParentOrganization</samp>, []).
                     </p>
 
                     <h5>Dataset Characteristics</h5>
@@ -427,7 +440,7 @@
                             target="_blank">evaluation</a> script. The baseline model probes the BERT language model
                         using a sample prompt like <em>"China shares border with [MASK]"</em>, and selects
                         object-entities predicted in the [MASK] position with greater than or equal to 0.5 likelihood as
-                        outputs. This baseline achieves 14.21% F1-score on the hidden test dataset. Participants can use
+                        outputs. This baseline achieves 30.5% F1-score on the hidden test dataset. Participants can use
                         the evaluation script to compute the F1-score for assessing the
                         performance of their systems. For more details on LM-probing and the baseline method, check the
                         released <a href="https://github.com/lm-kbc/dataset/blob/main/getting_started.ipynb"
@@ -453,11 +466,15 @@
                         The test dataset is initially hidden to preserve the
                         integrity of results, and will be released <span class="text-decoration-underline">3 days</span>
                         before system submission deadline. The output files for the test subject-entities must be
-                        formatted like the given dataset files (one for each relation in .csv form), and submitted along
+                        formatted as described
+                        <a href="https://github.com/lm-kbc/dataset#-your-prediction-file" target="_blank">
+                            <span>here</span></a>,
+                        and submitted along
                         with the
                         system. The top performing systems will get an opportunity to present their ideas and results
                         during
-                        the ISWC 2022 conference, and the challenge proceedings will be submitted to CEUR publication system. System
+                        the ISWC 2022 conference, and the challenge proceedings will be submitted to CEUR publication
+                        system. System
                         descriptions should be uploaded to
                         <a href="https://easychair.org/conferences/?conf=lmkbc2022" target="_blank">Easychair</a>.
                     </p>
