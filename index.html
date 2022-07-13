@@ -457,7 +457,7 @@
                 </div>
                 <div id='sec-task-evaluation' class="my-5">
                     <h3 id="task-evaluation">Task Evaluation</h3>
-                    <p>We use a standard KBC evaluation metric, the F1-score (based on the combination of precision and
+                    <p>We use a standard KBC evaluation metric, the macro-averaged F1-score (based on the combination of precision and
                         recall), to compare the predicted object-entities with true object-entities on the hidden test
                         dataset. We release a <a href="https://github.com/lm-kbc/dataset/blob/main/baseline.py"
                             target="_blank">baseline</a>
@@ -465,7 +465,7 @@
                             target="_blank">evaluation</a> script. The baseline model probes the BERT language model
                         using a sample prompt like <em>"China shares border with [MASK]"</em>, and selects
                         object-entities predicted in the [MASK] position with greater than or equal to 0.5 likelihood as
-                        outputs. This baseline achieves 31.08% F1-score on the hidden test dataset. Participants can use
+                        outputs. This baseline achieves 31.08% F1-score (averaged across all subject-entities and relations) on the hidden test dataset. Participants can use
                         the evaluation script to compute the F1-score for assessing the
                         performance of their systems. For more details on LM-probing and the baseline method, please
                         check the
