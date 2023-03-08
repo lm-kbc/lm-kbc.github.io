@@ -26,7 +26,7 @@
             </a>
         </p>
         <p>
-            <a class="btn btn-success" href="https://github.com/lm-kbc/dataset" target="_blank">
+            <a class="btn btn-success" href="https://github.com/lm-kbc/dataset2022" target="_blank">
                 <i class="fa-solid fa-download"></i>
                 Download dataset
             </a>
@@ -59,7 +59,7 @@
                         <li><b>04-07-2022</b>: Final deadline extension until July 26, 23:59:59 AoE time.
                         </li>
                         <li><b>11-07-2022</b>: Test subject entities have been released <a
-                                href="https://github.com/lm-kbc/dataset/blob/main/data/test.jsonl" target="_blank">
+                                href="https://github.com/lm-kbc/dataset2022/blob/main/data/test.jsonl" target="_blank">
                                 here</a>. Submit your predictions on <a
                                 href="https://codalab.lisn.upsaclay.fr/competitions/5815" target="_blank"> CodaLab</a>
                             to get a confirmed score now (optional, final leaderboard will be split by track, multiple submissions possible).
@@ -152,9 +152,9 @@
                 </div>
                 <div id='sec-dataset' class="my-5">
                     <h3 id="dataset">Dataset</h3>
-                    <p>We release a dataset (<a href="https://github.com/lm-kbc/dataset/blob/main/data/train.jsonl"
+                    <p>We release a dataset (<a href="https://github.com/lm-kbc/dataset2022/blob/main/data/train.jsonl"
                             target="_blank">train</a> and
-                        <a href="https://github.com/lm-kbc/dataset/blob/main/data/dev.jsonl"
+                        <a href="https://github.com/lm-kbc/dataset2022/blob/main/data/dev.jsonl"
                             target="_blank">development</a>) for a
                         diverse set of 12 relations, each covering a
                         different set of subject-entities and along with complete list ground truth object-entities per
@@ -377,7 +377,7 @@
                         single-token predictions), we provide a valid single-token form for multi-token object-entities,
                         wherever such a form is meaningful.
                         Please read the
-                        <a href="https://github.com/lm-kbc/dataset#data-format" target="_blank">
+                        <a href="https://github.com/lm-kbc/dataset2022#data-format" target="_blank">
                             <b>Data format</b>
                         </a>
                         section
@@ -490,7 +490,7 @@
                     </table>
 
                     <div class="text-center my-5">
-                        <a class="btn btn-success" href="https://github.com/lm-kbc/dataset" target="_blank">
+                        <a class="btn btn-success" href="https://github.com/lm-kbc/dataset2022" target="_blank">
                             Download dataset
                             <i class="fa-solid fa-download"></i>
                         </a>
@@ -500,9 +500,9 @@
                     <h3 id="task-evaluation">Task Evaluation</h3>
                     <p>We use a standard KBC evaluation metric, the macro-averaged F1-score (based on the combination of precision and
                         recall), to compare the predicted object-entities with true object-entities on the hidden test
-                        dataset. We release a <a href="https://github.com/lm-kbc/dataset/blob/main/baseline.py"
+                        dataset. We release a <a href="https://github.com/lm-kbc/dataset2022/blob/main/baseline.py"
                             target="_blank">baseline</a>
-                        implementation and <a href="https://github.com/lm-kbc/dataset/blob/main/evaluate.py"
+                        implementation and <a href="https://github.com/lm-kbc/dataset2022/blob/main/evaluate.py"
                             target="_blank">evaluation</a> script. The baseline model probes the BERT language model
                         using a sample prompt like <em>"China shares border with [MASK]"</em>, and selects
                         object-entities predicted in the [MASK] position with greater than or equal to 0.5 likelihood as
@@ -510,7 +510,7 @@
                         the evaluation script to compute the F1-score for assessing the
                         performance of their systems. For more details on LM-probing and the baseline method, please
                         check the
-                        released <a href="https://github.com/lm-kbc/dataset/blob/main/getting_started.ipynb"
+                        released <a href="https://github.com/lm-kbc/dataset2022/blob/main/getting_started.ipynb"
                             target="_blank">notebook</a>.</p>
                     <!-- <p>For general questions or discussion please use the Google group:
                         <a href="https://groups.google.com/g/lm-kbc"
@@ -537,7 +537,7 @@
                             days</span>
                         before the final deadline. The output files for the test subject-entities must be
                         formatted as described
-                        <a href="https://github.com/lm-kbc/dataset#-your-prediction-file" target="_blank">
+                        <a href="https://github.com/lm-kbc/dataset2022#-your-prediction-file" target="_blank">
                             <span>here</span></a>,
                         and submitted along
                         with the
