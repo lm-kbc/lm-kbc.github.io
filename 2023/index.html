@@ -65,21 +65,43 @@
                         using LM probing.
                     </p>
                     <p>
-                        The challenge comes with three tracks:
+                        The challenge comes with two tracks:
                     </p>
                     <ul>
                         <li>
-                            <strong>Track 1</strong>: a small-model track with low computational requirements
+                            <strong>Track 1</strong>: a small-model track with low computational requirements (<1 million parameters)
                         </li>
                         <li>
                             <strong>Track 2</strong>: an open track, where participants can use any LM of their choice
                         </li>
-                        <li>
-                            <strong>Track 3</strong>: a discovery track, where participants need to discover knowledge for emerging entities
-                        </li>
-
                     </ul>
                 </div>
+                
+                
+                <h4>Track 1: Small-model track (<1 billion parameters)</h4>
+
+Participants are free to use any pretrained LM containing at most 1 billion parameters. This includes, for instance, 
+BERT, BART, GPT-2, and variants of OPT (see https://huggingface.co/bert-large-uncased, https://huggingface.co/facebook/bart-large, https://huggingface.co/gpt2-mediumhttps://huggingface.co/facebook/opt-350m. 
+The input tuples can be paraphrased through prompt engineering techniques (e.g., AutoPrompt,LPAQA), and participants can also use prompt ensembles for better output generation. However, using context (e.g., verbalizing tuples using supporting sentences) is not allowed in this track.
+
+
+<h4>Track 2: Open track</h4>
+
+In the open track, the task is the same as in the small-model track. However,
+    <ul>
+      <li>
+          LMs of any size, e.g., GPT-3, can be probed.
+        </li>
+        <li>
+            Use of context is allowed for LM-generation, e.g., context retrieval like in REALM \cite{guu2020retrieval} and \cite{petroni2020context}. 
+        </li>
+    </ul>
+                    
+                    
+    <h4>Evaluation</h4>
+                        
+    For each test instance, predictions are evaluated by calculating precision and recall against ground-truth values. The final macro-averaged F1-score is used to rank the participating systems.
+
 
                 <div id='sec-organizers' class="my-5">
                     <h3 id="organizers">Organizers</h3>
