@@ -26,7 +26,7 @@
             </a>
         </p>
         <p>
-            <a class="btn btn-success" href="https://owncloud.mpi-sws.org/index.php/s/Fm4jnZ57KA7JM8E" target="_blank">
+            <a class="btn btn-success" href="https://github.com/lm-kbc/dataset2023" target="_blank">
                 <i class="fa-solid fa-download"></i>
                 Download dataset v0.9
             </a>
@@ -80,27 +80,24 @@
                 
                 <h4>Track 1: Small-model track (<1 billion parameters)</h4>
 
-Participants are free to use any pretrained LM containing at most 1 billion parameters. This includes, for instance, 
-BERT, BART, GPT-2, and variants of OPT (see https://huggingface.co/bert-large-uncased, https://huggingface.co/facebook/bart-large, https://huggingface.co/gpt2-mediumhttps://huggingface.co/facebook/opt-350m. 
-The input tuples can be paraphrased through prompt engineering techniques (e.g., AutoPrompt,LPAQA), and participants can also use prompt ensembles for better output generation. However, using context (e.g., verbalizing tuples using supporting sentences) is not allowed in this track.
+                Participants are free to use any pretrained LM containing at most 1 billion parameters. This includes, for instance, <a href="https://huggingface.co/bert-large-uncased" target="_blank">BERT</a>, <a href="https://huggingface.co/facebook/bart-large" target="_blank">BART</a>, <a href="https://huggingface.co/gpt2-medium" target="_blank">GPT-2</a>, and variants of <a href="https://huggingface.co/facebook/opt-350m." target="_
+                ">OPT</a>. The input tuples can be paraphrased through prompt engineering techniques (e.g., AutoPrompt,LPAQA), and participants can also use prompt ensembles for better output generation. However, using context (e.g., verbalizing tuples using supporting sentences) is not allowed in this track.
 
+                <h4>Track 2: Open track</h4>
 
-<h4>Track 2: Open track</h4>
-
-In the open track, the task is the same as in the small-model track. However,
-    <ul>
-      <li>
-          LMs of any size, e.g., GPT-3, can be probed.
-        </li>
-        <li>
-            Use of context is allowed for LM-generation, e.g., context retrieval like in REALM \cite{guu2020retrieval} and \cite{petroni2020context}. 
-        </li>
-    </ul>
+                In the open track, the task is the same as in the small-model track. However,
+                <ul>
+                <li>
+                    LMs of any size, e.g., GPT-3, can be probed.
+                    </li>
+                    <li>
+                        Use of context is allowed for LM-generation, e.g., context retrieval like in <a href="http://proceedings.mlr.press/v119/guu20a/guu20a.pdf" target="_blank">REALM</a> and <a href="https://www.akbc.ws/2020/assets/pdfs/025X0zPfn.pdf" target="_blank">factual predictions with context</a>.
+                    </li>
+                </ul>
                     
-                    
-    <h4>Evaluation</h4>
-                        
-    For each test instance, predictions are evaluated by calculating precision and recall against ground-truth values. The final macro-averaged F1-score is used to rank the participating systems.
+                <h4>Evaluation</h4>
+                                    
+                For each test instance, predictions are evaluated by calculating precision and recall against ground-truth values. The final macro-averaged F1-score is used to rank the participating systems.
 
 
                 <div id='sec-organizers' class="my-5">
