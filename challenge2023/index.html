@@ -99,6 +99,45 @@
                                     
                 For each test instance, predictions are evaluated by calculating precision and recall against ground-truth values. The final macro-averaged F1-score is used to rank the participating systems.
 
+                <h4>Baselines</h4>
+
+                We provide several baselines:
+                <ul>
+                    <li>
+                        Standard prompt for HuggingFace models with Wikidata default disambiguation: These baselines can be instantiated with various HuggingFace models (e.g., BERT, OPT), generate entity surface forms, and use the Wikidata entity disambiguation API to generate IDs.
+                    </li>
+                    <li>
+                        Few-shot GPT-3 directly predicting IDs: This baseline uses a few samples to instruct GPT-3 to directly predict Wikidata IDs.
+                    </li>
+                </ul>
+                Baseline performance:
+                <table class="table table-bordered">
+                    <thead class="table-light">
+                        <tr>
+                            <th class="text-center align-middle">Method</th>
+                            <th class="text-center">Avg. Precision</th>
+                            <th class="text-center">Avg. Recall</th>
+                            <th class="text-center">Avg. F1-score</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="text-center align-middle">GPT-3 IDs directly</td>
+                            <td class="text-center align-middle">0.131</td>
+                            <td class="text-center align-middle">0.049</td>
+                            <td class="text-center align-middle">0.057</td>
+                        </tr>
+
+                        <tr>
+                            <td class="text-center align-middle"><strong>OPT-1.3b 5-shot</strong></td>
+                            <td class="text-center align-middle">0.101</td>
+                            <td class="text-center align-middle">0.145</td>
+                            <td class="text-center align-middle">0.044</td>
+                        </tr>
+                        
+                    </tbody>
+                </table>
+
 
                 <div id='sec-organizers' class="my-5">
                     <h3 id="organizers">Organizers</h3>
