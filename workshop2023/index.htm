@@ -41,6 +41,38 @@ p.MsoPlainText, li.MsoPlainText, div.MsoPlainText
 	margin:0in;
 	font-size:11.0pt;
 	font-family:"Calibri",sans-serif;}
+p.MsoListParagraph, li.MsoListParagraph, div.MsoListParagraph
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:8.0pt;
+	margin-left:.5in;
+	line-height:105%;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+p.MsoListParagraphCxSpFirst, li.MsoListParagraphCxSpFirst, div.MsoListParagraphCxSpFirst
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	line-height:105%;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+p.MsoListParagraphCxSpMiddle, li.MsoListParagraphCxSpMiddle, div.MsoListParagraphCxSpMiddle
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	line-height:105%;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+p.MsoListParagraphCxSpLast, li.MsoListParagraphCxSpLast, div.MsoListParagraphCxSpLast
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:8.0pt;
+	margin-left:.5in;
+	line-height:105%;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
 span.Heading2Char
 	{mso-style-name:"Heading 2 Char";
 	mso-style-link:"Heading 2";
@@ -61,6 +93,11 @@ span.PlainTextChar
 	margin:1.0in 1.0in 1.0in 1.0in;}
 div.WordSection1
 	{page:WordSection1;}
+ /* List Definitions */
+ ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
 -->
 </style>
 
@@ -82,15 +119,15 @@ International Semantic Web Conference (ISWC 2023) </a></span></p>
 
 <h2>Overview</h2>
 
-<p class=MsoPlainText><span style='font-family:"Arial",sans-serif'>Language models
-(LMs), such as chatGPT, BERT, and T5, have demonstrated remarkable outcomes in
-numerous AI applications. Research has shown that these models implicitly
-capture vast amounts of factual knowledge within their parameters, resulting in
-a remarkable performance in knowledge-intensive applications. The seminal paper
-``Language Models as Knowledge Bases?'' sparked interest in the spectrum
-between language models and knowledge graphs, leading to a diverse range of
-research on the usage of LMs for knowledge base construction. This research
-includes:</span></p>
+<p class=MsoPlainText><span style='font-family:"Arial",sans-serif'>Language
+models (LMs), such as chatGPT, BERT, and T5, have demonstrated remarkable
+outcomes in numerous AI applications. Research has shown that these models
+implicitly capture vast amounts of factual knowledge within their parameters,
+resulting in a remarkable performance in knowledge-intensive applications. The
+seminal paper ``Language Models as Knowledge Bases?'' sparked interest in the
+spectrum between language models and knowledge graphs, leading to a diverse
+range of research on the usage of LMs for knowledge base construction. This
+research includes:</span></p>
 
 <p class=MsoPlainText><span style='font-family:"Arial",sans-serif'>(1)
 utilizing pre-trained LMs for knowledge base completion and construction tasks,</span></p>
@@ -132,38 +169,17 @@ role=presentation>
 <span role=presentation>- </span><span style='transform: scaleX(1.00034)' role=presentation>Designing
 robust prompts for large language model probin</span>g</span></p>
 
-<h2>Tentative schedule</h2>
+<p class=MsoNormal><span style='font-family:"Arial",sans-serif'>We invite two
+types of submissions:</span></p>
 
-<p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
-style='font-family:"Arial",sans-serif'>The idea of this workshop is to provide
-a focused venue for informal exchange around LMs for KB construction. In
-particular, we plan to devote space to extended presentations of participants
-of the LM-KBC ISWC challenge (where the 1-hour ISWC conference slot will only allow
-presentations of the winners). Furthermore, we plan to make this a hybrid event
-to lower the entry barrier for participants.</span></p>
+<p class=MsoListParagraphCxSpFirst style='text-indent:-.25in'><span
+style='font-family:"Arial",sans-serif'>(1)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span>Novel research contributions</p>
 
-<p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
-style='font-size:12.0pt;font-family:"Arial",sans-serif'><br>
-</span><span style='font-family:"Arial",sans-serif'>- 10:00-10:15: Welcome</span><span
-style='font-size:12.0pt;font-family:"Arial",sans-serif'><br>
-</span><span style='font-family:"Arial",sans-serif'>- 10:15-11:00: Keynote 1</span><span
-style='font-size:12.0pt;font-family:"Arial",sans-serif'><br>
-</span><span style='font-family:"Arial",sans-serif'>- 11:00-11:30: Coffee Break</span><span
-style='font-size:12.0pt;font-family:"Arial",sans-serif'><br>
-</span><span style='font-family:"Arial",sans-serif'>- 11:30-12:30: Paper
-Presentations</span><span style='font-size:12.0pt;font-family:"Arial",sans-serif'><br>
-</span><span style='font-family:"Arial",sans-serif'>- 12:30-13:30: Lunch Break</span><span
-style='font-size:12.0pt;font-family:"Arial",sans-serif'><br>
-</span><span style='font-family:"Arial",sans-serif'>- 13:30-14:00: Keynote 2
-(perhaps hybrid)</span><span style='font-size:12.0pt;font-family:"Arial",sans-serif'><br>
-</span><span style='font-family:"Arial",sans-serif'>- 14:00-15:00: LM-KBC
-Challenge Presentations</span><span style='font-size:12.0pt;font-family:"Arial",sans-serif'><br>
-</span><span style='font-family:"Arial",sans-serif'>- 15:00-15:20: Coffee Break</span><span
-style='font-size:12.0pt;font-family:"Arial",sans-serif'><br>
-</span><span style='font-family:"Arial",sans-serif'>- 15:20-16:00: Paper
-Presentations</span><span style='font-size:12.0pt;font-family:"Arial",sans-serif'><br>
-</span><span style='font-family:"Arial",sans-serif'>- 16:00-16:15: Closing
-Ceremony</span></p>
+<p class=MsoListParagraphCxSpLast style='text-indent:-.25in'><span
+style='font-family:"Arial",sans-serif'>(2)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span>Already published papers (these will be presentation-only, and
+not part of the proceedings).</p>
 
 <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
 style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
@@ -196,6 +212,60 @@ Euro.</span></p>
 <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
 style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
 
+<h2>Important dates</h2>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+style='font-family:"Arial",sans-serif'>- Papers due: August 8, 2023</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+style='font-family:"Arial",sans-serif'>- Notification to authors: September 5,
+2023</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+style='font-family:"Arial",sans-serif'>- Camera-ready deadline: September 19,
+2023</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+style='font-family:"Arial",sans-serif'>- Workshop dates: 6 or 7 November 2023</span></p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<h2>Tentative schedule</h2>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+style='font-family:"Arial",sans-serif'>The idea of this workshop is to provide
+a focused venue for informal exchange around LMs for KB construction. In
+particular, we plan to devote space to extended presentations of participants
+of the LM-KBC ISWC challenge (where the 1-hour ISWC conference slot will only
+allow presentations of the winners). Furthermore, we plan to make this a hybrid
+event to lower the entry barrier for participants.</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'><br>
+</span><span style='font-family:"Arial",sans-serif'>- 10:00-10:15: Welcome</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'><br>
+</span><span style='font-family:"Arial",sans-serif'>- 10:15-11:00: Keynote 1</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'><br>
+</span><span style='font-family:"Arial",sans-serif'>- 11:00-11:30: Coffee Break</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'><br>
+</span><span style='font-family:"Arial",sans-serif'>- 11:30-12:30: Paper
+Presentations</span><span style='font-size:12.0pt;font-family:"Arial",sans-serif'><br>
+</span><span style='font-family:"Arial",sans-serif'>- 12:30-13:30: Lunch Break</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'><br>
+</span><span style='font-family:"Arial",sans-serif'>- 13:30-14:00: Keynote 2
+(perhaps hybrid)</span><span style='font-size:12.0pt;font-family:"Arial",sans-serif'><br>
+</span><span style='font-family:"Arial",sans-serif'>- 14:00-15:00: LM-KBC
+Challenge Presentations</span><span style='font-size:12.0pt;font-family:"Arial",sans-serif'><br>
+</span><span style='font-family:"Arial",sans-serif'>- 15:00-15:20: Coffee Break</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'><br>
+</span><span style='font-family:"Arial",sans-serif'>- 15:20-16:00: Paper
+Presentations</span><span style='font-size:12.0pt;font-family:"Arial",sans-serif'><br>
+</span><span style='font-family:"Arial",sans-serif'>- 16:00-16:15: Closing
+Ceremony</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
 <h2>Chairs</h2>
 
 <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><b><span
@@ -209,7 +279,7 @@ management. He is co-organizing this year’s LM-KBC challenge at ISWC and has
 been part of the PC of ISWC and ESWC.</span></p>
 
 <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><b><span
-style='font-family:"Arial",sans-serif'>Simon Razniewski</span></span></b><span
+style='font-family:"Arial",sans-serif'>Simon Razniewski</span></b><span
 style='font-family:"Arial",sans-serif'><span role=presentation> </span><span
 style='transform: scaleX(0.997191)' role=presentation>is a research scientist
 in the NLP and Neuro-Symbolic</span> AI group at the Bosch Center for AI. He
@@ -235,7 +305,7 @@ forum for the Semantic Web / Knowledge Graph / Linked Data communities.</span></
 <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
 style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
 
-<h2>References</h2>
+<h2>Selected references</h2>
 
 <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
 style='font-family:"Arial",sans-serif'>- Petroni, F., Rocktaeschel, T., Riedel,
@@ -255,12 +325,13 @@ Language Models for Knowledge Base Completion, ESWC, 2023</span></p>
 <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
 style='font-family:"Arial",sans-serif'>- Alivanistos, Dimitrios, Selene Baez
 Santamaria, Michael Cochez, Jan-Christoph Kalo, Emile van Krieken, and Thiviyan
-Thanapalasingam. &quot;Prompting as Probing: Using Language Models for
-Knowledge Base Construction.&quot; LM-KBC, 2022.</span></p>
+Thanapalasingam. &quot;Prompting as Probing: Using Language Models for Knowledge
+Base Construction.&quot; LM-KBC, 2022.</span></p>
 
 <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
-style='font-family:"Arial",sans-serif'>- Simon Razniewski, Andrew Yates, Nora Kassner,
-Gerhard Weikum. Language Models As or For Knowledge Bases, DL4KG@ISWC, 2021</span></p>
+style='font-family:"Arial",sans-serif'>- Simon Razniewski, Andrew Yates, Nora
+Kassner, Gerhard Weikum. Language Models As or For Knowledge Bases, DL4KG@ISWC,
+2021</span></p>
 
 <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
 style='font-family:"Arial",sans-serif'>- KAMEL: Knowledge Analysis with
