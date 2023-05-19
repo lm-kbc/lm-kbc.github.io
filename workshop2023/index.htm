@@ -7,6 +7,9 @@
 <!--
  /* Font Definitions */
  @font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;}
+@font-face
 	{font-family:"Cambria Math";
 	panose-1:2 4 5 3 5 4 6 3 2 4;}
 @font-face
@@ -49,30 +52,6 @@ p.MsoListParagraph, li.MsoListParagraph, div.MsoListParagraph
 	line-height:105%;
 	font-size:11.0pt;
 	font-family:"Calibri",sans-serif;}
-p.MsoListParagraphCxSpFirst, li.MsoListParagraphCxSpFirst, div.MsoListParagraphCxSpFirst
-	{margin-top:0in;
-	margin-right:0in;
-	margin-bottom:0in;
-	margin-left:.5in;
-	line-height:105%;
-	font-size:11.0pt;
-	font-family:"Calibri",sans-serif;}
-p.MsoListParagraphCxSpMiddle, li.MsoListParagraphCxSpMiddle, div.MsoListParagraphCxSpMiddle
-	{margin-top:0in;
-	margin-right:0in;
-	margin-bottom:0in;
-	margin-left:.5in;
-	line-height:105%;
-	font-size:11.0pt;
-	font-family:"Calibri",sans-serif;}
-p.MsoListParagraphCxSpLast, li.MsoListParagraphCxSpLast, div.MsoListParagraphCxSpLast
-	{margin-top:0in;
-	margin-right:0in;
-	margin-bottom:8.0pt;
-	margin-left:.5in;
-	line-height:105%;
-	font-size:11.0pt;
-	font-family:"Calibri",sans-serif;}
 span.Heading2Char
 	{mso-style-name:"Heading 2 Char";
 	mso-style-link:"Heading 2";
@@ -83,8 +62,7 @@ span.PlainTextChar
 	mso-style-link:"Plain Text";
 	font-family:"Calibri",sans-serif;}
 .MsoChpDefault
-	{font-size:10.0pt;
-	font-family:"Calibri",sans-serif;}
+	{font-size:10.0pt;}
 .MsoPapDefault
 	{margin-bottom:8.0pt;
 	line-height:105%;}
@@ -119,25 +97,30 @@ International Semantic Web Conference (ISWC 2023) </a></span></p>
 
 <h2>Overview</h2>
 
-<p class=MsoPlainText><span style='font-family:"Arial",sans-serif'>Language
-models (LMs), such as chatGPT, BERT, and T5, have demonstrated remarkable
-outcomes in numerous AI applications. Research has shown that these models
-implicitly capture vast amounts of factual knowledge within their parameters,
-resulting in a remarkable performance in knowledge-intensive applications. The
-seminal paper ``Language Models as Knowledge Bases?'' sparked interest in the
-spectrum between language models and knowledge graphs, leading to a diverse
-range of research on the usage of LMs for knowledge base construction. This
-research includes:</span></p>
+<p class=MsoPlainText><span style='font-family:"Arial",sans-serif'>Language models
+(LMs), such as chatGPT, BERT, and T5, have demonstrated remarkable outcomes in
+numerous AI applications. Research has shown that these models implicitly
+capture vast amounts of factual knowledge within their parameters, resulting in
+a remarkable performance in knowledge-intensive applications. The seminal paper
+``Language Models as Knowledge Bases?'' sparked interest in the spectrum
+between language models and knowledge graphs, leading to a diverse range of
+research on the usage of LMs for knowledge base construction. This research
+includes:</span></p>
 
-<p class=MsoPlainText><span style='font-family:"Arial",sans-serif'>(1)
-utilizing pre-trained LMs for knowledge base completion and construction tasks,</span></p>
+<p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
+style='font-family:"Arial",sans-serif'>(1)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span><span style='font-family:"Arial",sans-serif'>utilizing
+pre-trained LMs for knowledge base completion and construction tasks,</span></p>
 
-<p class=MsoPlainText><span style='font-family:"Arial",sans-serif'>(2)
-performing information extraction tasks, like entity linking and relation
-extraction, and</span></p>
+<p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
+style='font-family:"Arial",sans-serif'>(2)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span><span style='font-family:"Arial",sans-serif'>performing
+information extraction tasks, like entity linking and relation extraction, and</span></p>
 
-<p class=MsoPlainText><span style='font-family:"Arial",sans-serif'>(3)
-utilizing knowledge graphs to support LM applications.</span></p>
+<p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
+style='font-family:"Arial",sans-serif'>(3)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span><span style='font-family:"Arial",sans-serif'>utilizing knowledge
+graphs to support LM applications.</span></p>
 
 <p class=MsoPlainText><span style='font-family:"Arial",sans-serif'>In the first
 edition of the LM-KBC workshop, we aim to give space to the emerging academic
@@ -145,63 +128,102 @@ community that investigates these topics, host extended discussions around the
 LM-KBC Semantic Web challenge, and enable an informal exchange of researchers
 and practitioners.</span></p>
 
+<p class=MsoPlainText><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
 <h2>Topics</h2>
 
-<p class=MsoNormal><span style='font-family:"Arial",sans-serif'>- <span
-style='transform: scaleX(1.04193)' role=presentation>Entity recognition and
-disambiguation with LMs</span><br role=presentation>
-<span role=presentation>- </span><span style='transform: scaleX(1.05436)' role=presentation>Relation
-extraction with LMs</span><br role=presentation>
-<span role=presentation>- </span><span style='transform: scaleX(1.00473)' role=presentation>Zero-shot
-and few-shot knowledge extraction from LMs</span><br role=presentation>
-<span role=presentation>- </span><span style='transform: scaleX(0.989405)' role=presentation>Consistency
-of LMs</span><br role=presentation>
-<span role=presentation>- </span><span style='transform: scaleX(1.01709)' role=presentation>Knowledge
-consolidation with LMs</span><br role=presentation>
-<span role=presentation>- </span><span style='transform: scaleX(1.00003)' role=presentation>Comparisons
-of LMs for KBC tasks</span><br role=presentation>
-<span role=presentation>- </span><span style='transform: scaleX(1.01323)' role=presentation>Methodological
-contributions on training and fine-tuning LMs for KBC tasks</span><br
-role=presentation>
-<span role=presentation>- </span><span style='transform: scaleX(1.01081)' role=presentation>Evaluations
-of downstream capabilities of LM-based KGs in tasks like QA</span><br
-role=presentation>
-<span role=presentation>- </span><span style='transform: scaleX(1.00034)' role=presentation>Designing
-robust prompts for large language model probin</span>g</span></p>
+<p class=MsoListParagraph style='text-indent:-.25in'><span style='font-family:
+Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:"Arial",sans-serif'>Entity recognition
+and disambiguation with LMs</span></span></p>
+
+<p class=MsoListParagraph style='text-indent:-.25in'><span style='font-family:
+Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:"Arial",sans-serif'>Relation extraction
+with LMs</span></span></p>
+
+<p class=MsoListParagraph style='text-indent:-.25in'><span style='font-family:
+Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:"Arial",sans-serif'>Zero-shot and
+few-shot knowledge extraction from LMs</span></span></p>
+
+<p class=MsoListParagraph style='text-indent:-.25in'><span style='font-family:
+Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:"Arial",sans-serif'>Consistency of LMs</span></span></p>
+
+<p class=MsoListParagraph style='text-indent:-.25in'><span style='font-family:
+Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:"Arial",sans-serif'>Knowledge
+consolidation with LMs</span></span></p>
+
+<p class=MsoListParagraph style='text-indent:-.25in'><span style='font-family:
+Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:"Arial",sans-serif'>Comparisons of LMs
+for KBC tasks</span></span></p>
+
+<p class=MsoListParagraph style='text-indent:-.25in'><span style='font-family:
+Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:"Arial",sans-serif'>Methodological
+contributions on training and fine-tuning LMs for KBC tasks</span></span></p>
+
+<p class=MsoListParagraph style='text-indent:-.25in'><span style='font-family:
+Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:"Arial",sans-serif'>Evaluations of
+downstream capabilities of LM-based KGs in tasks like QA</span></span></p>
+
+<p class=MsoListParagraph style='text-indent:-.25in'><span style='font-family:
+Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:"Arial",sans-serif'>Designing robust
+prompts for large language model probin</span>g</span></p>
 
 <p class=MsoNormal><span style='font-family:"Arial",sans-serif'>We invite two
 types of submissions:</span></p>
 
-<p class=MsoListParagraphCxSpFirst style='text-indent:-.25in'><span
-style='font-family:"Arial",sans-serif'>(1)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
-</span></span>Novel research contributions</p>
+<p class=MsoListParagraph style='text-indent:-.25in'><span style='font-family:
+"Arial",sans-serif'>(1)</span><span style='font-size:7.0pt;line-height:105%;
+font-family:"Arial",sans-serif'>&nbsp;&nbsp; </span><span style='font-family:
+"Arial",sans-serif'>Novel research contributions.</span></p>
 
-<p class=MsoListParagraphCxSpLast style='text-indent:-.25in'><span
-style='font-family:"Arial",sans-serif'>(2)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
-</span></span>Already published papers (these will be presentation-only, and
-not part of the proceedings).</p>
+<p class=MsoListParagraph style='text-indent:-.25in'><span style='font-family:
+"Arial",sans-serif'>(2)</span><span style='font-size:7.0pt;line-height:105%;
+font-family:"Arial",sans-serif'>&nbsp;&nbsp; </span><span style='font-family:
+"Arial",sans-serif'>Already published papers (these will be presentation-only,
+and not part of the workshop proceedings).</span></p>
+
+<p class=MsoListParagraph style='margin-left:.25in;text-indent:-.25in'><span
+style='font-family:"Arial",sans-serif'>Novel research papers can be either full
+papers (ca. 8-12 pages), or short papers presenting smaller or preliminary
+results (typically 3-6 pages). We also accept demo and position papers.</span></p>
+
+<p class=MsoListParagraph style='margin-left:.25in;text-indent:-.25in'><span
+style='font-family:"Arial",sans-serif'>Check out also the <a
+href="https://lm-kbc.github.io/challenge2023/">LM-KBC challenge</a> for further
+options to contribute to the workshop.</span></p>
 
 <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
 style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
 
-<h2>Review process</h2>
+<h2>Submission and review process</h2>
 
 <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
 style='font-family:"Arial",sans-serif'>Papers will be peer-reviewed by at least
 three researchers using a double-blind review. Selected papers will be
-published on CEUR (if the authors agree to have their papers published). We
-invite the following types of papers:<br role=presentation>
-<span role=presentation>- </span><span style='transform: scaleX(0.972496)' role=presentation>Full
-research papers: novel research contributions (8-12 pages)</span><br
-role=presentation>
-<span role=presentation>- </span><span style='transform: scaleX(0.964882)' role=presentation>Short
-research papers: novel research contributions of smaller scope than full</span>
-papers (3-5 pages)<br role=presentation>
-<span role=presentation>- </span><span style='transform: scaleX(1.05738)' role=presentation>Position
-papers: presenting a novel idea that is not yet in the scope of a</span>
-research contribution (6-8 pages)<br role=presentation>
-<span role=presentation>- </span><span style='transform: scaleX(0.952488)' role=presentation>Demo
-papers: presenting a system based on research concepts (6-8 pages)</span></span></p>
+published on CEUR (if the authors agree to have their papers published). </span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+style='font-family:"Arial",sans-serif'>All papers need to be formatted according
+to the CEUR workshop proceedings. A template for this workshop is available <a
+href="https://www.overleaf.com/read/dwjshwhrqwzw">here</a>.</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+style='font-family:"Arial",sans-serif'>All papers need to be submitted on <a
+href="https://openreview.net/group?id=swsa.semanticweb.org/ISWC/2023/Workshop/KBC-LM">Openreview</a>.</span></p>
 
 <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
 style='font-family:"Arial",sans-serif'><br>
@@ -215,20 +237,20 @@ style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
 <h2>Important dates</h2>
 
 <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
-style='font-family:"Arial",sans-serif'>- Papers due: August 8, 2023</span></p>
+style='font-family:"Arial",sans-serif'>- Papers due: July 31, 2023</span></p>
 
 <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
-style='font-family:"Arial",sans-serif'>- Notification to authors: September 5,
+style='font-family:"Arial",sans-serif'>- Notification to authors: August 31,
 2023</span></p>
 
 <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
-style='font-family:"Arial",sans-serif'>- Camera-ready deadline: September 19,
+style='font-family:"Arial",sans-serif'>- Camera-ready deadline: September 14,
 2023</span></p>
 
 <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
 style='font-family:"Arial",sans-serif'>- Workshop dates: 6 or 7 November 2023</span></p>
 
-<p class=MsoNormal>&nbsp;</p>
+<p class=MsoNormal><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
 
 <h2>Tentative schedule</h2>
 
@@ -242,26 +264,30 @@ event to lower the entry barrier for participants.</span></p>
 
 <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
 style='font-size:12.0pt;font-family:"Arial",sans-serif'><br>
-</span><span style='font-family:"Arial",sans-serif'>- 10:00-10:15: Welcome</span><span
+</span><span style='font-family:"Arial",sans-serif'>- 08:30-08:45: Welcome</span><span
 style='font-size:12.0pt;font-family:"Arial",sans-serif'><br>
-</span><span style='font-family:"Arial",sans-serif'>- 10:15-11:00: Keynote 1</span><span
+</span><span style='font-family:"Arial",sans-serif'>- 08:45-09:30: Keynote</span><span
 style='font-size:12.0pt;font-family:"Arial",sans-serif'><br>
-</span><span style='font-family:"Arial",sans-serif'>- 11:00-11:30: Coffee Break</span><span
+</span><span style='font-family:"Arial",sans-serif'>- 09:30-10:30: Paper presentations
+1</span><span style='font-size:12.0pt;font-family:"Arial",sans-serif'><br>
+</span><span style='font-family:"Arial",sans-serif'>- 10:30-10:50: Coffee break</span><span
 style='font-size:12.0pt;font-family:"Arial",sans-serif'><br>
-</span><span style='font-family:"Arial",sans-serif'>- 11:30-12:30: Paper
-Presentations</span><span style='font-size:12.0pt;font-family:"Arial",sans-serif'><br>
-</span><span style='font-family:"Arial",sans-serif'>- 12:30-13:30: Lunch Break</span><span
+</span><span style='font-family:"Arial",sans-serif'>- 10:50-11:20: Paper
+presentations 2</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+style='font-family:"Arial",sans-serif'>- 11:20-12:20: <a
+href="https://lm-kbc.github.io/challenge2023/">LM-KBC challenge</a> presentations</span><span
 style='font-size:12.0pt;font-family:"Arial",sans-serif'><br>
-</span><span style='font-family:"Arial",sans-serif'>- 13:30-14:00: Keynote 2
-(perhaps hybrid)</span><span style='font-size:12.0pt;font-family:"Arial",sans-serif'><br>
-</span><span style='font-family:"Arial",sans-serif'>- 14:00-15:00: LM-KBC
-Challenge Presentations</span><span style='font-size:12.0pt;font-family:"Arial",sans-serif'><br>
-</span><span style='font-family:"Arial",sans-serif'>- 15:00-15:20: Coffee Break</span><span
-style='font-size:12.0pt;font-family:"Arial",sans-serif'><br>
-</span><span style='font-family:"Arial",sans-serif'>- 15:20-16:00: Paper
-Presentations</span><span style='font-size:12.0pt;font-family:"Arial",sans-serif'><br>
-</span><span style='font-family:"Arial",sans-serif'>- 16:00-16:15: Closing
-Ceremony</span></p>
+</span><span style='font-family:"Arial",sans-serif'>- 12:20-12:30: Closing
+ceremony</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+style='font-family:"Arial",sans-serif'>* We do not yet know whether the
+workshop happens in the morning or in the afternoon.</span></p>
 
 <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
 style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
@@ -292,8 +318,8 @@ role=presentation> </span><span style='transform: scaleX(1.06489)' role=presenta
 a PhD student at the Max-Planck Institute for Informatics. Her research focuses
 on enabling machines to select and utilize high-</span>quality information
 sources, with an awareness of unknowns, for knowledge base (KB) construction.
-She co-organized the LM-KBC’22 challenge and has held PC roles at ACL, CIKM,
-ISWC, and ESWC.<br role=presentation>
+She co-organized the LM-KBC’22 challenge and has held PC roles at ACL, CIKM, ISWC,
+and ESWC.<br role=presentation>
 <b><span style='transform: scaleX(1.19841)' role=presentation>Jeff Z. Pan</span></b><span
 role=presentation> </span><span style='transform: scaleX(1.05571)' role=presentation>is
 a chair of the Knowledge Graph Group at the Alan Turing</span> Institute and is
@@ -325,8 +351,8 @@ Language Models for Knowledge Base Completion, ESWC, 2023</span></p>
 <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
 style='font-family:"Arial",sans-serif'>- Alivanistos, Dimitrios, Selene Baez
 Santamaria, Michael Cochez, Jan-Christoph Kalo, Emile van Krieken, and Thiviyan
-Thanapalasingam. &quot;Prompting as Probing: Using Language Models for Knowledge
-Base Construction.&quot; LM-KBC, 2022.</span></p>
+Thanapalasingam. &quot;Prompting as Probing: Using Language Models for
+Knowledge Base Construction.&quot; LM-KBC, 2022.</span></p>
 
 <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
 style='font-family:"Arial",sans-serif'>- Simon Razniewski, Andrew Yates, Nora
