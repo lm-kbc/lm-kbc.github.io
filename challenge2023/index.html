@@ -45,23 +45,16 @@
         <div class="row">
             <div id="content" class="col-12 col-xl-8">
 
-                <!-- <div id='sec-news' class="mb-5">
-                    <h3>🔔 News</h3>
-                    <ul>
-                        <li><b>16 March 2023</b>: 2nd Edition of LM-KBC Announced!
-                        </li>
-                    </ul>
-                </div> -->
-
-                <div id='sec-task-description' class="mb-5">
-                    <h3>News</h3>
+                <div id='sec-news' class="mb-5">
+                    <h3 id="news">News</h3>
 					<ul>
                         <li>22.5.23: v1.0 of dataset (train and validation splits) released.</li>
                         <li>17.5.23: Test output/system submission deadline extended to August 2, 2023. Take time to submit your strongest systems!</li>
                     </ul>
-					
-					
-					<h3>Task Description</h3>
+                </div>
+
+                <div id='sec-task-description' class="mb-5">
+					<h3 id="task-description">Task Description</h3>
 
                     Pretrained language models (LMs) like chatGPT have advanced a range of semantic tasks and have also shown promise for knowledge extraction from the models itself. Although several works have explored this ability in a setting called probing or prompting, the viability of <em>knowledge base construction</em> from LMs remains underexplored. In the 2<sup>nd</sup> edition of this challenge, we invite participants to build actual disambiguated knowledge bases from LMs, for given subjects and relations. In crucial difference to existing probing benchmarks like LAMA (<a
                     href="https://arxiv.org/pdf/1909.01066.pdf" target="_blank">Petroni et al., 2019</a>), we make no simplifying assumptions on relation cardinalities, i.e., a subject-entity can stand in relation with zero, one, or many object-entities. Furthermore, submissions need to go beyond just ranking predicted surface strings and materialize disambiguated entities in the output, which will be evaluated using established KB metrics of precision and recall. 
@@ -76,92 +69,656 @@
                     </p>
                     <ul>
                         <li>
-                            <strong>Track 1</strong>: a small-model track with low computational requirements (<1 billion parameters)
+                            <strong>Track 1</strong>: a small-model track with low computational requirements (&lt;1 billion parameters)
                         </li>
                         <li>
                             <strong>Track 2</strong>: an open track, where participants can use any LM of their choice
                         </li>
                     </ul>
-                </div>
                 
+                    <h5>Track 1: Small-model track (&lt;1 billion parameters)</h5>
+                    Participants are free to use any pretrained LM containing at most 1 billion parameters. This includes, for instance, <a href="https://huggingface.co/bert-large-uncased" target="_blank">BERT</a>, <a href="https://huggingface.co/facebook/bart-large" target="_blank">BART</a>, <a href="https://huggingface.co/gpt2-medium" target="_blank">GPT-2</a>, and variants of <a href="https://huggingface.co/facebook/opt-350m" target="_
+                    ">OPT</a>. The input tuples can be paraphrased through prompt engineering techniques (e.g., AutoPrompt,LPAQA), and participants can also use prompt ensembles for better output generation. However, using context (e.g., verbalizing tuples using supporting sentences) is not allowed in this track.
+                    <br>
+                    <br>
+                    <h5>Track 2: Open track</h5>
+                    In the open track, the task is the same as in the small-model track. However,
+                    <ul>
+                        <li>
+                            LMs of any size, e.g., GPT-3, can be probed.
+                        </li>
+                        <li>
+                            Use of context is allowed for LM-generation, e.g., context retrieval like in <a href="http://proceedings.mlr.press/v119/guu20a/guu20a.pdf" target="_blank">REALM</a> and <a href="https://www.akbc.ws/2020/assets/pdfs/025X0zPfn.pdf" target="_blank">factual predictions with context</a>.
+                        </li>
+                    </ul>
+                </div>    
                 
-                <h4>Track 1: Small-model track (<1 billion parameters)</h4>
+                <div id='sec-dataset' class="my-5">
+                    <h3 id="dataset">Dataset</h3>
+                    <p>We release a dataset (<a href="https://github.com/lm-kbc/dataset2023/blob/main/data/train.jsonl"
+                        target="_blank">train</a> and
+                    <a href="https://github.com/lm-kbc/dataset2023/blob/main/data/val.jsonl" target="_blank">validation</a>) for a diverse set of 21 relations, each covering a
+                    different set of subject-entities and along with complete list ground truth object-entities per
+                    subject-relation-pair. The total number of object-entities varies for a given subject-relation
+                    pair. The train dataset subject-relation-object triples can be used for training or probing the
+                    language models in any form, while validation can be used for hyperparameter tuning. Futher
+                    details on the relations are given below:
+                </p>
 
-                Participants are free to use any pretrained LM containing at most 1 billion parameters. This includes, for instance, <a href="https://huggingface.co/bert-large-uncased" target="_blank">BERT</a>, <a href="https://huggingface.co/facebook/bart-large" target="_blank">BART</a>, <a href="https://huggingface.co/gpt2-medium" target="_blank">GPT-2</a>, and variants of <a href="https://huggingface.co/facebook/opt-350m." target="_
-                ">OPT</a>. The input tuples can be paraphrased through prompt engineering techniques (e.g., AutoPrompt,LPAQA), and participants can also use prompt ensembles for better output generation. However, using context (e.g., verbalizing tuples using supporting sentences) is not allowed in this track.
-
-                <h4>Track 2: Open track</h4>
-
-                In the open track, the task is the same as in the small-model track. However,
-                <ul>
-                <li>
-                    LMs of any size, e.g., GPT-3, can be probed.
-                    </li>
-                    <li>
-                        Use of context is allowed for LM-generation, e.g., context retrieval like in <a href="http://proceedings.mlr.press/v119/guu20a/guu20a.pdf" target="_blank">REALM</a> and <a href="https://www.akbc.ws/2020/assets/pdfs/025X0zPfn.pdf" target="_blank">factual predictions with context</a>.
-                    </li>
-                </ul>
-                    
-                <h4>Evaluation</h4>
-                                    
-                For each test instance, predictions are evaluated by calculating precision and recall against ground-truth values. The final macro-averaged F1-score is used to rank the participating systems.
-
-                <h4>Baselines</h4>
-
-                We provide several baselines:
-                <ul>
-                    <li>
-                        Standard prompt for HuggingFace models with Wikidata default disambiguation: These baselines can be instantiated with various HuggingFace models (e.g., BERT, OPT), generate entity surface forms, and use the Wikidata entity disambiguation API to generate IDs.
-                    </li>
-                    <li>
-                        Few-shot GPT-3 directly predicting IDs: This baseline uses a few samples to instruct GPT-3 to directly predict Wikidata IDs.
-                    </li>
-                </ul>
-                Baseline performance:
-                <table class="table table-bordered">
-                    <thead class="table-light">
+                <table class="table table-striped table-hover">
+                    <thead>
                         <tr>
-                            <th class="text-center align-middle">Method</th>
-                            <th class="text-center">Avg. Precision</th>
-                            <th class="text-center">Avg. Recall</th>
-                            <th class="text-center">Avg. F1-score</th>
+                            <th scope="col">Relation</th>
+                            <th scope="col">Description</th>
+                            <th scope="col" style="width:42%;">
+                                <span>
+                                    Example
+                                </span>
+                            </th>
                         </tr>
                     </thead>
-                    <tbody>
+                    <tbody class="table-group-divider">
                         <tr>
-                            <td class="text-center align-middle">GPT-3 IDs directly (Curie model)</td>
-                            <td class="text-center align-middle">0.126</td>
-                            <td class="text-center align-middle">0.060</td>
-                            <td class="text-center align-middle">0.061</td>
+                            <td><samp>BandHasMember</samp></td>
+                            <td>band (<code>s</code>) has a member (<code>o</code>)
+                            </td>
+                            <td>
+                                <a data-bs-toggle="collapse" href="#collapseExample_1" role="button"
+                                    aria-expanded="false" aria-controls="collapseExample_1">
+                                    Show/Hide
+                                </a>
+                                <div class="collapse multi-collapse" id="collapseExample_1">
+                                    <pre class="mt-3">(Q941293, N.E.R.D., BandHasMember, [Q14313, Q706641, Q2584176], [Pharrell Williams, Chad Hugo, Shay Haley])</pre>
+                                </div>
+                            </td>
                         </tr>
 
                         <tr>
-                            <td class="text-center align-middle">BERT</td>
-                            <td class="text-center align-middle">0.368</td>
-                            <td class="text-center align-middle">0.161</td>
-                            <td class="text-center align-middle">0.142</td>
+                            <td><samp>CityLocatedAtRiver</samp></td>
+                            <td>City (<code>s</code>) is located at the river (<code>o</code>)
+                            </td>
+                            <td>
+                                <a data-bs-toggle="collapse" href="#collapseExample_1" role="button"
+                                    aria-expanded="false" aria-controls="collapseExample_1">
+                                    Show/Hide
+                                </a>
+                                <div class="collapse multi-collapse" id="collapseExample_1">
+                                    <pre class="mt-3">(Q365, Cologne, CityLocatedAtRiver, [Q584], [Rhine])</pre>
+                                </div>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td><samp>CompanyHasParentOrganisation</samp></td>
+                            <td>Company (<code>s</code>) has another company (<code>o</code>) as its parent organization
+                            </td>
+                            <td>
+                                <a data-bs-toggle="collapse" href="#collapseExample_1" role="button"
+                                    aria-expanded="false" aria-controls="collapseExample_1">
+                                    Show/Hide
+                                </a>
+                                <div class="collapse multi-collapse" id="collapseExample_1">
+                                    <pre class="mt-3">(Q39898, NSU, CompanyHasParentOrganisation, [Q246], [Volkswagen])</pre>
+                                </div>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td><samp>CompoundHasParts</samp></td>
+                            <td>chemical compound (<code>s</code>) consists of an element (<code>o</code>)
+                            </td>
+                            <td>
+                                <a data-bs-toggle="collapse" href="#collapseExample_1" role="button"
+                                    aria-expanded="false" aria-controls="collapseExample_1">
+                                    Show/Hide
+                                </a>
+                                <div class="collapse multi-collapse" id="collapseExample_1">
+                                    <pre class="mt-3">(Q150843, Hexadecane, [Q623, Q556], [carbon, hydrogen])</pre>
+                                </div>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td><samp>CountryBordersCountry</samp></td>
+                            <td>country (<code>s</code>) shares a land border with another country (<code>o</code>)
+                            </td>
+                            <td>
+                                <a data-bs-toggle="collapse" href="#collapseExample_1" role="button"
+                                    aria-expanded="false" aria-controls="collapseExample_1">
+                                    Show/Hide
+                                </a>
+                                <div class="collapse multi-collapse" id="collapseExample_1">
+                                    <pre class="mt-3">(Q1020, Malawi, CountryBordersCountry, [Q924, Q953, Q1029], [Tanzania, Zambia, Mozambique])</pre>
+                                </div>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td><samp>CountryHasOfficialLanguage</samp></td>
+                            <td>country (<code>s</code>) has an official language (<code>o</code>)
+                            </td>
+                            <td>
+                                <a data-bs-toggle="collapse" href="#collapseExample_1" role="button"
+                                    aria-expanded="false" aria-controls="collapseExample_1">
+                                    Show/Hide
+                                </a>
+                                <div class="collapse multi-collapse" id="collapseExample_1">
+                                    <pre class="mt-3">(Q334, Singapore, CountryHasOfficialLanguage, [Q1860, Q5885, Q9237, Q727694], [English, Tamil, Malay, Standard Mandarin])</pre>
+                                </div>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td><samp>CountryHasStates</samp></td>
+                            <td>country (<code>s</code>) has the state (<code>o</code>)
+                            </td>
+                            <td>
+                                <a data-bs-toggle="collapse" href="#collapseExample_1" role="button"
+                                    aria-expanded="false" aria-controls="collapseExample_1">
+                                    Show/Hide
+                                </a>
+                                <div class="collapse multi-collapse" id="collapseExample_1">
+                                    <pre class="mt-3">(Q702, Federated States of Micronesia, CountryHasStates, [Q221684, Q1785093, Q7771127, Q11342951], [Chuuk, Kosrae State, Pohnpei State, Yap State])</pre>
+                                </div>
+                            </td>
                         </tr>
                         
+                        <tr>
+                            <td><samp>FootballerPlaysPosition</samp></td>
+                            <td>Footballer (<code>s</code>) plays in the position (<code>o</code>)
+                            </td>
+                            <td>
+                                <a data-bs-toggle="collapse" href="#collapseExample_1" role="button"
+                                    aria-expanded="false" aria-controls="collapseExample_1">
+                                    Show/Hide
+                                </a>
+                                <div class="collapse multi-collapse" id="collapseExample_1">
+                                    <pre class="mt-3">(Q455462, Antoine Griezmann, FootballerPlaysPosition, [Q280658], [forward])</pre>
+                                </div>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td><samp>PersonCauseOfDeath</samp></td>
+                            <td>person (<code>s</code>) died due to a cause (<code>o</code>)
+                            </td>
+                            <td>
+                                <a data-bs-toggle="collapse" href="#collapseExample_1" role="button"
+                                    aria-expanded="false" aria-controls="collapseExample_1">
+                                    Show/Hide
+                                </a>
+                                <div class="collapse multi-collapse" id="collapseExample_1">
+                                    <pre class="mt-3">(Q5238609, David Plotz, PersonCauseOfDeath, [ ], [ ])</pre>
+                                </div>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td><samp>PersonHasAutobiography</samp></td>
+                            <td>person (<code>s</code>) has the autobiography (<code>o</code>)
+                            </td>
+                            <td>
+                                <a data-bs-toggle="collapse" href="#collapseExample_1" role="button"
+                                    aria-expanded="false" aria-controls="collapseExample_1">
+                                    Show/Hide
+                                </a>
+                                <div class="collapse multi-collapse" id="collapseExample_1">
+                                    <pre class="mt-3">(Q6279, Joe Biden, PersonHasAutobiography, [Q100221747], [Promise Me Dad])</pre>
+                                </div>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td><samp>PersonHasEmployer	</samp></td>
+                            <td>person (<code>s</code>) is or was employed by a company (<code>o</code>)
+                            </td>
+                            <td>
+                                <a data-bs-toggle="collapse" href="#collapseExample_1" role="button"
+                                    aria-expanded="false" aria-controls="collapseExample_1">
+                                    Show/Hide
+                                </a>
+                                <div class="collapse multi-collapse" id="collapseExample_1">
+                                    <pre class="mt-3">(Q11476943, Yōichi Shimada, PersonHasEmployer, [Q4845464], [Fukui Prefectural University])</pre>
+                                </div>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td><samp>PersonHasNoblePrize</samp></td>
+                            <td>person (<code>s</code>) has the noble prize (<code>o</code>)
+                            </td>
+                            <td>
+                                <a data-bs-toggle="collapse" href="#collapseExample_1" role="button"
+                                    aria-expanded="false" aria-controls="collapseExample_1">
+                                    Show/Hide
+                                </a>
+                                <div class="collapse multi-collapse" id="collapseExample_1">
+                                    <pre class="mt-3">(Q65989, Wolfgang Pauli, PersonHasNoblePrize, [Q38104], [Nobel Prize in Physics])</pre>
+                                </div>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td><samp>PersonHasNumberOfChildren</samp></td>
+                            <td>person (<code>s</code>) has number of children (<code>o</code>)
+                            </td>
+                            <td>
+                                <a data-bs-toggle="collapse" href="#collapseExample_1" role="button"
+                                    aria-expanded="false" aria-controls="collapseExample_1">
+                                    Show/Hide
+                                </a>
+                                <div class="collapse multi-collapse" id="collapseExample_1">
+                                    <pre class="mt-3">(Q7599711, Stanley Johnson, PersonHasNumberOfChildren, [6], [6])</pre>
+                                </div>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td><samp>PersonHasPlaceOfDeath</samp></td>
+                            <td>person (<code>s</code>) died at a location (<code>o</code>)
+                            </td>
+                            <td>
+                                <a data-bs-toggle="collapse" href="#collapseExample_1" role="button"
+                                    aria-expanded="false" aria-controls="collapseExample_1">
+                                    Show/Hide
+                                </a>
+                                <div class="collapse multi-collapse" id="collapseExample_1">
+                                    <pre class="mt-3">(Q4369225, Alina Pokrovskaya, PersonHasPlaceOfDeath, [ ], [ ])</pre>
+                                </div>
+                            </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><samp>PersonHasProfession</samp></td>
+                            <td>person (<code>s</code>) held a profession (<code>o</code>)
+                            </td>
+                            <td>
+                                <a data-bs-toggle="collapse" href="#collapseExample_1" role="button"
+                                    aria-expanded="false" aria-controls="collapseExample_1">
+                                    Show/Hide
+                                </a>
+                                <div class="collapse multi-collapse" id="collapseExample_1">
+                                    <pre class="mt-3">(Q468043, Jon Elster, PersonHasProfession, [Q121594, Q188094, Q1238570, Q2306091, Q4964182], [professor, economist, political scientist, sociologist, philosopher])</pre>
+                                </div>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td><samp>PersonHasSpouse</samp></td>
+                            <td>person (<code>s</code>) has spouse (<code>o</code>)
+                            </td>
+                            <td>
+                                <a data-bs-toggle="collapse" href="#collapseExample_1" role="button"
+                                    aria-expanded="false" aria-controls="collapseExample_1">
+                                    Show/Hide
+                                </a>
+                                <div class="collapse multi-collapse" id="collapseExample_1">
+                                    <pre class="mt-3">(Q5111202, Chrissy Teigen, PersonHasSpouse, [Q44857], [John Legend])</pre>
+                                </div>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td><samp>PersonPlaysInstrument</samp></td>
+                            <td>person (<code>s</code>) plays an instrument (<code>o</code>)
+                            </td>
+                            <td>
+                                <a data-bs-toggle="collapse" href="#collapseExample_1" role="button"
+                                    aria-expanded="false" aria-controls="collapseExample_1">
+                                    Show/Hide
+                                </a>
+                                <div class="collapse multi-collapse" id="collapseExample_1">
+                                    <pre class="mt-3">(Q15994935, Emma Blackery, PersonPlaysInstrument, [Q6607, Q61285, Q17172850], [guitar, ukulele, voice])</pre>
+                                </div>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td><samp>PersonSpeaksLanguage</samp></td>
+                            <td>person (<code>s</code>) speaks the language (<code>o</code>)
+                            </td>
+                            <td>
+                                <a data-bs-toggle="collapse" href="#collapseExample_1" role="button"
+                                    aria-expanded="false" aria-controls="collapseExample_1">
+                                    Show/Hide
+                                </a>
+                                <div class="collapse multi-collapse" id="collapseExample_1">
+                                    <pre class="mt-3">(Q18958964, Witold Andrzejewski, PersonSpeaksLanguage, [Q809], [Polish])</pre>
+                                </div>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td><samp>RiverBasinsCountry</samp></td>
+                            <td>river (<code>s</code>) basins in a country (<code>o</code>)
+                            </td>
+                            <td>
+                                <a data-bs-toggle="collapse" href="#collapseExample_1" role="button"
+                                    aria-expanded="false" aria-controls="collapseExample_1">
+                                    Show/Hide
+                                </a>
+                                <div class="collapse multi-collapse" id="collapseExample_1">
+                                    <pre class="mt-3">(Q45403, Brahmaputra River, RiverBasinsCountry, [Q148, Q668], [People's Republic of China, India])</pre>
+                                </div>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td><samp>SeriesHasNumberOfEpisodes</samp></td>
+                            <td>series (<code>s</code>) has (<code>o</code>) number of episodes
+                            </td>
+                            <td>
+                                <a data-bs-toggle="collapse" href="#collapseExample_1" role="button"
+                                    aria-expanded="false" aria-controls="collapseExample_1">
+                                    Show/Hide
+                                </a>
+                                <div class="collapse multi-collapse" id="collapseExample_1">
+                                    <pre class="mt-3">(Q12403564, Euphoria, SeriesHasNumberOfEpisodes, [10], [10])</pre>
+                                </div>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td><samp>StateBordersState</samp></td>
+                            <td>state (<code>s</code>) shares a border with another state (<code>o</code>)
+                            </td>
+                            <td>
+                                <a data-bs-toggle="collapse" href="#collapseExample_1" role="button"
+                                    aria-expanded="false" aria-controls="collapseExample_1">
+                                    Show/Hide
+                                </a>
+                                <div class="collapse multi-collapse" id="collapseExample_1">
+                                    <pre class="mt-3">(Q1204, Illinois, StateBordersState, [Q1166, Q1415, Q1537, Q1546, Q1581, Q1603], [Michigan, Indiana, Wisconsin, Iowa, Missouri, Kentucky])</pre>
+                                </div>
+                            </td>
+                        </tr>
+
+
                     </tbody>
                 </table>
 
+                <p>
+                    Each row in the dataset files constitutes of (1) subject-entity-id, (2) subject-entity, (3) list of all possible object-entities-id, (4) list of all possible object-entities and (5) relation. Please read the
+                    <a href="https://github.com/lm-kbc/dataset2023/tree/main#dataset-v10" target="_blank">data format</a> section for more details. When the subjects have zero valid objects, the ground truth is an empty list, e.g., (Microsoft, <samp>CompanyHasParentOrganisation</samp>, [ ]).
+                </p>
+                
+                <h5>Dataset Characteristics</h5>
+                    <p>
+                        For each of the 21 relations, the number of unique subject-entities in the train, dev, and test
+                        are given in the <a href="https://github.com/lm-kbc/dataset2023/blob/main/README.md#dataset-characteristics" target="_blank">GitHub repo</a>. The minimum and maximum number of object-entities for each relation is
+                        given below. If the minimum value is 0, then the subject-entity can have zero valid
+                        object-entities for that relation.
+                    </p>
 
-                <div id='sec-organizers' class="my-5">
-                    <h3 id="organizers">Organizers</h3>
+                    <table class="table table-striped table-hover">
+                        <thead>
+                            <tr>
+                                <th scope="col">Relation</th>
+                                <th scope="col">Train</th>
+                                <th scope="col">Val</th>
+                                <th scope="col">Test</th>
+                            </tr>
+                        </thead>
+                        <tbody class="table-group-divider">
+                            <tr>
+                                <td><samp>BandHasMember</samp></td>
+                                <td>[2, 15]</td>
+                                <td>[2, 16]</td>
+                                <td>[2, 16]</td>
+                            </tr>
+                            <tr>
+                                <td><samp>CityLocatedAtRiver</samp></td>
+                                <td>[1, 9]</td>
+                                <td>[1, 5]</td>
+                                <td>[1, 9]</td>
+                            </tr>
+                            <tr>
+                                <td><samp>CompanyHasParentOrganisation</samp></td>
+                                <td>[0, 5]</td>
+                                <td>[0, 3]</td>
+                                <td>[0, 5]</td>
+                            </tr>
+                            <tr>
+                                <td><samp>CompoundHasParts</samp></td>
+                                <td>[2, 6]</td>
+                                <td>[2, 5]</td>
+                                <td>[2, 6]</td>
+                            </tr>
+                            <tr>
+                                <td><samp>CountryBordersCountry</samp></td>
+                                <td>[1, 17]</td>
+                                <td>[1, 10]</td>
+                                <td>[1, 17]</td>
+                            </tr>
+                            <tr>
+                                <td><samp>CountryHasOfficialLanguage</samp></td>
+                                <td>[1, 16]</td>
+                                <td>[1, 11]</td>
+                                <td>[1, 16]</td>
+                            </tr>
+                            <tr>
+                                <td><samp>CountryHasStates</samp></td>
+                                <td>[1, 20]</td>
+                                <td>[1, 20]</td>
+                                <td>[1, 20]</td>
+                            </tr>
+                            <tr>
+                                <td><samp>FootballerPlaysPosition</samp></td>
+                                <td>[1, 2]</td>
+                                <td>[1, 3]</td>
+                                <td>[1, 2]</td>
+                            </tr>
+                            <tr>
+                                <td><samp>PersonCauseOfDeath</samp></td>
+                                <td>[0, 1]</td>
+                                <td>[0, 3]</td>
+                                <td>[0, 1]</td>
+                            </tr> 
+                            <tr>
+                                <td><samp>PersonHasAutobiography</samp></td>
+                                <td>[1, 4]</td>
+                                <td>[1, 4]</td>
+                                <td>[1, 4]</td>
+                            </tr>   
+                            <tr>
+                                <td><samp>PersonHasEmployer</samp></td>
+                                <td>[1, 6]</td>
+                                <td>[1, 13]</td>
+                                <td>[1, 6]</td>
+                            </tr>
+                            <tr>
+                                <td><samp>PersonHasNoblePrize</samp></td>
+                                <td>[0, 1]</td>
+                                <td>[0, 2]</td>
+                                <td>[0, 1]</td>
+                            </tr> 
+                            <tr>
+                                <td><samp>PersonHasNumberOfChildren</samp></td>
+                                <td>[1, 1]</td>
+                                <td>[1, 2]</td>
+                                <td>[1, 1]</td>
+                            </tr>
+                            <tr>
+                                <td><samp>PersonHasPlaceOfDeath</samp></td>
+                                <td>[0, 1]</td>
+                                <td>[0, 1]</td>
+                                <td>[0, 1]</td>
+                            </tr> 
+                            <tr>
+                                <td><samp>PersonHasProfession</samp></td>
+                                <td>[1, 11]</td>
+                                <td>[1, 12]</td>
+                                <td>[1, 11]</td>
+                            </tr>
+                            <tr>
+                                <td><samp>PersonHasSpouse</samp></td>
+                                <td>[1, 3]</td>
+                                <td>[1, 3]</td>
+                                <td>[1, 3]</td>
+                            </tr>
+                            <tr>
+                                <td><samp>PersonPlaysInstrument</samp></td>
+                                <td>[1, 8]</td>
+                                <td>[1, 8]</td>
+                                <td>[1, 8]</td>
+                            </tr>
+                            <tr>
+                                <td><samp>PersonSpeaksLanguage</samp></td>
+                                <td>[1, 10]</td>
+                                <td>[1, 4]</td>
+                                <td>[1, 10]</td>
+                            </tr>
+                            <tr>
+                                <td><samp>RiverBasinsCountry</samp></td>
+                                <td>[1, 9]</td>
+                                <td>[1, 5]</td>
+                                <td>[1, 9]</td>
+                            </tr>
+                            <tr>
+                                <td><samp>SeriesHasNumberOfEpisodes</samp></td>
+                                <td>[1, 2]</td>
+                                <td>[1, 1]</td>
+                                <td>[1, 2]</td>
+                            </tr>
+                            <tr>
+                                <td><samp>StateBordersState</samp></td>
+                                <td>[1, 16]</td>
+                                <td>[1, 12]</td>
+                                <td>[1, 16]</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <div class="text-center my-5">
+                        <a class="btn btn-success" href="https://github.com/lm-kbc/dataset2023" target="_blank">
+                            Download dataset
+                            <i class="fa-solid fa-download"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div id='sec-task-evaluation' class="mb-5">
+                    <h3 id="task-evaluation">Task Evaluation</h3>
+                                    
+                    For each test instance, predictions are evaluated by calculating precision and recall against ground-truth values. The final macro-averaged F1-score is used to rank the participating systems.
+
+                </div>
+
+                <div id='sec-baselines' class="mb-5">
+                    <h3 id="baselines">Baselines</h3>
+
+                    We provide several baselines:
                     <ul>
                         <li>
-                            <a href="https://people.mpi-inf.mpg.de/~ssinghan/" target="_blank">Sneha Singhania</a>, 
-                            Max Planck Institute for Informatics, Germany
+                            Standard prompt for HuggingFace models with Wikidata default disambiguation: These baselines can be instantiated with various HuggingFace models (e.g., BERT, OPT), generate entity surface forms, and use the Wikidata entity disambiguation API to generate IDs.
                         </li>
                         <li>
-                            <a href="https://research.vu.nl/en/persons/jan-christoph-kalo/">Jan-Christoph Kalo</a>, VU Amsterdam
+                            Few-shot GPT-3 directly predicting IDs: This baseline uses a few samples to instruct GPT-3 to directly predict Wikidata IDs.
                         </li>
-                        <li><a href="http://simonrazniewski.com/" target="_blank">Simon Razniewski</a>, 
-                            Bosch Center for AI
-                        </li>
-                        <li>
-                            <a href="http://knowledge-representation.org/j.z.pan/bio.shtml">Jeff Z. Pan</a>, University of Edinburgh and Huawei Technology R&D UK
-                        </li>
+                    </ul>
+                    Baseline performance:
+                    <table class="table table-bordered">
+                        <thead class="table-light">
+                            <tr>
+                                <th class="text-center align-middle">Method</th>
+                                <th class="text-center">Avg. Precision</th>
+                                <th class="text-center">Avg. Recall</th>
+                                <th class="text-center">Avg. F1-score</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="text-center align-middle">GPT-3 IDs directly (Curie model)</td>
+                                <td class="text-center align-middle">0.126</td>
+                                <td class="text-center align-middle">0.060</td>
+                                <td class="text-center align-middle">0.061</td>
+                            </tr>
+
+                            <tr>
+                                <td class="text-center align-middle">BERT</td>
+                                <td class="text-center align-middle">0.368</td>
+                                <td class="text-center align-middle">0.161</td>
+                                <td class="text-center align-middle">0.142</td>
+                            </tr>
+                            
+                        </tbody>
+                    </table>
+                </div>
+
+                <div id='sec-organizers' class="mb-5">
+                    <h3 id="organizers">Organizers</h3>
+                        <div class="row">
+                            <div class="my-3 col-12 col-xl-3">
+                                <div>
+                                    <div class="mb-3 text-center">
+                                        <img src="./static/img/sneha.jpg" class="img-thumbnail headshot"
+                                            alt="Sneha Singhania">
+                                    </div>
+                                    <div class="text-center">
+                                        <div>
+                                            <a href="https://people.mpi-inf.mpg.de/~ssinghan/" target="_blank"
+                                                class="fw-bold">
+                                                Sneha Singhania
+                                            </a>
+                                        </div>
+                                        <div>MPI Informatics</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="my-3 col-12 col-xl-3">
+                                <div>
+                                    <div class="mb-3 text-center">
+                                        <img src="./static/img/jan.jpeg" class="img-thumbnail headshot"
+                                            alt="Jan-Christoph Kalo">
+                                    </div>
+                                    <div class="text-center">
+                                        <div>
+                                            <a href="https://research.vu.nl/en/persons/jan-christoph-kalo/" target="_blank" class="fw-bold">
+                                                Jan-Christoph Kalo
+                                            </a>
+                                        </div>
+                                        <div>VU Amsterdam</div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="my-3 col-12 col-xl-3">
+                                <div>
+                                    <div class="mb-3 text-center">
+                                        <img src="./static/img/simon.jpg" class="img-thumbnail headshot"
+                                            alt="Simon Razniewski">
+                                    </div>
+                                    <div class="text-center">
+                                        <div>
+                                            <a href="http://simonrazniewski.com/" target="_blank" class="fw-bold">
+                                                Simon Razniewski
+                                            </a>
+                                        </div>
+                                        <div>Bosch Center for AI</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="my-3 col-12 col-xl-3">
+                                <div>
+                                    <div class="mb-3 text-center">
+                                        <img src="./static/img/jeff.jpeg" class="img-thumbnail headshot"
+                                            alt="Jeff Z. Pan">
+                                    </div>
+                                    <div class="text-center">
+                                        <div>
+                                            <a href="http://knowledge-representation.org/j.z.pan/bio.shtml" target="_blank" class="fw-bold">
+                                                Jeff Z. Pan
+                                            </a>
+                                        </div>
+                                        <div>University of Edinburgh<br>Huawei Technology R&D UK </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
                     </ul>
                 </div>
 
@@ -227,7 +784,7 @@
                         </div>
                         <div class="px-xxl-4">
                             <p>
-                                1<sup>st</sup> Edition: <a href="https://lm-kbc.github.io/2022/" target="_blank">LM-KBC 2022</a>
+                                1<sup>st</sup> Edition: <a href="https://lm-kbc.github.io/challenge2022/" target="_blank">LM-KBC 2022</a>
                             </p>
                         </div>
                     </div>

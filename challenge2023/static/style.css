@@ -14,6 +14,10 @@ a:not(.btn) {
   color: #198754;
 }
 
+img.headshot.jeff {
+  width: 100px;
+  height: 170px;
+}
 
 img.headshot {
   width: 200px;
