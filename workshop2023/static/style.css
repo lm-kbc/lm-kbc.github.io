@@ -1,0 +1,63 @@
+#content p {
+  text-align: justify;
+}
+
+#header-description {
+  font-size: 1.5em;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:not(.btn) {
+  color: #3817f5e9;
+}
+
+p,
+ul,
+ol,
+h4,
+table
+{
+  margin-right: 150px;
+  margin-left: 150px;
+}
+
+.tg  {border:none;border-collapse:collapse;border-spacing:0;}
+.tg th{font-weight:normal}
+.tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
+
+ol {
+  counter-reset: list;
+}
+ol > li {
+  list-style: none;
+}
+ol > li:before {
+  content: "(" counter(list) ") ";
+  counter-increment: list;
+}
+
+img.headshot {
+  width: 200px;
+  height: 200px;
+}
+
+.btn-twitter {
+  background-color: #00acee;
+  color: white !important;
+}
+
+.btn-twitter:hover {
+  background-color: #008abe;
+}
+
+#mpi-logo,
+#license-img {
+  height: 3em;
+}
+
+.footer {
+  font-size: 0.75rem;
+}
