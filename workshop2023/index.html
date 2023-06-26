@@ -1,130 +1,189 @@
 <!DOCTYPE html>
-<html lang="en-US">
-
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>KBC-LM @ ISWC 2023</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-
-    <script src="https://kit.fontawesome.com/360bbb0a38.js" crossorigin="anonymous"></script>
-
-    <link rel="stylesheet" type="text/css" href="./static/style.css">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>KBC-LM</title>
+    <!-- Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/ -->
+    <!-- <link href="css/bootstrap.min.css" rel="stylesheet"> -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="css/freelancer.css" rel="stylesheet">
+    <!-- Custom Fonts -->
+    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/jpswalsh/academicons/master/css/academicons.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <script src="js/modernizr.js"></script>
 </head>
 
-<body class="px-xxl-2">
-    <div class="container-fluid text-center text-white" style="background-color:#33475b">
-        <h1>
-            <br>
-            Knowledge Base Construction from Pre-Trained Language Models (KBC-LM)
-            <img src="boschlogo.svg" alt="Logo" style="float:right;width:180px;background-color:white;">
-        </h1>
-        <p>
-            <a id="header-description" href="https://iswc2023.semanticweb.org/" target="_blank"
-                class="text-decoration-none" style="color:#b4c2c5">
-                Workshop @ 22<sup>nd</sup> International Semantic Web Conference (ISWC 2023)
-            </a>
-        </p>
-        <hr>
-    </div>
-    
-    <div class="container-fluid content">
-        <div class="row">
-            <div id="content">
-                <div id='sec-introduction' class="mb-5">
-                    <p>
-                        Language models such as chatGPT, BERT, and T5, have demonstrated remarkable outcomes in numerous AI applications. Research has shown that these models implicitly capture vast amounts of factual knowledge within their parameters, resulting in a remarkable performance in knowledge-intensive applications. The seminal paper "Language Models as Knowledge Bases?" sparked interest in the spectrum between language models and knowledge graphs, leading to a diverse range of research on the usage of LMs for knowledge base construction. This research includes:
+
+
+<body id="page-top" class="index">
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li><a style="color:beige; font-size: 20px" href="#page-top">KBC-LM</a></li>
+                    <li><a href="#dates">Important Dates</a><li>
+                    <li><a href="#topics">Topics</a></li>
+                    <li><a href="#submission">Submission</a></li>
+                    <li><a href="#schedule">Schedule</a> </li>
+                    <li><a href="#committee">Program Committee</a> </li>
+                    <li><a href="#chairs">Chairs</a></li>
+                    <li><a href="#sponsor">Sponsor</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header>
+        <div class="container-fluid text-center text-white" style="margin-top: 20px;">
+            <h1>
+                <br>
+                Knowledge Base Construction from Pre-Trained Language Models
+                <!-- <img src="boschlogo.svg" alt="Logo" style="float:right;width:180px;background-color:white;"> -->
+            </h1>
+            <h2>
+                <a id="header-description" href="https://iswc2023.semanticweb.org/" target="_blank"
+                    class="text-decoration-none" style="color:#b4c2c5; font-size:30px;">
+                    Workshop @ 22<sup>nd</sup> International Semantic Web Conference (ISWC 2023)
+                </a>
+            </h2>
+        </div>
+    </header>
+
+    <section id="sec-about">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-16 text-center">
+                    <p class="pubd">Language models such as chatGPT, BERT, and T5, have demonstrated remarkable outcomes in numerous AI applications. Research has shown that these models implicitly capture vast amounts of factual knowledge within their parameters, resulting in a remarkable performance in knowledge-intensive applications. The seminal paper "Language Models as Knowledge Bases?" sparked interest in the spectrum between language models (LMs) and knowledge graphs (KGs), leading to a diverse range of research on the usage of LMs for knowledge base construction, including (i) utilizing pre-trained LMs for knowledge base completion and construction tasks, (ii) performing information extraction tasks, like entity linking and relation extraction, and (iii) utilizing KGs to support LM based applications.
                     </p>
-                        
-                    <ol>
-                        <li>utilizing pre-trained language models for knowledge base completion and construction tasks,</li>
-                        <li>performing information extraction tasks, like entity linking and relation extraction, and</li>
-                        <li>utilizing knowledge graphs to support language models based applications.</li>
-                    </ol>
-                    <p>
-                        The <b>1<sup>st</sup> Workshop on Knowledge Base Construction from Pre-Trained Language Models</b> (KBC-LM) workshop aims to give space to the emerging academic community that investigates these topics, host extended discussions around the LM-KBC Semantic Web challenge, and enable an informal exchange of researchers and practitioners.
-                    </p>
-                </div>
 
-                <div id='sec-important-dates' class="mb-5">
-                    <h4 id="important-dates">Important Dates</h4>
-                        <table class="tg" style="table-layout: fixed; width: 421px">
-                            <colgroup>
-                            <col style="width: 187px">
-                            <col style="width: 234px">
-                            </colgroup>
-                            <thead>
-                            <tr>
-                                <th class="tg-0pky"></th>
-                                <th class="tg-0pky"></th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <tr>
-                                <td class="tg-0pky"><span style="color:black">Papers due:</span></td>
-                                <td class="tg-0pky"><span style="color:black;background-color:var(--bs-table-bg)">July 31, 2023</span></td>
-                            </tr>
-                            <tr>
-                                <td class="tg-0pky"><span style="color:black;background-color:var(--bs-table-bg)">Notification to authors:</span></td>
-                                <td class="tg-0pky"><span style="color:black;background-color:var(--bs-table-bg)">August 31, 2023</span></td>
-                            </tr>
-                            <tr>
-                                <td class="tg-0pky"><span style="color:black;background-color:var(--bs-table-bg)">Camera-ready deadline:</span></td>
-                                <td class="tg-0pky"><span style="color:black;background-color:var(--bs-table-bg)">September 14, 2023</span></td>
-                            </tr>
-                            <tr>
-                                <td class="tg-0pky"><span style="color:black;background-color:var(--bs-table-bg)">Workshop dates:</span></td>
-                                <td class="tg-0pky"><span style="color:black;background-color:var(--bs-table-bg)">6 or 7 November 2023</span></td>
-                            </tr>
-                            </tbody>
-                        </table>
-                </div>
-
-                <div id='sec-topics' class="mb-5">
-                    <h4 id="important-dates">Topics</h4>
-                        <p> We invite contributions on the following topics:</p>
-                        <ul>
-                            <li>Entity recognition and disambiguation with LMs</li>
-                            <li>Relation extraction with LMs</li>
-                            <li>Zero-shot and few-shot knowledge extraction from LMs</li>
-                            <li>Consistency of LMs</li>
-                            <li>Knowledge consolidation with LMs</li>
-                            <li>Comparisons of LMs for KBC tasks</li>
-                            <li>Methodological contributions on training and fine-tuning LMs for KBC tasks</li>
-                            <li>Evaluations of downstream capabilities of LM-based KGs in tasks like QA</li>
-                            <li>Designing robust prompts for large language model probing</li>
-                        </ul>
-                        <p> 
-                            Submissions can be novel research contributions or already published papers (these will be presentation-only, and not part of the workshop proceedings). Novel research papers can be either full papers (ca. 8-12 pages), or short papers presenting smaller or preliminary results (typically 3-6 pages). We are accepting demo and position papers as well.
-
-                            Check out also the <a href="https://lm-kbc.github.io/challenge2023/">LM-KBC challenge</a> for further options to contribute to the workshop.
-                        </p>
-                </div>
-
-                <div id='sec-submission-and-review-process' class="mb-5">
-                    <h4 id="submission-and-review-process">Submission and Review Process</h4>
-                    <p>
-                        Papers will be peer-reviewed by at least three researchers using a double-blind review. Accepted papers will be published on CEUR (unless authors opt out). Submissions need to be formatted according to the CEUR workshop proceedings (<a href="https://www.overleaf.com/read/dwjshwhrqwzw">template</a>). Papers can be submitted directly via  <a href="https://openreview.net/group?id=swsa.semanticweb.org/ISWC/2023/Workshop/KBC-LM">Openreview</a>.
-                        <br><br>
-                        Robert Bosch GmbH has signaled that they would likely sponsor a best paper award over 500 Euro.
+                    <p class="pubd">The <b>1<sup>st</sup> Workshop on Knowledge Base Construction from Pre-Trained Language Models</b> (KBC-LM) workshop aims to give space to the emerging academic community that investigates these topics, host extended discussions around the LM-KBC Semantic Web challenge, and enable an informal exchange of researchers and practitioners.
                     </p>
                 </div>
+            </div>
+        </div>
+    </section>
 
-                <div id='sec-tentative-schedule' class="mb-5">
-                    <h4 id="tentative-schedule">Tentative Schedule</h4>
-                    <p>
+    <section id="dates">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-18 text-center">
+                    <h3>Important Dates</h3>
+                    <table class="tg" style="table-layout: fixed; width: 500px">
+                        <colgroup>
+                        <col style="width: 187px">
+                        <col style="width: 234px">
+                        </colgroup>
+                        <thead>
+                        <tr>
+                            <th class="tg-0pky"></th>
+                            <th class="tg-0pky"></th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td class="tg-0pky"><span style="color:black">Papers due:</span></td>
+                            <td class="tg-0pky"><span style="color:black;">July 31, 2023</span></td>
+                        </tr>
+                        <tr>
+                            <td class="tg-0pky"><span style="color:black;">Notification to authors:</span></td>
+                            <td class="tg-0pky"><span style="color:black;">August 31, 2023</span></td>
+                        </tr>
+                        <tr>
+                            <td class="tg-0pky"><span style="color:black;">Camera-ready deadline:</span></td>
+                            <td class="tg-0pky"><span style="color:black;">September 14, 2023</span></td>
+                        </tr>
+                        <tr>
+                            <td class="tg-0pky"><span style="color:black;">Workshop dates:</span></td>
+                            <td class="tg-0pky"><span style="color:black;">6 or 7 November 2023</span></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>            
+    </section>
+            
+    <section id="topics">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-18 text-center">
+                    <h3 style="text-align:left">Topics</h3>
+                    <p class="pubd">We invite contributions on the following topics:</p>
+                    <ul class="pubd">
+                        <li>Entity recognition and disambiguation with LMs</li>
+                        <li>Relation extraction with LMs</li>
+                        <li>Zero-shot and few-shot knowledge extraction from LMs</li>
+                        <li>Consistency of LMs</li>
+                        <li>Knowledge consolidation with LMs</li>
+                        <li>Comparisons of LMs for KBC tasks</li>
+                        <li>Methodological contributions on training and fine-tuning LMs for KBC tasks</li>
+                        <li>Evaluations of downstream capabilities of LM-based KGs in tasks like QA</li>
+                        <li>Designing robust prompts for large language model probing</li>
+                    </ul>
+                    <p class="pubd">
+                        Submissions can be novel research contributions or already published papers (these will be presentation-only, and not part of the workshop proceedings). Novel research papers can be either full papers (ca. 8-12 pages), or short papers presenting smaller or preliminary results (typically 3-6 pages). We are accepting demo and position papers as well.
+
+                        Check out also the <a style="font-size: 20px" href="https://lm-kbc.github.io/challenge2023/">LM-KBC challenge</a> for further options to contribute to the workshop.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="submission">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-18 text-center">
+                    <h3 style="text-align:left">Submission and Review Process</h3>
+                    <p class="pubd">
+                        Papers will be peer-reviewed by at least three researchers using a double-blind review. Accepted papers will be published on CEUR (unless authors opt out). Submissions need to be formatted according to the CEUR workshop proceedings (<a style="font-size: 20px" href="https://www.overleaf.com/read/dwjshwhrqwzw">template</a>). Papers can be submitted directly via  <a style="font-size: 20px" href="https://openreview.net/group?id=swsa.semanticweb.org/ISWC/2023/Workshop/KBC-LM">Openreview</a>.
+                    <br><br>
+                    Robert Bosch GmbH has signaled that they would likely sponsor a best paper award over 500 Euro.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="schedule">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-18 text-center">
+                    <h3 style="text-align:left">Schedule</h3>
+                    <p class="pubd">
                         The idea of this workshop is to provide a focused venue for informal exchange around LMs for KB construction. In particular, we plan to devote space to extended presentations of participants of the LM-KBC ISWC challenge (where the 1-hour ISWC conference slot will only allow presentations of the winners). Furthermore, we plan to make this a hybrid event to lower the entry barrier for participants.
                     </p>
-                    <table class="tg" style="table-layout: fixed; width: 474px">
+                    <br>
+                    <table class="tg" style="table-layout: fixed; width: 500px">
                         <colgroup>
                         <col style="width: 149px">
                         <col style="width: 325px">
                         </colgroup>
                         <thead>
                             <tr>
-                            <th class="tg-7zrl">10:00-10:15 </th>
-                            <th class="tg-0lax"> Welcome</th>
+                            <th class="tg-7zrl" style="text-align:center">10:00-10:15 </th>
+                            <th class="tg-0lax" style="text-align:center"> Welcome</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -165,63 +224,115 @@
                             <td class="tg-0lax"> Closing Ceremony</td>
                             </tr>
                         </tbody>
-                        </table>
+                    </table>
                 </div>
-
-                <div id='sec-topics' class="mb-5">
-                    <h4 id="PC">Program Committee</h4>
-                        <ul>
-                            <li>Hang Dong, University of Oxford</li>
-                            <li>Russa Biswas, FIZ Karlsruhe</li>
-                            <li>Jiaoyan Chen, University of Manchester</li>
-                            <li>Gerard de Melo - HPI Potsdam</li>
-                            <li>Peter Bloem, Vrije Universiteit Amsterdam</li>
-                            <li>Edlira Vakaj, Birmingham City University</li>
-                            <li>Stefan Dietze, Heinrich-Heine-Universität Düsseldorf</li>
-                            <li>Paul Groth, University of Amsterdam</li>
-                            <li>Lucie-Aimée Kaffee, HPI Potsdam</li>
-                            <li>Hiba Arnaout, MPI for Informatics</li>
-                            <li>Shrestha Ghosh, MPI for Informatics</li>
-                            <li>Frank van Harmelen, Vrije Universiteit Amsterdam</li>
-                            <li>Heiko Paulheim, Mannheim University</li>
-                            <li>Janna Omeliyanenko, University of Würzburg</li>
-                            <li>Vanessa López, IBM Research</li>
-                            <li>Martin Nečaský, Charles University Prague</li>
-                        </ul>
-                </div>
-
-                <div id="sec-chairs" class="mb-5">
-                    <h4 id="chairs">Chairs</h4>
-                        <p>
-                            <i>Jan-Christoph Kalo</i> is a postdoctoral researcher at the Learning and Reasoning Group at the Vrije Universiteit Amsterdam. His research focus is on machine learning methods, particularly language models, for knowledge base construction and knowledge management. He is co-organizing this year's LM-KBC challenge at ISWC and has been part of the PC of ISWC and ESWC.
-                            <br><br>
-                            <i>Simon Razniewski</i> is a research scientist in the NLP and Neuro-Symbolic AI group at the Bosch Center for AI. He has previously organized the Wikidata workshop @ ISWC, and the LM-KBC challenge 2022. He has also held senior roles in program committees of major conferences such as IJCAI'21 and EACL'23 (area chair), or ISWC'20 and CIKM'20 (senior PC member).
-                            <br><br>
-                            <i>Sneha Singhania</i> is a PhD student at the Max-Planck Institute for Informatics. Her research focuses on enabling machines to select and utilize high-quality information sources, with an awareness of unknowns, for knowledge base (KB) construction. She co-organized the LM-KBC'22 challenge and has held PC roles at ACL, CIKM, ISWC, and ESWC.
-                            <br><br>
-                            <i>Jeff Z. Pan</i> is a chair of the Knowledge Graph Group at the Alan Turing Institute and is a member of the School of Informatics at The University of Edinburgh. He is an Editor of the Journal of Web Semantics (JoWS) and a Programme Chair of the 19th International Semantic Web Conference (ISWC 2020), the premier international forum for the Semantic Web / Knowledge Graph / Linked Data communities.
-                        </p>
-                </div>
-
-
-
-                <div id="sec-references" class="mb-5">
-                    <h4 id="references">Selected References</h4>
-                    <ul>
-                        <li>Fabio Petroni, Tim Rocktäschel, Patrick Lewis, Anton Bakhtin, Yuxiang Wu, Alexander H. Miller, and Sebastian Riedel. "Language models as knowledge bases?.", EMNLP, 2019</li>
-                        <li>Sneha Singhania, Tuan-Phong Nguyen, Simon Razniewski. "LM-KBC: Knowledge Base Construction from Pre-trained Language Models", CEUR-WS, 2022</li>
-                        <li>Blerta Veselhi, Sneha Singhania, Simon Razniewski, Gerhard Weikum. "Evaluating Language Models for Knowledge Base Completion", ESWC, 2023</li>
-                        <li>Dimitrios Alivanistos, Selene Baez Santamaria, Michael Cochez, Jan-Christoph Kalo, Emile van Krieken, and Thiviyan Thanapalasingam. "Prompting as Probing: Using Language Models for Knowledge Base Construction." LM-KBC, 2022.</li>
-                        <li>Simon Razniewski, Andrew Yates, Nora Kassner, Gerhard Weikum. "Language Models As or For Knowledge Bases", DL4KG@ISWC, 2021</li>
-                        <li>Jan-Christoph Kalo, and Leandra Fichtel. "KAMEL: Knowledge Analysis with Multitoken Entities in Language Models", AKBC 2022</li>
-                        <li>Roi Cohen, Mor Geva, Jonathan Berant, and Amir Globerson. "Crawling The Internal Knowledge-Base of Language Models.", Findings of EACL 2023.</li>
-                        <li>Adam Roberts, Colin Raffel, and Noam Shazeer. "How Much Knowledge Can You Pack Into the Parameters of a Language Model?.", EMNLP 2020.</li>
-                    </ul>
-                </div>
-
             </div>
         </div>
-    </div>
-    
-</body>
+    </section>
 
+
+    <section id="committee">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-18 text-center">
+                    <h3 style="text-align:left">Program Committee</h3>
+                    <ul class="pubd">
+                        <li>Hang Dong, University of Oxford</li>
+                        <li>Russa Biswas, FIZ Karlsruhe</li>
+                        <li>Jiaoyan Chen, University of Manchester</li>
+                        <li>Gerard de Melo, HPI Potsdam</li>
+                        <li>Peter Bloem, Vrije Universiteit Amsterdam</li>
+                        <li>Edlira Vakaj, Birmingham City University</li>
+                        <li>Stefan Dietze, Heinrich-Heine-Universität Düsseldorf</li>
+                        <li>Paul Groth, University of Amsterdam</li>
+                        <li>Lucie-Aimée Kaffee, HPI Potsdam</li>
+                        <li>Hiba Arnaout, MPI for Informatics</li>
+                        <li>Shrestha Ghosh, MPI for Informatics</li>
+                        <li>Frank van Harmelen, Vrije Universiteit Amsterdam</li>
+                        <li>Heiko Paulheim, Mannheim University</li>
+                        <li>Janna Omeliyanenko, University of Würzburg</li>
+                        <li>Vanessa López, IBM Research</li>
+                        <li>Martin Nečaský, Charles University Prague</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="chairs">
+        <div class="container">
+            <div class="row" style="align-items: left;">
+                <div class="col-lg-18 text-center">
+                    <h3 style="text-align:left">Chairs</h3>
+
+                    <div class="row">
+                        <div class="column">
+                            <img src="./static/img/jan.jpeg" class="img-thumbnail headshot" alt="Jan-Christoph Kalo">
+                            <div>
+                                <a style="font-size: 20px" href="https://research.vu.nl/en/persons/jan-christoph-kalo/" target="_blank" class="fw-bold">
+                                            Jan-Christoph Kalo
+                                        </a>
+                            </div>
+                            <div>VU Amsterdam</div>
+                        </div>
+
+                        <div class="column">
+                            <img src="./static/img/simon.jpg" class="img-thumbnail headshot"
+                                        alt="Simon Razniewski">
+                            <div>
+                                <a style="font-size: 20px" href="http://simonrazniewski.com/" target="_blank" class="fw-bold">
+                                    Simon Razniewski
+                                </a>
+                            </div>
+                            <div>Bosch Center for AI</div>
+                        </div>
+
+                        <div class="column">
+                            <img src="./static/img/sneha.jpg" class="img-thumbnail headshot" alt="Sneha Singhania">
+                            <div>
+                                <a style="font-size: 20px" href="https://people.mpi-inf.mpg.de/~ssinghan/" target="_blank"
+                                    class="fw-bold">
+                                    Sneha Singhania
+                                </a>
+                            </div>
+                            <div>MPI Informatics</div>
+                        </div>
+
+                        
+                        <div class="column">
+                            <img src="./static/img/jeff.jpeg" class="img-thumbnail headshot"
+                                        alt="Jeff Z. Pan">
+                            <div>
+                                <a style="font-size: 20px" href="http://knowledge-representation.org/j.z.pan/bio.shtml" target="_blank" class="fw-bold">
+                                            Jeff Z. Pan
+                                </a>
+                            </div>
+                            <div>University of Edinburgh<br>Huawei Technology R&D UK </div>
+                        </div>
+                        
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="sponsor">
+        <div class="container">
+            <div class="row" style="align-items: left;">
+                <div class="col-lg-18 text-center">
+                    <h3 style="text-align:left">Sponsor</h3>
+
+                        <div class="py-3 my-4 border-top footer">
+                            <div class="row">
+                                <div class="col-12 col-xl-4 text-xl-end mt-3 mt-xl-0">
+                                    <a href="https://www.bosch-ai.com/" target="_blank">
+                                        <img src="./static/img/bosch_logo.png" id="bosch-logo" style="max-width: 30%;">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </section>
