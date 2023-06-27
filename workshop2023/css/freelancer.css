@@ -170,36 +170,8 @@ header .intro-text .skills {
     display: none;
 }
 section {
-    padding: 20px;
+    padding: 40px 0;
 }
-
-section#timeline {
-    padding-top: 0px;
-}
-
-section h2 {
-    margin: 0;
-}
-
-section#news-list ul {
-    list-style: none;
-    display: flex;
-    flex-wrap: wrap;
-    margin: 0;
-    padding: 0;
-  }
-
-section#news-list ul li {
-    display: flex;
-    width: 100%;
-}
-section#news-list ul li span {
-    font-weight: 100;
-    font-size: 15px;
-    margin-right: 2rem;
-    font-family: 'Abril Fatface', serif;
-}
-
 
 .btn-outline {
     margin-top: 15px;
@@ -352,7 +324,7 @@ footer .footer-below {
 }
 .pubd {
     text-align: justify;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 300;
     color: #000000;
 }
@@ -487,6 +459,7 @@ footer .footer-below {
         background-position: top;
     }
   }
+
 
   img.headshot.jeff {
     width: 100px;
