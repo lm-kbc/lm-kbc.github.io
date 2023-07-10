@@ -48,7 +48,7 @@
                 <div id='sec-news' class="mb-5">
                     <h3 id="news">News</h3>
 					<ul>
-                        <li>02.6.23 Robert Bosch GmbH has signaled that they would likely sponsor a best paper award over 500 Euro.</li>
+                        <li>10.7.23: New baseline (GPT3 + Wikidata NED) added to repository.</li>
                         <li>22.5.23: v1.0 of dataset (train and validation splits) released.</li>
                         <li>17.5.23: Test output/system submission deadline extended to August 2, 2023. Take time to submit your strongest systems!</li>
                     </ul>
@@ -616,6 +616,9 @@
                         <li>
                             Few-shot GPT-3 directly predicting IDs: This baseline uses a few samples to instruct GPT-3 to directly predict Wikidata IDs.
                         </li>
+                        <li>
+                            Few-shot GPT-3 w/ NED: Like above, but predicting surface forms that are disambiguated via Wikidata's default disambiguation.
+                        </li>
                     </ul>
                     Baseline performance:
                     <table class="table table-bordered">
@@ -629,12 +632,17 @@
                         </thead>
                         <tbody>
                             <tr>
+                                <td class="text-center align-middle">GPT-3 NED (Curie model)</td>
+                                <td class="text-center align-middle">0.308</td>
+                                <td class="text-center align-middle">0.210</td>
+                                <td class="text-center align-middle">0.218</td>
+                            </tr>
+                            <tr>
                                 <td class="text-center align-middle">GPT-3 IDs directly (Curie model)</td>
                                 <td class="text-center align-middle">0.126</td>
                                 <td class="text-center align-middle">0.060</td>
                                 <td class="text-center align-middle">0.061</td>
                             </tr>
-
                             <tr>
                                 <td class="text-center align-middle">BERT</td>
                                 <td class="text-center align-middle">0.368</td>
