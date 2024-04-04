@@ -5,128 +5,176 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>LM-KBC Challenge @ ISWC 2024</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
     <script src="https://kit.fontawesome.com/360bbb0a38.js" crossorigin="anonymous"></script>
 
     <link rel="stylesheet" type="text/css" href="./static/style.css">
 </head>
 
-<body class="px-xxl-2">
-    <div class="container-fluid text-center my-4">
-        <h1>
-            Knowledge Base Construction from Pre-trained Language Models
-            (LM-KBC)
-        </h1>
-        <p>
-            <a id="header-description" href="https://iswc2023.semanticweb.org/" target="_blank"
-                class="text-decoration-none text-black">
-                Challenge @ 23<sup>rd</sup> International Semantic Web Conference (ISWC 2024)
-            </a>
-        </p>
+<body>
+    <!-- header -->
+    <div class="text-center bg-warning-subtle shadow-sm py-3 mb-5">
+            <p>
+                <span class="h1">
+                    Knowledge Base Construction <br> from Pre-trained Language Models
+                    (LM-KBC)
+                </span>
+            </p>
+            <p>
+                <a id="header-description" href="https://iswc2024.semanticweb.org/" target="_blank"
+                    class="text-decoration-none text-black">
+                    Challenge @ 23<sup>rd</sup> International Semantic Web Conference (ISWC 2024)
+                </a>
+            </p>
     </div>
-    <hr>
 
+    <div class="container-fluid">
+        <div class="row mt-0 pt-0">
 
-    
-
-
-    <div class="container-fluid my-5">
-        <div class="row">
-            <div id="content" class="col-12 col-xl-8">
-
-                <div id='sec-news' class="mb-5">
-                    <h3 id="news">🔔 News</h3>
-					<ul>
-                        <li>19.03.24: First information on <a href='https://github.com/lm-kbc/dataset2024'>2024 dataset</a> available</li>                   
-                        <li>13.03.24: Website up!</li>
-                    </ul>
-                </div>
-
-                <div class="text-center mb-4">
-                    <h4>Important Dates</h4>
-                </div>
-                <table class="table table-bordered">
-                    <thead class="table-light">
-                        <tr>
-                            <th>Activity</th>
-                            <th class="text-center">Dates</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Dataset (train and dev) release</td>
-                            <td class="text-center">30 March 2024</td>
-                        </tr>
-                        <tr>
-                            <td>Release of test dataset</td>
-                            <td class="text-center">15 July 2024</td>
-                        </tr>
-                        <tr>
-                            <td>Submission of test output and systems</td>
-                            <td class="text-center">19 July 2024</td>
-                        </tr>
-                        <tr>
-                            <td>Submission of system description</td>
-                            <td class="text-center">2 August 2024</td>
-                        </tr>
-                        <tr>
-                            <td>Winner announcement</td>
-                            <td class="text-center">16 August 2024</td>
-                        </tr>
-                        <tr>
-                            <td>Presentations@ISWC (hybrid)</td>
-                            <td class="text-center">November 11 or 12, 2024</td>
-                        </tr>
-                    </tbody>
-                </table>
+            <div class="d-none d-lg-block col-lg-2 col-xl-3">
             </div>
 
-                <div id='sec-task-description' class="mb-5">
-					<h3 id="task-description">Task Description</h3>
+            <div class="col-12 col-lg-8 col-xl-6">
+                <!-- content -->
+                <div id="content" class="container">
 
-                    Pretrained language models (LMs) like chatGPT have advanced a range of semantic tasks and have also shown promise for knowledge extraction from the models itself. Although several works have explored this ability in a setting called probing or prompting, the viability of <em>knowledge base construction</em> from LMs remains underexplored. In the 3<sup>rd</sup> edition of this challenge, we invite participants to build actual disambiguated knowledge bases from LMs, for given subjects and relations. In crucial difference to existing probing benchmarks like LAMA (<a
-                    href="https://arxiv.org/pdf/1909.01066.pdf" target="_blank">Petroni et al., 2019</a>), we make no simplifying assumptions on relation cardinalities, i.e., a subject-entity can stand in relation with zero, one, or many object-entities. Furthermore, submissions need to go beyond just ranking predicted surface strings and materialize disambiguated entities in the output, which will be evaluated using established KB metrics of precision and recall. 
+                    <!-- Section: News -->
+                    <div id='sec-news' class="mb-5">
+                        <h4 id="news" class="section-title">📰 News</h4>
+                        <ul>
+                            <li><b>19.03.24</b>: First information on
+                                <a href='https://github.com/lm-kbc/dataset2024' target="_blank">
+                                    2024 dataset</a> available.
+                            </li>
+                            <li><b>13.03.24</b>: Website up!</li>
+                        </ul>
+                    </div>
 
-                    <p class="bg-warning">Formally, given the input subject-entity (<code>s</code>) and relation
-                        (<code>r</code>), the task is to predict all the correct object-entities
-                        ({<code>o<sub>1</sub></code>, <code>o<sub>2</sub></code>, ..., <code>o<sub>k</sub></code>})
-                        using LM probing.
-                    </p>
-                    <p>
-                
-                <div id='sec-submission-details' class="my-5">
-                    <h3 id="submission-details">Special features</h3>
-                    <p>This year, we impose a 10B parameter limit for participing systems, that ensures that no team can simply outperform others by monetary investment</p>
-                    <p>We will look at a smaller set of relations 5 relations (last year: 20), with very distinctive features.:</p>
-                    <ol>
-                        <li>countryLandBordersCountry: Null values possible (e.g., Iceland)</li>
-                        <li>personHasCityOfDeath: Null values possible</li>
-                        <li>seriesHasNumberOfEpisodes: Object is numeric</li>
-                        <li>awardWonBy: Many objects per subject (e.g., 224 Physics Nobel prize winners)</li>
-                        <li>companyTradesAtStockExchange: Null values possible</li>
-                    </ol>
-                </div>        
+                    <!-- Section: Important Dates -->
+                    <div id="sec-important-dates" class="mb-5">
+                        <h4 id="important-dates" class="section-title">🗓️ Important Dates</h4>
+                        <p></p>
+                        <table class="table">
+                            <thead class="table-light">
+                                <tr>
+                                    <th>Activity</th>
+                                    <th class="text-center">Dates</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Dataset (train and dev) release</td>
+                                    <td class="text-center">30 March 2024</td>
+                                </tr>
+                                <tr>
+                                    <td>Release of test dataset</td>
+                                    <td class="text-center">15 July 2024</td>
+                                </tr>
+                                <tr>
+                                    <td>Submission of test output and systems</td>
+                                    <td class="text-center">19 July 2024</td>
+                                </tr>
+                                <tr>
+                                    <td>Submission of system description</td>
+                                    <td class="text-center">2 August 2024</td>
+                                </tr>
+                                <tr>
+                                    <td>Winner announcement</td>
+                                    <td class="text-center">16 August 2024</td>
+                                </tr>
+                                <tr>
+                                    <td>Presentations@ISWC (hybrid)</td>
+                                    <td class="text-center">November 11 or 12, 2024</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
 
-                <div id='sec-submission-details' class="my-5">
-                    <h3 id="submission-details">Submission Details</h3>
-                    <p>Participants are required to submit:</p>
-                    <ol>
-                        <li>A system implementing the LM probing approach, uploaded to a public GitHub repo</li>
-                        <li>The output for the test dataset subject entites, in the same GitHub repo</li>
-                        <li>A system description in PDF format (5-12 pages, <a
-                                href="https://www.overleaf.com/read/dwjshwhrqwzw"
-                                target="_blank">CEUR workshop style</a>), mentioning the GitHub repo.
-                        </li>
-                    </ol>
-                </div>
+                    <!-- Section: Task Description -->
+                    <div id='sec-task-description' class="mb-5">
+                        <h4 id="task-description" class="section-title">💻 Task Description</h4>
 
-                <div id='sec-organizers' class="mb-5">
-                    <h3 id="organizers">Organizers</h3>
+                        <p>
+                            Pretrained language models (LMs) like chatGPT have advanced a range of semantic tasks and
+                            have
+                            also
+                            shown
+                            promise for knowledge extraction from the models itself. Although several works have
+                            explored
+                            this
+                            ability
+                            in a setting called probing or prompting, the viability of <em>knowledge base
+                                construction</em>
+                            from LMs
+                            remains underexplored. In the 3<sup>rd</sup> edition of this challenge, we invite
+                            participants
+                            to build
+                            actual disambiguated knowledge bases from LMs, for given subjects and relations. In crucial
+                            difference
+                            to
+                            existing probing benchmarks like LAMA (<a href="https://arxiv.org/pdf/1909.01066.pdf"
+                                target="_blank">Petroni et al., 2019</a>), we make no simplifying assumptions on
+                            relation
+                            cardinalities,
+                            i.e., a subject-entity can stand in relation with zero, one, or many object-entities.
+                            Furthermore,
+                            submissions need to go beyond just ranking predicted surface strings and materialize
+                            disambiguated
+                            entities
+                            in the output, which will be evaluated using established KB metrics of precision and recall.
+                        </p>
+
+                        <div class="bd-callout bd-callout-warning">Formally, given the input subject-entity
+                            (<code>s</code>)
+                            and
+                            relation
+                            (<code>r</code>), the task is to predict all the correct object-entities
+                            ({<code>o<sub>1</sub></code>, <code>o<sub>2</sub></code>, ..., <code>o<sub>k</sub></code>})
+                            using LM probing.
+                        </div>
+
+                    </div>
+
+                    <!-- Section: Special Features -->
+                    <div id='sec-special-features' class="my-5">
+                        <h4 id="special-features" class="section-title">🌟 Special Features</h4>
+                        <p>This year, we impose a 10B parameter limit for participing systems, that ensures that no team
+                            can
+                            simply outperform others by monetary investment.</p>
+                        <p>We will look at a smaller set of relations 5 relations (last year: 20), with very distinctive
+                            features:</p>
+                        <ol>
+                            <li><b>countryLandBordersCountry</b>: Null values possible (e.g., Iceland)</li>
+                            <li><b>personHasCityOfDeath</b>: Null values possible</li>
+                            <li><b>seriesHasNumberOfEpisodes</b>: Object is numeric</li>
+                            <li><b>awardWonBy</b>: Many objects per subject (e.g., 224 Physics Nobel prize winners)</li>
+                            <li><b>companyTradesAtStockExchange</b>: Null values possible</li>
+                        </ol>
+                    </div>
+
+                    <!-- Section: Submission Details -->
+                    <div id='sec-submission-details' class="my-5">
+                        <h4 id="submission-details" class="section-title">🤝 Submission Details</h4>
+                        <p>Participants are required to submit:</p>
+                        <ol>
+                            <li>A system implementing the LM probing approach, uploaded to a public GitHub repo</li>
+                            <li>The output for the test dataset subject entites, in the same GitHub repo</li>
+                            <li>A system description in PDF format (5-12 pages, <a
+                                    href="https://www.overleaf.com/read/dwjshwhrqwzw" target="_blank">CEUR workshop
+                                    style</a>),
+                                mentioning the GitHub repo.
+                            </li>
+                        </ol>
+                    </div>
+
+                    <!-- Section: Organizers -->
+                    <div id='sec-organizers' class="mb-5">
+                        <h4 id="organizers" class="section-title">🧑‍💻 Organizers</h4>
                         <div class="row">
 
-                            <div class="my-3 col-12 col-xl-3">
+                            <div class="my-3 col-12 col-md-6 col-xl-3">
                                 <div>
                                     <div class="mb-3 text-center">
                                         <img src="./static/img/jan.jpeg" class="img-thumbnail headshot"
@@ -134,7 +182,8 @@
                                     </div>
                                     <div class="text-center">
                                         <div>
-                                            <a href="https://research.vu.nl/en/persons/jan-christoph-kalo/" target="_blank" class="fw-bold">
+                                            <a href="https://research.vu.nl/en/persons/jan-christoph-kalo/"
+                                                target="_blank" class="fw-bold">
                                                 Jan-Christoph Kalo
                                             </a>
                                         </div>
@@ -143,7 +192,7 @@
                                 </div>
                             </div>
 
-                            <div class="my-3 col-12 col-xl-3">
+                            <div class="my-3 col-12 col-md-6 col-xl-3">
                                 <div>
                                     <div class="mb-3 text-center">
                                         <img src="./static/img/phong.jpg" class="img-thumbnail headshot"
@@ -160,7 +209,7 @@
                                 </div>
                             </div>
 
-                            <div class="my-3 col-12 col-xl-3">
+                            <div class="my-3 col-12 col-md-6 col-xl-3">
                                 <div>
                                     <div class="mb-3 text-center">
                                         <img src="./static/img/simon.jpg" class="img-thumbnail headshot"
@@ -177,7 +226,7 @@
                                 </div>
                             </div>
 
-                            <div class="my-3 col-12 col-xl-3">
+                            <div class="my-3 col-12 col-md-6 col-xl-3">
                                 <div>
                                     <div class="mb-3 text-center">
                                         <img src="./static/img/bohui.jpg" class="img-thumbnail headshot"
@@ -193,74 +242,69 @@
                                     </div>
                                 </div>
                             </div>
-
-
-                        </div>
-                    </ul>
-                </div>
-
-            </div>
-            
-          
-     
-
-                    <div class="mb-4">
-                        <div class="text-center mb-4">
-                            <h4>Past Edition</h4>
-                        </div>
-                        <div class="px-xxl-4">
-                            <p>
-                                2<sup>nd</sup> Edition: <a href="https://lm-kbc.github.io/challenge2023/" target="_blank">LM-KBC 2023</a>
-                            </p>
-                            <p>
-                                1<sup>st</sup> Edition: <a href="https://lm-kbc.github.io/challenge2022/" target="_blank">LM-KBC 2022</a>
-                            </p>
                         </div>
                     </div>
 
-                </div>
-            </div>
-        </div>
-            
-                <div class="mb-4">
-                    <div class="text-center mb-4">
-                        <h4>Contact</h4>
-                    </div>
-                    <div class="px-xxl-4">
-                        <p>
-                            For general questions or discussion please use the
-                            <a href="https://groups.google.com/g/lm-kbc2023" target="_blank">Google group</a>.
-                        </p>
-                    </div>
-                </div>
-
-
-            </div>
-        </div>
-    </div>
-
-        <div class="container-fluid">
-            <div class="py-3 my-4 border-top footer">
-                <div class="row">
-                    <div class="col-12 col-xl-8 d-flex align-items-center">
-                        <div class="me-3">
-                            <a href="http://creativecommons.org/licenses/by/4.0" target="_blank">
-                                <img src="./static/img/by.png" alt="cc-by-3.0" id="license-img">
-                            </a>
-                        </div>
+                    <!-- Section: Past Editions -->
+                    <div id="sec-past-editions" class="mb-5">
+                        <h4 id="past-editions" class="section-title">⏪ Past Editions</h4>
                         <div>
-                            The LM-KBC dataset is licensed under a
-                            <a href="http://creativecommons.org/licenses/by/4.0" target="_blank">
-                                Creative Commons Attribution 4.0 International License (CC BY 4.0)</a>.
+                            <ul>
+                                <li>
+                                    2<sup>nd</sup> Edition: <a href="https://lm-kbc.github.io/challenge2023/"
+                                        target="_blank">LM-KBC
+                                        2023</a>
+                                </li>
+                                <li>
+                                    1<sup>st</sup> Edition: <a href="https://lm-kbc.github.io/challenge2022/"
+                                        target="_blank">LM-KBC
+                                        2022</a>
+                                </li>
+                            </ul>
                         </div>
                     </div>
+
+                    <!-- Section: Contact -->
+                    <div id="sec-contact" class="mb-5">
+                        <h4 id="contact" class="section-title">🗣️ Contact</h4>
+                        <div>
+                            <p>
+                                For general questions or discussion please use the
+                                <a href="https://groups.google.com/g/lm-kbc2024" target="_blank">Google group</a>.
+                            </p>
+                        </div>
+                    </div>
+
                 </div>
+                <!-- end content -->
+            </div>
+
+            <div class="d-none d-lg-block col-lg-2 col-xl-3">
+            </div>
+
+        </div>
+    </div>
+
+    <!-- footer -->
+    <div class="container-fluid text-center">
+        <div class="py-3 my-4 border-top footer">
+            <div class="mb-2">
+                <a href="https://creativecommons.org/licenses/by/4.0" target="_blank">
+                    <img src="./static/img/by.png" alt="cc-by-3.0" id="license-img">
+                </a>
+            </div>
+            <div>
+                The LM-KBC dataset is licensed under a
+                <a href="https://creativecommons.org/licenses/by/4.0" target="_blank">
+                    Creative Commons Attribution 4.0 International License (CC BY 4.0)</a>.
             </div>
         </div>
     </div>
-    
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
-            crossorigin="anonymous"></script>
+    <!-- end footer -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
 </body>
+
 </html>
