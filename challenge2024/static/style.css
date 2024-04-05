@@ -3,7 +3,7 @@
 }
 
 #header-description {
-  font-size: 1.5em;
+  font-size: 1.15em;
 }
 
 a {
@@ -11,7 +11,7 @@ a {
 }
 
 a:not(.btn) {
-  color: #198754;
+  color: #648880;
 }
 
 img.headshot.jeff {
@@ -36,10 +36,6 @@ img.headshot {
 #mpi-logo,
 #license-img {
   height: 3em;
-}
-
-.footer {
-  font-size: 0.75rem;
 }
 
 .bd-callout {
@@ -71,10 +67,165 @@ img.headshot {
   --bd-callout-border: var(--bs-danger-border-subtle);
 }
 
+.bd-callout-primary {
+  --bd-callout-color: #576663;
+  --bd-callout-bg: #e9eeed;
+  --bd-callout-border: #92aba6;
+}
+
 .bd-callout+.bd-callout {
   margin-top: -.25rem;
 }
 
+section {
+  padding: 50px 0;
+}
+
 .section-title {
+  padding-bottom: 40px;
+}
+
+.section-title h4 {
+  font-size: 14px;
+  font-weight: 500;
+  padding: 0;
+  line-height: 1px;
+  margin: 0 0 5px 0;
+  letter-spacing: 2px;
   text-transform: uppercase;
+  color: #aaaaaa;
+}
+
+.section-title h4::after {
+  content: "";
+  width: 150px;
+  height: 1px;
+  display: inline-block;
+  background: #92aba6;
+  margin: 4px 10px;
+}
+
+.section-title h3 {
+  margin: 0;
+  margin-top: 10px;
+  font-size: 36px;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: #2a2c39;
+}
+
+
+header {
+  vertical-align: baseline;
+  font-weight: lighter;
+}
+
+header,
+footer {
+  background: #293f50;
+}
+
+footer {
+  font-size: 0.75rem;
+  padding: 1rem 0;
+  color: white;
+}
+
+footer a {
+  color: white !important;
+  font-weight: bold;
+}
+
+header a {
+  color: white !important;
+}
+
+header .logo {
+  border-top: 4px solid #92aba6;
+  float: left;
+  font-size: 36px;
+  font-weight: 100;
+  letter-spacing: .5px;
+  line-height: 44px;
+  padding: 40px 0 22px 0;
+  text-transform: uppercase;
+  font-weight: lighter;
+}
+
+header .tagline {
+  margin: 44px 0 22px 0;
+  color: #92aba6;
+  text-align: right;
+  font-weight: lighter;
+}
+
+header .nav-line {
+  display: block;
+  text-align: right;
+  color: #fff;
+}
+
+header .primary-nav {
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: .5px;
+  text-transform: uppercase;
+}
+
+header .primary-nav a:hover {
+  color: #92aba6 !important;
+}
+
+.group {
+  clear: both;
+}
+
+.group:after {
+  clear: both;
+}
+
+.group:before,
+.group:after {
+  content: "";
+  display: table;
+}
+
+.hero {
+  background-color: #293f50;
+  color: #fff;
+  line-height: 44px;
+  padding: 22px 80px 66px 80px;
+  text-align: center;
+  font-weight: lighter;
+}
+
+.hero h3 {
+  color: #92aba6;
+  font-weight: lighter;
+}
+
+.hero a {
+  color: #fff !important;
+}
+
+.container {
+  max-width: 960px;
+}
+
+a.btn-alt {
+  border: 1px solid #fff;
+  padding: 10px 25px;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 400;
+  letter-spacing: .5px;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+a.btn-alt:hover {
+  background: #fff;
+  color: #648880 !important;
 }
