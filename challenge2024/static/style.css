@@ -120,9 +120,12 @@ header {
   font-weight: lighter;
 }
 
-header,
-footer {
+body {
   background: #293f50;
+}
+
+#main {
+  background: #fff;
 }
 
 footer {
