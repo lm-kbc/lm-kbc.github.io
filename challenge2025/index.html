@@ -102,33 +102,24 @@
 
                     <!-- Subsection: Problem Statement -->
                     <div id="subsec-promblem-statement" class="mb-5">
-                        <h4 id="task-description">Task Description</h4>
-                        <p>
-                            TBD.
+                    <h4 id="task-description">Task Description</h4><br>
+                    Pretrained language models (LMs) have advanced a range of semantic tasks and have also shown promise for knowledge extraction from the models itself. Although several works have explored this ability in a setting called probing or prompting, the viability of knowledge base construction from LMs remains underexplored. In the 4th edition of the LM-KBC challenge, we ask participants to build actual disambiguated knowledge bases from LMs, for given subjects and relations. In crucial difference to existing probing benchmarks like LAMA (Petroni et al., 2019), we make no simplifying assumptions on relation cardinalities, i.e., a subject-entity can stand in relation with zero, one, or many object-entities. Furthermore, submissions need to go beyond just ranking predicted surface strings and materialize disambiguated entities in the output, which will be evaluated using established KB metrics of precision and recall.<br>
+                    This year there are two major changes:
+                    <ol>    
+                      <li>Disallowing fine-tuning. </li>
+                      <li> Disallowing external corpora (RAG).</li>
+                    </ol>
+                    Thus this year is a true exploration of knowledge within a given LLM.
                     </div>
 
                     <!-- Subsection: Special Features -->
                     <div id="subsec-special-features">
                         <h4 id="special-features">Special Features</h4>
-                        TBD
+                        For fairness, all teams have to use the same moderate-sized LLM (we are still discussing which one to use).<br>
+                        The challenge will be run on a common dataset, which will be released in two parts: a training and development set, and a test set. The test set will be released later than the training set to prevent overfitting. The challenge will be evaluated using standard KB metrics of precision and recall. The challenge will be run on the CodaLab platform, and the results will be presented at the ISWC conference.
                     </div>
 
                 </section>
-
-
-
-                <!-- Section: Finalresult -->
-                <section id="sec-finalresult">
-                    <div class="section-title">
-                        <h4 id="finalresult">Final result</h4>
-                        <h3 id="final-ranking">
-                            <span>Final Ranking</span>
-                        </h3>
-                    </div>      
-                </section>
-
-
-
 
                 <!-- Section: Calls -->
                 <section id="sec-calls">
