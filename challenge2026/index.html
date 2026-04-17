@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AKBC Shared Task 2026 @ EMNLP</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/360bbb0a38.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./static/style.css">
+    <link rel="icon" href="./static/img/akbc_logo.png" type="image/png">
+    <link rel="apple-touch-icon" href="./static/img/akbc_logo.png">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="theme-color" content="#1e3a4f">
+</head>
+
+<body>
+
+    <!-- ==================== HEADER ==================== -->
+    <header class="site-header">
+        <div class="container">
+            <div class="d-md-flex align-items-end justify-content-between">
+                <div class="logo">
+                    <a href=".">
+                        <img src="./static/img/akbc_logo.png" alt="AKBC Shared Task" height="36" class="header-logo-img">
+                        <span class="header-edition">Shared Task 2026</span>
+                    </a>
+                </div>
+                <div class="text-md-end pb-3">
+                    <div class="tagline mb-2">October 2026 &mdash; Budapest, Hungary</div>
+                    <nav class="top-nav" aria-label="Primary navigation">
+                        <a href="#sec-whats-new">What's New</a>
+                        <span class="sep">&middot;</span>
+                        <a href="#sec-dates">Dates</a>
+                        <span class="sep">&middot;</span>
+                        <a href="#sec-task">Task</a>
+                        <span class="sep">&middot;</span>
+                        <a href="#sec-dataset">Dataset</a>
+                        <span class="sep">&middot;</span>
+                        <a href="#sec-rules">Rules</a>
+                        <span class="sep">&middot;</span>
+                        <a href="#sec-submission">Submission</a>
+                        <span class="sep">&middot;</span>
+                        <a href="#sec-organizers">Organizers</a>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- ==================== HERO ==================== -->
+    <section class="hero">
+        <div class="container">
+            <div class="edition-badge">5th Edition &middot; Shared Task</div>
+            <h1>AKBC Shared Task 2026</h1>
+            <p class="hero-subtitle">
+                Predicting complete knowledge base entries from language models<br>
+                <a href="https://www.akbc.ws/2026/" target="_blank" class="hero-link">AKBC Workshop</a>
+                @
+                <a href="https://2026.emnlp.org/" target="_blank" class="hero-link">EMNLP 2026</a>,
+                Budapest
+            </p>
+            <div class="hero-actions">
+                <a class="btn-hero btn-hero-primary" href="https://github.com/lm-kbc/dataset2026" target="_blank">
+                    <i class="fa-brands fa-github me-1"></i> Dataset &amp; Baseline</a>
+                <a class="btn-hero btn-hero-outline" href="#sec-dates">
+                    <i class="fa-regular fa-calendar me-1"></i> Important Dates</a>
+                <a class="btn-hero btn-hero-outline" href="#sec-participate">
+                    <i class="fa-solid fa-rocket me-1"></i> How to Participate</a>
+            </div>
+            <div class="hero-facts">
+                <div class="hero-fact"><i class="fa-solid fa-book-open"></i> Closed-book</div>
+                <div class="hero-fact"><i class="fa-solid fa-brain"></i> Open-weight &le;32B</div>
+                <div class="hero-fact"><i class="fa-solid fa-database"></i> 6 Relations</div>
+                <div class="hero-fact"><i class="fa-solid fa-font"></i> String outputs</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== NEWS STRIP ==================== -->
+    <div class="news-strip">
+        <div class="container">
+            <i class="fa-solid fa-bullhorn me-2"></i>
+            <strong>16.04.2026:</strong> First website online. Check back for updates.
+        </div>
+    </div>
+
+    <!-- ==================== MAIN ==================== -->
+    <div id="main">
+        <div class="container">
+            <div id="content">
+
+                <!-- ========== WHAT'S NEW ========== -->
+                <section id="sec-whats-new">
+                    <h2 class="section-heading">What's New in 2026</h2>
+                    <div class="new-grid">
+                        <div class="new-card">
+                            <div class="new-card-icon"><i class="fa-solid fa-brain"></i></div>
+                            <h4>Open-Weight Models</h4>
+                            <p>Use any open-weight system up to a <strong>32B total neural parameter budget</strong>. No single fixed model this year.</p>
+                        </div>
+                        <div class="new-card">
+                            <div class="new-card-icon"><i class="fa-solid fa-font"></i></div>
+                            <h4>String Outputs</h4>
+                            <p>Predictions are evaluated as <strong>strings</strong>. No Wikidata entity disambiguation required.</p>
+                        </div>
+                        <div class="new-card">
+                            <div class="new-card-icon"><i class="fa-solid fa-robot"></i></div>
+                            <h4>Agentic Systems</h4>
+                            <p>Multi-step and agentic inference strategies are <strong>allowed</strong> within the same 32B budget.</p>
+                        </div>
+                        <div class="new-card">
+                            <div class="new-card-icon"><i class="fa-solid fa-location-dot"></i></div>
+                            <h4>At AKBC / EMNLP</h4>
+                            <p>For the first time, co-located with the <strong>AKBC workshop</strong> at EMNLP in Budapest.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- ========== IMPORTANT DATES ========== -->
+                <section id="sec-dates">
+                    <h2 class="section-heading">Important Dates</h2>
+                    <table class="dates-table">
+                        <thead>
+                            <tr>
+                                <th>Activity</th>
+                                <th class="text-end">Date</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Dataset (train &amp; dev) release</td>
+                                <td class="text-end"><span class="date-badge">April 20, 2026</span></td>
+                            </tr>
+                            <tr>
+                                <td>Dataset (test) release</td>
+                                <td class="text-end"><span class="date-badge">TBA</span></td>
+                            </tr>
+                            <tr>
+                                <td>Submission of test output, code, and system papers</td>
+                                <td class="text-end"><span class="date-badge">August 15, 2026</span></td>
+                            </tr>
+                            <tr>
+                                <td>Acceptance and winner announcement</td>
+                                <td class="text-end"><span class="date-badge">September 1, 2026</span></td>
+                            </tr>
+                            <tr>
+                                <td>Camera-ready papers</td>
+                                <td class="text-end"><span class="date-badge">September 15, 2026</span></td>
+                            </tr>
+                            <tr>
+                                <td>Presentations @ EMNLP 2026</td>
+                                <td class="text-end"><span class="date-badge">October 2026</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+
+                <!-- ========== HOW TO PARTICIPATE ========== -->
+                <section id="sec-participate">
+                    <h2 class="section-heading">How to Participate</h2>
+                    <div class="steps">
+                        <div class="step">
+                            <div class="step-num">1</div>
+                            <h4>Get the data</h4>
+                            <p>Download the dataset and baseline from the
+                                <a href="https://github.com/lm-kbc/dataset2026" target="_blank">GitHub repository</a>.</p>
+                        </div>
+                        <div class="step">
+                            <div class="step-num">2</div>
+                            <h4>Build your system</h4>
+                            <p>Develop your approach and validate locally using the provided evaluation script.</p>
+                        </div>
+                        <div class="step">
+                            <div class="step-num">3</div>
+                            <h4>Submit predictions</h4>
+                            <p>Submit your output file to the CodaLab leaderboard (link TBA).</p>
+                        </div>
+                        <div class="step">
+                            <div class="step-num">4</div>
+                            <h4>Write your paper</h4>
+                            <p>Submit a system description paper and share your code publicly.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- ========== OVERVIEW + TASK ========== -->
+                <section id="sec-task">
+                    <h2 class="section-heading">Task</h2>
+
+                    <p>
+                        Large language models contain a substantial amount of factual knowledge. Turning that knowledge
+                        into reliable <strong>knowledge base entries</strong>, however, is much harder than answering a
+                        single factual question.
+                    </p>
+                    <p>
+                        Given a subject <em>s</em> and a relation <em>r</em>, predict the complete set of correct
+                        object strings {<em>o</em><sub>1</sub>, <em>o</em><sub>2</sub>, &hellip;,
+                        <em>o<sub>k</sub></em>}. Unlike standard factual QA, a subject may have
+                        <strong>zero</strong>, <strong>one</strong>, or <strong>many</strong> correct objects.
+                        The goal is to construct a <strong>complete and precise</strong> KB entry.
+                    </p>
+
+                    <!-- Task Illustration -->
+                    <div class="task-illustration">
+                        <div class="task-node node-subject">
+                            <span class="node-label">Input</span>
+                            Subject + Relation
+                        </div>
+                        <div class="task-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+                        <div class="task-node node-lm">
+                            <span class="node-label">Process</span>
+                            <i class="fa-solid fa-brain me-1"></i> Language Model
+                        </div>
+                        <div class="task-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+                        <div class="task-objects">
+                            <div class="task-node node-object">
+                                <span class="node-label">Output</span>
+                                Object Entity 1
+                            </div>
+                            <div class="task-node node-object">Object Entity 2</div>
+                            <div class="task-node node-object" style="opacity:.5">&hellip;</div>
+                        </div>
+                    </div>
+
+                    <h4>Examples</h4>
+                    <div class="row g-3">
+                        <div class="col-md-4">
+                            <div class="content-card example-card h-100">
+                                <span class="cardinality-badge badge-one">1 object</span>
+                                <p class="mb-1"><strong>Subject:</strong> <code>Dominican Republic</code></p>
+                                <p class="mb-1"><strong>Relation:</strong> <code>countryLandBordersCountry</code></p>
+                                <p class="mb-0"><strong>Output:</strong> <code>{"Haiti"}</code></p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="content-card example-card h-100">
+                                <span class="cardinality-badge badge-zero">0 objects</span>
+                                <p class="mb-1"><strong>Subject:</strong> <code>Mauritius</code></p>
+                                <p class="mb-1"><strong>Relation:</strong> <code>countryLandBordersCountry</code></p>
+                                <p class="mb-0"><strong>Output:</strong> <code>{}</code></p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="content-card example-card h-100">
+                                <span class="cardinality-badge badge-many">n objects</span>
+                                <p class="mb-1"><strong>Subject:</strong> <code>Turing Award</code></p>
+                                <p class="mb-1"><strong>Relation:</strong> <code>awardWonBy</code></p>
+                                <p class="mb-0"><strong>Output:</strong> <code>{"Geoffrey Hinton", "Yoshua Bengio",&nbsp;&hellip;}</code></p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- ========== DATASET ========== -->
+                <section id="sec-dataset">
+                    <h2 class="section-heading">Dataset</h2>
+
+                    <p>
+                        The dataset is released in <strong>train</strong>, <strong>validation</strong>, and
+                        <strong>test</strong> splits, covering six relations with different structural properties.
+                    </p>
+
+                    <div style="overflow-x:auto">
+                        <table class="dates-table">
+                            <thead>
+                                <tr>
+                                    <th>Relation</th>
+                                    <th class="text-center">Train</th>
+                                    <th class="text-center">Val</th>
+                                    <th class="text-center">Test</th>
+                                    <th>Properties</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><code>countryLandBordersCountry</code></td>
+                                    <td class="text-center">68</td>
+                                    <td class="text-center">68</td>
+                                    <td class="text-center">67</td>
+                                    <td><span class="prop-badge prop-set">set-valued</span> <span class="prop-badge prop-null">null values</span></td>
+                                </tr>
+                                <tr>
+                                    <td><code>personHasCityOfDeath</code></td>
+                                    <td class="text-center">100</td>
+                                    <td class="text-center">100</td>
+                                    <td class="text-center">100</td>
+                                    <td><span class="prop-badge prop-null">null values</span></td>
+                                </tr>
+                                <tr>
+                                    <td><code>hasCapacity</code></td>
+                                    <td class="text-center">100</td>
+                                    <td class="text-center">100</td>
+                                    <td class="text-center">100</td>
+                                    <td><span class="prop-badge prop-num">numeric</span></td>
+                                </tr>
+                                <tr>
+                                    <td><code>awardWonBy</code></td>
+                                    <td class="text-center">10</td>
+                                    <td class="text-center">10</td>
+                                    <td class="text-center">10</td>
+                                    <td><span class="prop-badge prop-set">many objects</span></td>
+                                </tr>
+                                <tr>
+                                    <td><code>companyTradesAtStockExchange</code></td>
+                                    <td class="text-center">100</td>
+                                    <td class="text-center">100</td>
+                                    <td class="text-center">100</td>
+                                    <td><span class="prop-badge prop-null">null values</span></td>
+                                </tr>
+                                <tr>
+                                    <td><code>hasArea</code></td>
+                                    <td class="text-center">100</td>
+                                    <td class="text-center">100</td>
+                                    <td class="text-center">100</td>
+                                    <td><span class="prop-badge prop-num">numeric</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <p class="mt-3">
+                        <a href="https://github.com/lm-kbc/dataset2026/tree/main/data" target="_blank">Dataset files</a>,
+                        <a href="https://github.com/lm-kbc/dataset2026/tree/main/models" target="_blank">baseline code</a>, and
+                        <a href="https://github.com/lm-kbc/dataset2026/blob/main/evaluate.py" target="_blank">evaluation script</a>
+                        are available in the
+                        <a href="https://github.com/lm-kbc/dataset2026" target="_blank">GitHub repository</a>
+                    </p>
+                </section>
+
+                <!-- ========== EVALUATION ========== -->
+                <section id="sec-evaluation">
+                    <h2 class="section-heading">Evaluation &amp; Output Format</h2>
+
+                    <div class="row g-4">
+                        <div class="col-md-6">
+                            <h4>Metrics</h4>
+                            <p>
+                                Submissions are evaluated using <strong>macro precision, macro recall, and macro F1</strong>
+                                over predicted object sets. Predictions are evaluated as <strong>strings</strong> &mdash;
+                                no canonical entity identifiers required.
+                            </p>
+                            <p>
+                                For <strong>string relations</strong>, predicted strings are normalized (lowercased,
+                                diacritics removed, punctuation stripped) and matched against the ground-truth label
+                                and its known aliases.
+                                For <strong>numeric relations</strong> (<code>hasCapacity</code>, <code>hasArea</code>),
+                                a prediction is counted as correct if it falls within a <strong>5% relative tolerance</strong>
+                                of the ground-truth value.
+                            </p>
+                            <div class="callout" style="margin-top:auto">
+                                <strong>Evaluation Script:</strong>
+                                Available as
+                                <a href="https://github.com/lm-kbc/dataset2026/blob/main/evaluate.py" target="_blank"><code>evaluate.py</code></a>
+                                in the challenge repository.
+                                Use it to validate locally before submission.
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <h4>JSONL Format</h4>
+                            <p>Each line: one JSON object with <code>SubjectEntity</code>, <code>Relation</code>, <code>ObjectEntities</code>.</p>
+<pre><code>{"SubjectEntity": "Dominican Republic",
+ "Relation": "countryLandBordersCountry",
+ "ObjectEntities": ["Haiti"]}
+
+{"SubjectEntity": "Mauritius",
+ "Relation": "countryLandBordersCountry",
+ "ObjectEntities": []}</code></pre>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- ========== RULES ========== -->
+                <section id="sec-rules">
+                    <h2 class="section-heading">Rules</h2>
+
+                    <p>
+                        Participants may use one or more <strong>open-weight</strong> neural models, provided that the
+                        <strong>total parameter count of all inference-time neural components</strong> does not exceed
+                        <strong>32B parameters</strong>.
+                    </p>
+
+                    <div class="row g-4">
+                        <div class="col-md-4">
+                            <div class="rule-card h-100">
+                                <div class="rule-card-header">
+                                    <i class="fa-solid fa-book-open"></i> Data &amp; Retrieval
+                                </div>
+                                <div class="rule-card-body">
+                                    <p><strong>Closed-book setting.</strong> No web search, no RAG, no external factual corpora, no KB lookup for fact prediction.</p>
+                                    <p class="mb-0"><strong>No additional training.</strong> Fine-tuning, continued pretraining, or instruction tuning for this challenge is not allowed.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="rule-card h-100">
+                                <div class="rule-card-header">
+                                    <i class="fa-solid fa-microchip"></i> Model Budget
+                                </div>
+                                <div class="rule-card-body">
+                                    <p><strong>32B parameter limit</strong> across all neural components at inference time.</p>
+                                    <p><strong>Quantization</strong> does not reduce the counted size.</p>
+                                    <p class="mb-0"><strong>MoE models</strong> are counted by total published parameter count, not active parameters.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="rule-card h-100">
+                                <div class="rule-card-header">
+                                    <i class="fa-solid fa-gears"></i> Systems &amp; Processing
+                                </div>
+                                <div class="rule-card-body">
+                                    <p><strong>Agentic systems</strong> and multi-step inference are allowed. Multiple models are summed toward the 32B limit.</p>
+                                    <p class="mb-0"><strong>Non-neural components</strong> (rule-based filtering, string normalization, deduplication, aggregation) are allowed.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- ========== SUBMISSION ========== -->
+                <section id="sec-submission">
+                    <h2 class="section-heading">Submission</h2>
+
+                    <div class="row g-3">
+                        <div class="col-md-3 col-6">
+                            <div class="submit-card h-100">
+                                <i class="fa-solid fa-chart-bar fa-lg text-accent"></i>
+                                <h4>Leaderboard</h4>
+                                <p>Submit predictions to CodaLab (link TBA)</p>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-6">
+                            <div class="submit-card h-100">
+                                <i class="fa-solid fa-pen-to-square fa-lg text-accent"></i>
+                                <h4>OpenReview</h4>
+                                <p>Submit your system paper on <a href="https://openreview.net/group?id=EMNLP/2026/Workshop/LM-KBC_Shared_Task" target="_blank">OpenReview</a></p>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-6">
+                            <div class="submit-card h-100">
+                                <i class="fa-solid fa-code fa-lg text-accent"></i>
+                                <h4>Code</h4>
+                                <p>Public GitHub repo linked in your paper</p>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-6">
+                            <div class="submit-card h-100">
+                                <i class="fa-solid fa-terminal fa-lg text-accent"></i>
+                                <h4>Local Eval</h4>
+                                <p>Validate with the <a href="https://github.com/lm-kbc/dataset2026" target="_blank">eval script</a> before submitting</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- ========== ORGANIZERS ========== -->
+                <section id="sec-organizers">
+                    <h2 class="section-heading">Organizers</h2>
+
+                    <div class="row g-4">
+                        <div class="col-6 col-md-4 col-lg-3">
+                            <div class="organizer-card">
+                                <img src="./static/img/jan.jpeg" alt="Jan-Christoph Kalo">
+                                <div class="card-body">
+                                    <h6 class="card-title"><a href="https://www.uva.nl/profiel/k/a/j.c.kalo/j.c.kalo.html" target="_blank">Jan-Christoph Kalo</a></h6>
+                                    <p class="card-text">University of Amsterdam</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-3">
+                            <div class="organizer-card">
+                                <img src="./static/img/phong.jpg" alt="Tuan-Phong Nguyen">
+                                <div class="card-body">
+                                    <h6 class="card-title"><a href="https://tuan-phong.com/" target="_blank">Tuan-Phong Nguyen</a></h6>
+                                    <p class="card-text">MPI for Informatics</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-3">
+                            <div class="organizer-card">
+                                <img src="./static/img/simon.jpg" alt="Simon Razniewski">
+                                <div class="card-body">
+                                    <h6 class="card-title"><a href="http://simonrazniewski.com/" target="_blank">Simon Razniewski</a></h6>
+                                    <p class="card-text">ScaDS.AI and TU Dresden</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-3">
+                            <div class="organizer-card">
+                                <img src="./static/img/bohui.jpg" alt="Bohui Zhang">
+                                <div class="card-body">
+                                    <h6 class="card-title"><a href="https://bohuizhang.github.io/" target="_blank">Bohui Zhang</a></h6>
+                                    <p class="card-text">King's College London</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- ==================== BOTTOM INFO BLOCK ==================== -->
+    <div class="bottom-block">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <h5>Resources</h5>
+                    <ul class="bottom-links">
+                        <li><a href="https://github.com/lm-kbc/dataset2026" target="_blank"><i class="fa-brands fa-github me-1"></i> Dataset &amp; Baseline</a></li>
+                        <li><a href="#"><i class="fa-solid fa-users me-1"></i> Google Group (TBA)</a></li>
+                        <li><a href="https://www.akbc.ws/2026/" target="_blank"><i class="fa-solid fa-globe me-1"></i> AKBC 2026</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Past Editions</h5>
+                    <ul class="bottom-links">
+                        <li><a href="https://lm-kbc.github.io/challenge2025/">LM-KBC 2025</a> &middot; <a href="https://ceur-ws.org/Vol-4041/">proceedings</a></li>
+                        <li><a href="https://lm-kbc.github.io/challenge2024/">LM-KBC 2024</a> &middot; <a href="https://ceur-ws.org/Vol-3853/">proceedings</a></li>
+                        <li><a href="https://lm-kbc.github.io/challenge2023/">LM-KBC 2023</a> &middot; <a href="https://ceur-ws.org/Vol-3577/">proceedings</a></li>
+                        <li><a href="https://lm-kbc.github.io/challenge2022/">LM-KBC 2022</a> &middot; <a href="https://ceur-ws.org/Vol-3274/">proceedings</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Contact</h5>
+                    <p>For questions and discussion, use the <strong>Google Group</strong> (link TBA).</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="site-footer">
+        <div class="container">
+            <a href="https://creativecommons.org/licenses/by/4.0" target="_blank">
+                <img src="./static/img/by.png" alt="CC BY 4.0" id="license-img">
+            </a>
+            <span class="ms-2">
+                The dataset is licensed under
+                <a href="https://creativecommons.org/licenses/by/4.0" target="_blank">CC BY 4.0</a>.
+            </span>
+        </div>
+    </footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+</body>
+</html>
